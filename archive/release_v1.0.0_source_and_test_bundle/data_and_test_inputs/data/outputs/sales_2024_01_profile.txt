@@ -1,0 +1,263 @@
+FILE: sales_2024_01.csv
+================================================================================
+
+Rows    : 53200
+Columns : 15
+
+--- NULL PROFILE ---
+                    null_count  null_pct
+sales_line_id                0      0.00
+order_id                     0      0.00
+order_date                   0      0.00
+order_time                   0      0.00
+customer_id               1607      3.02
+product_id                   0      0.00
+store_id                     0      0.00
+salesperson_id           13260     24.92
+promotion_id             53200    100.00
+sales_channel                0      0.00
+quantity                     0      0.00
+unit_selling_price           0      0.00
+discount_pct                 0      0.00
+payment_method               0      0.00
+order_status                 0      0.00
+
+--- UNIQUE COUNTS ---
+            column  unique_count
+     sales_line_id         53200
+          order_id         42942
+        order_date            31
+        order_time         39744
+       customer_id          1310
+        product_id          1200
+          store_id            52
+    salesperson_id           391
+      promotion_id             0
+     sales_channel             2
+          quantity             4
+unit_selling_price          1200
+      discount_pct             1
+    payment_method             6
+      order_status             2
+
+--- NUMERIC PROFILE ---
+                       min      max      mean    median
+promotion_id           NaN      NaN       NaN       NaN
+quantity              1.00      4.0      1.60      1.00
+unit_selling_price  187.21  68144.4  30618.38  30359.11
+discount_pct          0.00      0.0      0.00      0.00
+
+--- DATE PROFILE ---
+
+Column: order_date
+Parse failures : 0
+Minimum date   : 2024-01-01
+Maximum date   : 2024-01-31
+
+--- DUPLICATE PROFILE ---
+Duplicate rows : 0
+
+--- CATEGORY FREQUENCIES ---
+
+Column: sales_line_id
+sales_line_id
+SL2024010000000001    1
+SL2024010000000002    1
+SL2024010000000003    1
+SL2024010000000004    1
+SL2024010000000005    1
+SL2024010000000006    1
+SL2024010000000007    1
+SL2024010000000008    1
+SL2024010000000009    1
+SL2024010000000010    1
+SL2024010000000011    1
+SL2024010000000012    1
+SL2024010000000013    1
+SL2024010000000014    1
+SL2024010000000015    1
+SL2024010000000016    1
+SL2024010000000017    1
+SL2024010000000018    1
+SL2024010000000019    1
+SL2024010000000020    1
+
+Column: order_id
+order_id
+ORD202401000000062    3
+ORD202401000000070    3
+ORD202401000000129    3
+ORD202401000000148    3
+ORD202401000000196    3
+ORD202401000000236    3
+ORD202401000000269    3
+ORD202401000000294    3
+ORD202401000000318    3
+ORD202401000000326    3
+ORD202401000000359    3
+ORD202401000000389    3
+ORD202401000000403    3
+ORD202401000000427    3
+ORD202401000000441    3
+ORD202401000000483    3
+ORD202401000000518    3
+ORD202401000000525    3
+ORD202401000000564    3
+ORD202401000000575    3
+
+Column: order_date
+order_date
+2024-01-13    1815
+2024-01-15    1813
+2024-01-16    1787
+2024-01-22    1780
+2024-01-23    1779
+2024-01-17    1773
+2024-01-29    1764
+2024-01-26    1755
+2024-01-28    1746
+2024-01-10    1726
+2024-01-19    1725
+2024-01-05    1725
+2024-01-21    1724
+2024-01-04    1724
+2024-01-18    1716
+2024-01-12    1712
+2024-01-03    1705
+2024-01-25    1695
+2024-01-20    1694
+2024-01-31    1691
+
+Column: order_time
+order_time
+0 days 13:19:59    6
+0 days 02:55:59    6
+0 days 21:28:40    6
+0 days 15:07:08    5
+0 days 17:50:37    5
+0 days 18:20:45    5
+0 days 23:42:11    5
+0 days 05:02:47    5
+0 days 17:03:59    5
+0 days 15:20:21    5
+0 days 03:10:16    5
+0 days 15:06:35    5
+0 days 15:13:46    5
+0 days 15:59:14    5
+0 days 07:10:26    5
+0 days 07:20:57    5
+0 days 18:24:30    5
+0 days 04:19:50    5
+0 days 17:13:08    5
+0 days 06:42:01    5
+
+Column: customer_id
+customer_id
+<NULL>        1607
+CUST001065      68
+CUST005196      68
+CUST002474      67
+CUST000079      65
+CUST004549      63
+CUST002447      63
+CUST005276      62
+CUST008382      62
+CUST009042      62
+CUST003961      61
+CUST003862      61
+CUST007943      60
+CUST001423      60
+CUST008599      60
+CUST007536      60
+CUST000413      60
+CUST007539      59
+CUST009099      59
+CUST000199      59
+
+Column: product_id
+product_id
+PROD002220    67
+PROD000782    67
+PROD000341    64
+PROD002038    64
+PROD000485    63
+PROD001043    63
+PROD002179    62
+PROD000886    62
+PROD002053    62
+PROD001291    62
+PROD002390    62
+PROD001118    61
+PROD001499    61
+PROD000207    61
+PROD000637    61
+PROD001749    61
+PROD001360    61
+PROD000514    61
+PROD000315    61
+PROD001913    60
+
+Column: store_id
+store_id
+STORE00023    1117
+STORE00033    1074
+STORE00011    1073
+STORE00001    1072
+STORE00014    1069
+STORE00027    1058
+STORE00015    1053
+STORE00044    1051
+STORE00037    1050
+STORE00012    1049
+STORE00013    1048
+STORE00002    1047
+STORE00020    1047
+STORE00045    1045
+STORE00031    1039
+STORE00051    1039
+STORE00046    1039
+STORE00008    1036
+STORE00048    1031
+STORE00041    1029
+
+Column: salesperson_id
+salesperson_id
+<NULL>     13260
+SP00019      269
+SP00063      259
+SP00362      255
+SP00181      184
+SP00081      175
+SP00184      174
+SP00299      166
+SP00300      165
+SP00055      161
+SP00344      159
+SP00333      159
+SP00286      159
+SP00301      156
+SP00186      155
+SP00291      154
+SP00309      153
+SP00249      153
+SP00444      152
+SP00428      151
+
+Column: sales_channel
+sales_channel
+Store     39940
+Online    13260
+
+Column: payment_method
+payment_method
+Net Banking    9396
+Wallet         9334
+Credit Card    9323
+Debit Card     9296
+UPI            9214
+Cash           6637
+
+Column: order_status
+order_status
+Completed    51068
+Cancelled     2132

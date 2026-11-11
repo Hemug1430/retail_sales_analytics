@@ -1,0 +1,1065 @@
+{
+  "release_tag": "v1.0.0-PROD",
+  "frozen_at": "2026-11-11 09:14:37",
+  "python_version": [
+    "3.12.10",
+    "(tags/v3.12.10:0cc8128,",
+    "Apr",
+    "8",
+    "2025,",
+    "12:21:36)",
+    "[MSC",
+    "v.1943",
+    "64",
+    "bit",
+    "(AMD64)]"
+  ],
+  "total_scripts": 116,
+  "pinned_packages": 75,
+  "scripts": [
+    {
+      "script": "02.01_generate_customers_master.py",
+      "path": "src/02.01_generate_customers_master.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 8210,
+      "lines": 413,
+      "sha256": "76e1e1432ff670df6abcd27314a239556d3da1eff500fb04279f40513850530c"
+    },
+    {
+      "script": "02.08_generate_returns.py",
+      "path": "src/02.08_generate_returns.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2906,
+      "lines": 70,
+      "sha256": "283167fefcfdd38ab47347c47aa0f7b311751c80b7916ae36c30af011dd48e3c"
+    },
+    {
+      "script": "04.03_product_category_standardization.py",
+      "path": "src/04.03_product_category_standardization.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 15814,
+      "lines": 719,
+      "sha256": "198828e9516e5c571035e21dd7233f357c639ba7db7b9f0706548897c196e02d"
+    },
+    {
+      "script": "04.04_date_standardization.py",
+      "path": "src/04.04_date_standardization.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 15642,
+      "lines": 573,
+      "sha256": "f938f601582abe32ffe704781bdc5900202865e39409c2b548312b359e5871f3"
+    },
+    {
+      "script": "04.05_numeric_value_cleaning.py",
+      "path": "src/04.05_numeric_value_cleaning.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 13511,
+      "lines": 522,
+      "sha256": "1369f99fd6915c398ff1bd41d9919b19971d43e41ae85271415b408f6e176e5f"
+    },
+    {
+      "script": "04.06_missing_value_handling.py",
+      "path": "src/04.06_missing_value_handling.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 18607,
+      "lines": 675,
+      "sha256": "1571296be76114963e804fd4c48baf0c9a9d8aa60e5fa7e0f1e2597f2d0d8e60"
+    },
+    {
+      "script": "04.07_exact_duplicate_row_handling.py",
+      "path": "src/04.07_exact_duplicate_row_handling.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 23343,
+      "lines": 960,
+      "sha256": "45ceda5d873bbc02cb718a3f9ea933fac0689fa112cf7df5e4e5f1e18f0bab6d"
+    },
+    {
+      "script": "04.08_business_key_duplicate_handling.py",
+      "path": "src/04.08_business_key_duplicate_handling.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 15075,
+      "lines": 527,
+      "sha256": "b95a54e84784676a3471bfc92e0c46c637a777ad400bf896e9a1b82e89cdec6e"
+    },
+    {
+      "script": "04.09_foreign_key_validation.py",
+      "path": "src/04.09_foreign_key_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 17679,
+      "lines": 679,
+      "sha256": "264d7e15122586ceee1d3dcb897344f7d5a9c7c8eb5ef6b1539b0f3ca5eee714"
+    },
+    {
+      "script": "04.10_outlier_flagging.py",
+      "path": "src/04.10_outlier_flagging.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 15822,
+      "lines": 703,
+      "sha256": "f2a3e4481deae8a36e30c21732a18303a3fcb1dbaf15c4ce78eff6588894fda0"
+    },
+    {
+      "script": "04.11_row_level_business_validation.py",
+      "path": "src/04.11_row_level_business_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 29093,
+      "lines": 1196,
+      "sha256": "261a8ed467bd416238c608891e27957dba28c7692ccc360d41746abe173290b0"
+    },
+    {
+      "script": "04.12_reject_reason_codes.py",
+      "path": "src/04.12_reject_reason_codes.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 20176,
+      "lines": 777,
+      "sha256": "c73161143a67ab78c35cd043fb77bf53e064fb424a7daa3f0ea4006d8dd86b5e"
+    },
+    {
+      "script": "04.13_create_cleaned_staging_datasets.py",
+      "path": "src/04.13_create_cleaned_staging_datasets.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 21917,
+      "lines": 962,
+      "sha256": "fa24f3c38ff8d85df50e0c90f4fb00f0881b38668d0b76ef6b1c67099fe10315"
+    },
+    {
+      "script": "04.14_data_quality_summary.py",
+      "path": "src/04.14_data_quality_summary.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 16098,
+      "lines": 673,
+      "sha256": "d34c05b1c4a5490a1e55eb2dcccdca539e155e71a2d526fc9f2ff897d7e653d5"
+    },
+    {
+      "script": "04.15_reconcile_cleaned_rows.py",
+      "path": "src/04.15_reconcile_cleaned_rows.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 16483,
+      "lines": 686,
+      "sha256": "4a013bfc4d96dce37a542ea0df2cfa063bb196dca6aef4d5bfb8dde2ed9d6adf"
+    },
+    {
+      "script": "05.17_validate_staging_row_counts.py",
+      "path": "src/05.17_validate_staging_row_counts.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 14125,
+      "lines": 499,
+      "sha256": "1896097690ba6a56085bdd3f70dfedf488e4046bf086c1cd11289709325668e2"
+    },
+    {
+      "script": "05.18_run_staging_to_core_customer_merge.py",
+      "path": "src/05.18_run_staging_to_core_customer_merge.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 30046,
+      "lines": 1119,
+      "sha256": "0ea23870d63c5fa93ec543bf76b9994f5bcf5e261ca71fd55c7e4560ab133360"
+    },
+    {
+      "script": "05.19_run_staging_to_core_product_merge.py",
+      "path": "src/05.19_run_staging_to_core_product_merge.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 33842,
+      "lines": 1342,
+      "sha256": "4b386cc06aad7551ddcddd6012c219dd0cc59a845c15fc14dc378326d1101d6f"
+    },
+    {
+      "script": "05.20_run_staging_to_core_store_merge.py",
+      "path": "src/05.20_run_staging_to_core_store_merge.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 24660,
+      "lines": 994,
+      "sha256": "55f3229e58091de8416d80de73da053b9e7d39bb2cc631ca5ed98f43f038ed2e"
+    },
+    {
+      "script": "05.21_run_staging_to_core_salesperson_merge.py",
+      "path": "src/05.21_run_staging_to_core_salesperson_merge.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 26797,
+      "lines": 1051,
+      "sha256": "ef5fc1096a7d1cd465cbc42a340ec991309b744204eb55ffed3d6fbe3589da2c"
+    },
+    {
+      "script": "05.22_run_staging_to_core_promotion_merge.py",
+      "path": "src/05.22_run_staging_to_core_promotion_merge.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 22916,
+      "lines": 988,
+      "sha256": "3a5c690a03439b653af139859dddf5a076d65daf7014551c941dcb7d39261aa6"
+    },
+    {
+      "script": "05.23_run_sales_incremental_insert.py",
+      "path": "src/05.23_run_sales_incremental_insert.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 30149,
+      "lines": 1306,
+      "sha256": "1008e6660add1519f3f5473123800e129c4729ca7f1ee2f23876626c0e8bf1f0"
+    },
+    {
+      "script": "05.24_run_returns_incremental_insert.py",
+      "path": "src/05.24_run_returns_incremental_insert.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 4602,
+      "lines": 120,
+      "sha256": "5419d79ea94cc46d64b2ee7b263859f0c72b63507e718ac8e9aef49e03773cff"
+    },
+    {
+      "script": "05.25_run_targets_incremental_load.py",
+      "path": "src/05.25_run_targets_incremental_load.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 4758,
+      "lines": 106,
+      "sha256": "6ddf4d2e925d50926f4165ed3a1a60bb3f6c45f77c112826f6d45534351259f9"
+    },
+    {
+      "script": "05.26_implement_correction_file_updates.py",
+      "path": "src/05.26_implement_correction_file_updates.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3682,
+      "lines": 83,
+      "sha256": "9f54d7aa365775c3f7408407abcec1fdd69d3e109007071a579cadeee34bcdff"
+    },
+    {
+      "script": "05.27_implement_scd_history_updates.py",
+      "path": "src/05.27_implement_scd_history_updates.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2352,
+      "lines": 65,
+      "sha256": "a4dfdd34114c9a2d90b8c38ce2b043c456124d5576b5e2bca78a99b7529c98a0"
+    },
+    {
+      "script": "05.28_implement_transaction_boundaries.py",
+      "path": "src/05.28_implement_transaction_boundaries.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2523,
+      "lines": 63,
+      "sha256": "376543c41f7a233d1f943b1a9fca40c4abe10678a213f146e94e152ed12d6c00"
+    },
+    {
+      "script": "05.29_implement_database_error_recovery.py",
+      "path": "src/05.29_implement_database_error_recovery.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2188,
+      "lines": 53,
+      "sha256": "8a37d3caae45c9b578e3ee4aa1cfd0d453ed868f32fefd2292148c33bb2bc50d"
+    },
+    {
+      "script": "05.30_create_core_data_views.py",
+      "path": "src/05.30_create_core_data_views.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3169,
+      "lines": 78,
+      "sha256": "b0cbae719cb406f3641896da995e512d6b3ca968a08d194281b1c5977b6f4306"
+    },
+    {
+      "script": "05.31_run_source_to_database_reconciliation.py",
+      "path": "src/05.31_run_source_to_database_reconciliation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2435,
+      "lines": 58,
+      "sha256": "bae566d5c9d59a3f30646b60ad613679b194c833f403cb015cf03ffd878bc501"
+    },
+    {
+      "script": "05.32_optimize_sql_queries.py",
+      "path": "src/05.32_optimize_sql_queries.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2101,
+      "lines": 51,
+      "sha256": "262979135cf04a9b1269078c728654a95445e696f8fcfd61e9fd8540c491a667"
+    },
+    {
+      "script": "05.33_validate_database_integrity.py",
+      "path": "src/05.33_validate_database_integrity.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 1731,
+      "lines": 39,
+      "sha256": "ae559b7fe929cb4493aec42168453f3ec8ec02dd2983364e1ce32652cce7b335"
+    },
+    {
+      "script": "05_16_load_cleaned_data_to_staging.py",
+      "path": "src/05_16_load_cleaned_data_to_staging.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 48316,
+      "lines": 2277,
+      "sha256": "858f2af15bba1620a9565e386ef79581351ae1bebea621f67b9cb8f56b9c9db1"
+    },
+    {
+      "script": "06.01_create_date_dimension.py",
+      "path": "src/06.01_create_date_dimension.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3225,
+      "lines": 93,
+      "sha256": "d1f636d3a9d3f38ab3f2dcf05655ca1551174da79fddff49c39d29b623705972"
+    },
+    {
+      "script": "06.33_push_analytical_outputs.py",
+      "path": "src/06.33_push_analytical_outputs.py",
+      "module": "Analytics & Metrics",
+      "version": "v1.0.0-PROD",
+      "bytes": 2152,
+      "lines": 57,
+      "sha256": "cffa60a569437da1b28adc66e12bd59ccfaaff86522dda85e6b546c034063cb8"
+    },
+    {
+      "script": "09.01_test_source_file_schemas.py",
+      "path": "src/09.01_test_source_file_schemas.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3446,
+      "lines": 90,
+      "sha256": "d5bf86fcf29eaf94429e60c5aedafc064bf81e841e2f2aa30b943582a9232c53"
+    },
+    {
+      "script": "09.02_test_synthetic_record_counts.py",
+      "path": "src/09.02_test_synthetic_record_counts.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4506,
+      "lines": 109,
+      "sha256": "fc8bb9f07a3eef1b0487e8701c62d55efab36f0925600c291fcaeb0583970d1f"
+    },
+    {
+      "script": "09.03_test_synthetic_distributions.py",
+      "path": "src/09.03_test_synthetic_distributions.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7918,
+      "lines": 170,
+      "sha256": "4e93f835ebcb0a607092f785caaf14df6505f69e858f5e0321a2e1f3a28c3ef7"
+    },
+    {
+      "script": "09.04_test_controlled_duplicate_population.py",
+      "path": "src/09.04_test_controlled_duplicate_population.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3687,
+      "lines": 88,
+      "sha256": "b38a04a28dcc2544c4e2f9c61a8d89302ec0673648b1354f102be85693a9155c"
+    },
+    {
+      "script": "09.05_test_missing_invalid_outlier_scenarios.py",
+      "path": "src/09.05_test_missing_invalid_outlier_scenarios.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 6000,
+      "lines": 121,
+      "sha256": "076216e1e2b9c99ecce3fd1ecb1befe153c9ee4938e97f7b2cc7fee08b9c43f4"
+    },
+    {
+      "script": "09.06_unit_test_file_discovery.py",
+      "path": "src/09.06_unit_test_file_discovery.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4823,
+      "lines": 132,
+      "sha256": "703824f2563a843316aa19ef9dd847df7630c5cb78649b0cdf70914a8d6db5c4"
+    },
+    {
+      "script": "09.07_unit_test_schema_validation.py",
+      "path": "src/09.07_unit_test_schema_validation.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4616,
+      "lines": 116,
+      "sha256": "23319a64818621d81d2daee8e3a32ca7d52adfec575e86ae8130196b219f369c"
+    },
+    {
+      "script": "09.08_unit_test_cleaning_rules.py",
+      "path": "src/09.08_unit_test_cleaning_rules.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4956,
+      "lines": 126,
+      "sha256": "d2451bd564eb28ef3345bd0b304c1f0f6c31726a1b8b25fac6df817c28c9ac88"
+    },
+    {
+      "script": "09.09_unit_test_database_connection_load.py",
+      "path": "src/09.09_unit_test_database_connection_load.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4313,
+      "lines": 115,
+      "sha256": "e711509d41dde8be4efe1c7b5b86669420855ce2db97d24b211af38e8be96e09"
+    },
+    {
+      "script": "09.10_test_initial_historical_load.py",
+      "path": "src/09.10_test_initial_historical_load.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7195,
+      "lines": 149,
+      "sha256": "54fa35dc77dfc4c3563cbfcf0d2545e80fe01a1aae4e85ed1a9b1dddabb47b09"
+    },
+    {
+      "script": "09.11_test_incremental_monthly_load.py",
+      "path": "src/09.11_test_incremental_monthly_load.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7605,
+      "lines": 162,
+      "sha256": "61c9e9eda3051e874b7aac2a71c1661c6b52aa3d7376c025dadd7c4cdfdfb6d9"
+    },
+    {
+      "script": "09.12_test_exact_duplicate_file_rejection.py",
+      "path": "src/09.12_test_exact_duplicate_file_rejection.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8160,
+      "lines": 174,
+      "sha256": "7c7ad1afdf7f01244e9afbef69d79a231aba6a5c3c5595857002fad409273405"
+    },
+    {
+      "script": "09.13_test_correction_file_processing.py",
+      "path": "src/09.13_test_correction_file_processing.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 9286,
+      "lines": 194,
+      "sha256": "1933d87c2c4b631ab7cbb651afedba47472fe0149c80373716253461b4a97617"
+    },
+    {
+      "script": "09.14_test_schema_change_processing.py",
+      "path": "src/09.14_test_schema_change_processing.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8603,
+      "lines": 178,
+      "sha256": "59793b760923997f2b6ed6272c1e38a6fb7f5f79f7ab97a83ce32e80c8b6e93d"
+    },
+    {
+      "script": "09.15_test_master_scd_history.py",
+      "path": "src/09.15_test_master_scd_history.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7895,
+      "lines": 162,
+      "sha256": "bb357062914098f045ad53a6cbd13957810ac6437710747ee55f91ba5a99681b"
+    },
+    {
+      "script": "09.16_test_duplicate_transaction_prevention.py",
+      "path": "src/09.16_test_duplicate_transaction_prevention.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7494,
+      "lines": 157,
+      "sha256": "d0c3e295874f0176becbb3bc27e88e52c4e6188bfac50dd910890085e60ee94b"
+    },
+    {
+      "script": "09.17_test_rejected_record_handling.py",
+      "path": "src/09.17_test_rejected_record_handling.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8160,
+      "lines": 174,
+      "sha256": "da38fd91009410cac638b28e2debaaecf7e5871589324676166997fd17ec0815"
+    },
+    {
+      "script": "09.18_test_file_audit_logging.py",
+      "path": "src/09.18_test_file_audit_logging.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 10457,
+      "lines": 197,
+      "sha256": "dd8d557291f55fd040c5c1fcd00608b2184c137669a2b71125ae1a780365b714"
+    },
+    {
+      "script": "09.19_test_reconciliation_equation.py",
+      "path": "src/09.19_test_reconciliation_equation.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 7712,
+      "lines": 168,
+      "sha256": "2de2d293cbaa2ce41e4496566c783b031620311adb662ae8f857d22568602ad8"
+    },
+    {
+      "script": "09.20_test_database_constraints.py",
+      "path": "src/09.20_test_database_constraints.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8878,
+      "lines": 191,
+      "sha256": "4c9f5ee613549e44847e90e846cf67b7cc1c128c8133eb7cdcd02a80e14ba3c0"
+    },
+    {
+      "script": "09.21_test_data_lineage.py",
+      "path": "src/09.21_test_data_lineage.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8194,
+      "lines": 171,
+      "sha256": "703ad658eb791d9911110d253143d8445f04b5c5ab5958fa02f8d6815e530484"
+    },
+    {
+      "script": "09.22_validate_revenue_formula.py",
+      "path": "src/09.22_validate_revenue_formula.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 9105,
+      "lines": 174,
+      "sha256": "a965e40e49f2b1cf5b6656f79a3b72c75ffd5b85d3db2f8229476cc9373bb95b"
+    },
+    {
+      "script": "09.23_validate_cost_profit_margin_formulas.py",
+      "path": "src/09.23_validate_cost_profit_margin_formulas.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8231,
+      "lines": 178,
+      "sha256": "095112bcb39e26c60c1d349b5ba21cb3794bac002744e5caa7df831f81234628"
+    },
+    {
+      "script": "09.24_validate_return_metrics.py",
+      "path": "src/09.24_validate_return_metrics.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 9759,
+      "lines": 178,
+      "sha256": "f38711e2c4464b99707b2a7539070a85fc05d090bcf295e40e7cd6c0e1a00a96"
+    },
+    {
+      "script": "09.25_validate_target_metrics.py",
+      "path": "src/09.25_validate_target_metrics.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8656,
+      "lines": 175,
+      "sha256": "b52b03d98d8e94e9560fc3b8c62a2a53d6805047e0dfdab6993a694cc97c6dea"
+    },
+    {
+      "script": "09.26_validate_time_intelligence.py",
+      "path": "src/09.26_validate_time_intelligence.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 8539,
+      "lines": 183,
+      "sha256": "b2fdf6c01cfa93a756d9cff9dec438b820658a7787ad95f967cce5412eef1e18"
+    },
+    {
+      "script": "09.27_validate_customer_segmentation.py",
+      "path": "src/09.27_validate_customer_segmentation.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 9896,
+      "lines": 211,
+      "sha256": "5f070dc716bb4bd306a509099406da85b4d7df60827ad9285a69fcdb8303162c"
+    },
+    {
+      "script": "09.28_validate_ranking_outputs.py",
+      "path": "src/09.28_validate_ranking_outputs.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3356,
+      "lines": 45,
+      "sha256": "07c1a30ff6037bc8a879a552c0cf5fca440fbcde58c3c9898d63b8ce54eb171f"
+    },
+    {
+      "script": "09.29_validate_analytical_tables.py",
+      "path": "src/09.29_validate_analytical_tables.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4200,
+      "lines": 57,
+      "sha256": "cbc30f3602c3531636cb31d2a65f4ec380324ac7a6d7da8816d1e403ef0fa1e0"
+    },
+    {
+      "script": "09.30_validate_powerbi_relationships.py",
+      "path": "src/09.30_validate_powerbi_relationships.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4263,
+      "lines": 64,
+      "sha256": "f8cbc280c7b80c03fa618dfedf1182997140c0280c0046f1a7f955844b740653"
+    },
+    {
+      "script": "09.31_validate_powerbi_kpi_cards.py",
+      "path": "src/09.31_validate_powerbi_kpi_cards.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3916,
+      "lines": 47,
+      "sha256": "18d95e2754b71f81d9e60aed2f88475518e27bc5e3c3a2e631725c8f2d5db80a"
+    },
+    {
+      "script": "09.32_validate_report_visuals.py",
+      "path": "src/09.32_validate_report_visuals.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4210,
+      "lines": 51,
+      "sha256": "318cc2f096c2e88435f9e45846089ac60194176ab27a8159f78561396778fc83"
+    },
+    {
+      "script": "09.33_test_slicers_and_filters.py",
+      "path": "src/09.33_test_slicers_and_filters.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3731,
+      "lines": 44,
+      "sha256": "c399960ceef2ebab31e06f2aaf94f641362341332241db4ad45c7fca39972aee"
+    },
+    {
+      "script": "09.34_test_sorting_and_grouping.py",
+      "path": "src/09.34_test_sorting_and_grouping.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3833,
+      "lines": 45,
+      "sha256": "57c3598937d0816b5bd8847407e0f932d9cc63b8fbd40fe18dc2a195cbf194d6"
+    },
+    {
+      "script": "09.35_test_drill_down.py",
+      "path": "src/09.35_test_drill_down.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4669,
+      "lines": 47,
+      "sha256": "5ac2246f4a8dce1fb0f074cca31a6a611a0b16b5ef20e2e41b9da116474d3fb2"
+    },
+    {
+      "script": "09.36_test_drill_through.py",
+      "path": "src/09.36_test_drill_through.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4370,
+      "lines": 48,
+      "sha256": "1c624992b48c6d61d3f7a5c6372632411a1708f53eddaf93a191cdde2cf15055"
+    },
+    {
+      "script": "09.38_test_bookmarks_navigation.py",
+      "path": "src/09.38_test_bookmarks_navigation.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3185,
+      "lines": 45,
+      "sha256": "25d9b8459daeaac8f10d646f1be8c875680f1f48d6eaa5501b8f0c2474ddb7ac"
+    },
+    {
+      "script": "09.39_test_conditional_formatting.py",
+      "path": "src/09.39_test_conditional_formatting.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3797,
+      "lines": 56,
+      "sha256": "810f526a4a3a2cc5eaeb9615e0148862049a2a62dd4fe17d0036661eace96bfa"
+    },
+    {
+      "script": "09.40_test_row_level_security.py",
+      "path": "src/09.40_test_row_level_security.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3851,
+      "lines": 44,
+      "sha256": "981749a623ee1ab0d9eed6868b7973cf0bfa31c34b0f4ae9aeaa59d65f62cb99"
+    },
+    {
+      "script": "09.41_test_powerbi_refresh.py",
+      "path": "src/09.41_test_powerbi_refresh.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3379,
+      "lines": 44,
+      "sha256": "24d434f8ceab9cf97a0ea73c59e5a7eaa06873d54828e704f20d20e0fc8bc842"
+    },
+    {
+      "script": "09.42_test_failed_load_isolation.py",
+      "path": "src/09.42_test_failed_load_isolation.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3324,
+      "lines": 43,
+      "sha256": "a21effda279d8a00bbf237f1b1fdf538d668c0b45101b841a3bd2e4fbc5bb350"
+    },
+    {
+      "script": "09.43_test_python_performance.py",
+      "path": "src/09.43_test_python_performance.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3840,
+      "lines": 61,
+      "sha256": "528af56198d0086f3ad3dfb02ebec4d228a6911df040eff3a588e8f5af9c64b1"
+    },
+    {
+      "script": "09.44_test_mysql_performance.py",
+      "path": "src/09.44_test_mysql_performance.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3153,
+      "lines": 47,
+      "sha256": "048377a6bd53490a70344c9b8466d6465a17cc97f09d42248003d89cf5fdbad5"
+    },
+    {
+      "script": "09.45_test_powerbi_performance.py",
+      "path": "src/09.45_test_powerbi_performance.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3127,
+      "lines": 41,
+      "sha256": "d75562c1b5f1ea9997ecbe728e07b088d1ece16825dd8d637abefea22d729a89"
+    },
+    {
+      "script": "09.46_run_regression_test_suite.py",
+      "path": "src/09.46_run_regression_test_suite.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 1553,
+      "lines": 29,
+      "sha256": "08887d97658dc5064059ef556b96d01a5a964a3044f7da92999e271f289d766a"
+    },
+    {
+      "script": "09.47_run_user_acceptance_testing.py",
+      "path": "src/09.47_run_user_acceptance_testing.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4887,
+      "lines": 51,
+      "sha256": "e30bc3d5e0123255862a685dc76f24ffdb280b97017766b7f06c543c86047ebd"
+    },
+    {
+      "script": "09.48_log_and_prioritize_defects.py",
+      "path": "src/09.48_log_and_prioritize_defects.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 3589,
+      "lines": 27,
+      "sha256": "19e951449b5f0a862072741418272d44ed0cfa903cd4045d5e316a57cd37001f"
+    },
+    {
+      "script": "09.49_retest_resolved_defects.py",
+      "path": "src/09.49_retest_resolved_defects.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 2242,
+      "lines": 33,
+      "sha256": "a143ddf2ffba2af9597eb48eb7119b4e37c6f3662215111a8e62b8ece5377b83"
+    },
+    {
+      "script": "09.50_complete_final_acceptance_checklist.py",
+      "path": "src/09.50_complete_final_acceptance_checklist.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4688,
+      "lines": 55,
+      "sha256": "419a180903e5b9f652cfa5df249d7d1299bc45bfbc7b1736beba1bf4e0f3df7e"
+    },
+    {
+      "script": "09.51_obtain_final_sign_off.py",
+      "path": "src/09.51_obtain_final_sign_off.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 4521,
+      "lines": 56,
+      "sha256": "def150038d3ed6a0c45ecd6ccd493a8f2afbb3923371e27165003730e7a95b2e"
+    },
+    {
+      "script": "10.01_run_final_e2e_execution.py",
+      "path": "src/10.01_run_final_e2e_execution.py",
+      "module": "Release & Governance",
+      "version": "v1.0.0-PROD",
+      "bytes": 5281,
+      "lines": 62,
+      "sha256": "cb9b68236152aa159f3f37a7debea1316eb60b127044d980da1ba9139e953b48"
+    },
+    {
+      "script": "10.02_confirm_final_reconciliation.py",
+      "path": "src/10.02_confirm_final_reconciliation.py",
+      "module": "Release & Governance",
+      "version": "v1.0.0-PROD",
+      "bytes": 4661,
+      "lines": 53,
+      "sha256": "becf63ad6cdc70df48411d6863e3c509b9c6a523f0f43a3ac91a51b889686ce3"
+    },
+    {
+      "script": "10.03_freeze_production_python_scripts.py",
+      "path": "src/10.03_freeze_production_python_scripts.py",
+      "module": "Release & Governance",
+      "version": "v1.0.0-PROD",
+      "bytes": 3640,
+      "lines": 46,
+      "sha256": "1e255504cbfb3e498448620bf0dcb3fc533553ac1e1c224db184f8d0c76dd349"
+    },
+    {
+      "script": "allowed_value_validation.py",
+      "path": "src/allowed_value_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 9580,
+      "lines": 401,
+      "sha256": "0f4f5907b67457d1fc223344860515f8ac896b8ab6661547c13453c257eeeb68"
+    },
+    {
+      "script": "archive_successful_files.py",
+      "path": "src/archive_successful_files.py",
+      "module": "Ingestion & Staging",
+      "version": "v1.0.0-PROD",
+      "bytes": 16419,
+      "lines": 648,
+      "sha256": "12e7ad767e22b471f403067f915962eaf66c4cf59cb730388196e79ec1899998"
+    },
+    {
+      "script": "batch_id.py",
+      "path": "src/batch_id.py",
+      "module": "Ingestion & Staging",
+      "version": "v1.0.0-PROD",
+      "bytes": 828,
+      "lines": 39,
+      "sha256": "05137967a3e827df7674d6ba6a4d748f4b7eb02d9db4b2c6b95e03732319be0b"
+    },
+    {
+      "script": "config.py",
+      "path": "src/config.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 983,
+      "lines": 35,
+      "sha256": "37329139df42a0dcb170089c60031d73fe1e10e3f6724e95e74126fe20d62ebc"
+    },
+    {
+      "script": "customer_geography_standardization.py",
+      "path": "src/customer_geography_standardization.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 21584,
+      "lines": 958,
+      "sha256": "0d2abcfd25b7b8bd962c042ec25545cc37b475dc05276f2778e184d91699fdb3"
+    },
+    {
+      "script": "data_ingestion.py",
+      "path": "src/data_ingestion.py",
+      "module": "Ingestion & Staging",
+      "version": "v1.0.0-PROD",
+      "bytes": 1073,
+      "lines": 48,
+      "sha256": "f756df0cfb2fcd57aeef43e2c3b4773f32f977b6a4ac0392f2d795cc5ba800df"
+    },
+    {
+      "script": "data_type_validation.py",
+      "path": "src/data_type_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 21882,
+      "lines": 864,
+      "sha256": "3dcc8c7a4f79842ad3816120b4fff5c743da21c62971c629aa408599bf1fcfaf"
+    },
+    {
+      "script": "dataset_profiling.py",
+      "path": "src/dataset_profiling.py",
+      "module": "Ingestion & Staging",
+      "version": "v1.0.0-PROD",
+      "bytes": 8031,
+      "lines": 249,
+      "sha256": "368e6263ece91fb682a68c6c235f64f1351fe8b53111a59758fec6329b9b0921"
+    },
+    {
+      "script": "duplicate_file_detection.py",
+      "path": "src/duplicate_file_detection.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 6697,
+      "lines": 266,
+      "sha256": "883d8a9d599f28e5a7d168613bfb9b825e2a67ce9a2295e5a2723bcc5d40a5d6"
+    },
+    {
+      "script": "file_hash.py",
+      "path": "src/file_hash.py",
+      "module": "Ingestion & Staging",
+      "version": "v1.0.0-PROD",
+      "bytes": 5517,
+      "lines": 225,
+      "sha256": "4b4674f069c86228202132ef38f525253609e3bb07170051f587037922515a37"
+    },
+    {
+      "script": "file_level_validation_result.py",
+      "path": "src/file_level_validation_result.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 11256,
+      "lines": 440,
+      "sha256": "9ae836fd83f749203e8e5b17185c1db358491c8f0485d06de378da62c9423ece"
+    },
+    {
+      "script": "fix_sales_staging_keys.py",
+      "path": "src/fix_sales_staging_keys.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3600,
+      "lines": 90,
+      "sha256": "6a122b24b98d555c85cd34bf351bd74192af5e522fb1ce45ab97c23b253911b2"
+    },
+    {
+      "script": "generate_customers_master.py",
+      "path": "src/generate_customers_master.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 10561,
+      "lines": 383,
+      "sha256": "1116e7f19fc324449ceff0b517f8ae7f82ebcf31ee6633e786983e07fb8a1a40"
+    },
+    {
+      "script": "generate_promotions_master.py",
+      "path": "src/generate_promotions_master.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 8275,
+      "lines": 370,
+      "sha256": "b4a59aadbb9662e5e16e43632d0874930d12c49ba3b4e66bbcd133ed5422164a"
+    },
+    {
+      "script": "generate_salespersons_master.py",
+      "path": "src/generate_salespersons_master.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5762,
+      "lines": 247,
+      "sha256": "399ff1758bfb8cfc881e7dd4b6d44467fefc80b9526a0c0a873938a1e32c2194"
+    },
+    {
+      "script": "generate_stores_master.py",
+      "path": "src/generate_stores_master.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 7411,
+      "lines": 286,
+      "sha256": "9851e2505a0b3a002578b4d68a9596002943941f79d4c013a9bcbebc0f8c68ee"
+    },
+    {
+      "script": "historical_intake_sequence_test.py",
+      "path": "src/historical_intake_sequence_test.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 15719,
+      "lines": 722,
+      "sha256": "994f12f4b802f2deb20b43521dc516bc255b5fab0e69996fbeb09cb6fa2389a6"
+    },
+    {
+      "script": "intake_audit_log.py",
+      "path": "src/intake_audit_log.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 10172,
+      "lines": 437,
+      "sha256": "41f03bc3ecb0006fb76fe5587cf3c9c9393eaaeea8080bec0b2c4804583507ac"
+    },
+    {
+      "script": "load_salespersons.py",
+      "path": "src/load_salespersons.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2424,
+      "lines": 70,
+      "sha256": "ff1380d053c4aa4b60a7293107e1cf09456ba30f3690788d1bdfc288af856c98"
+    },
+    {
+      "script": "mandatory_field_validation.py",
+      "path": "src/mandatory_field_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 7412,
+      "lines": 294,
+      "sha256": "c3aa749f0473df7ba68b47bdaf7f533858f04330233ca8fb48f235e33bc0425c"
+    },
+    {
+      "script": "quarantine_invalid_files.py",
+      "path": "src/quarantine_invalid_files.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 9029,
+      "lines": 412,
+      "sha256": "411e3d301961383cf2f24d6ced442da430a44c03cedd412c337b8770c111e33f"
+    },
+    {
+      "script": "row_level_validation_flags.py",
+      "path": "src/row_level_validation_flags.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 19129,
+      "lines": 871,
+      "sha256": "a09cc511d6eddae72d5218e2c83399d7b7d33b1b5a1221f4ac181387425dcc70"
+    },
+    {
+      "script": "schema_validation.py",
+      "path": "src/schema_validation.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 24904,
+      "lines": 964,
+      "sha256": "e5b667b320711d4ce2c07d93de6878f4e4060d276040875e2a406a3ce9486335"
+    },
+    {
+      "script": "test_config.py",
+      "path": "src/test_config.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 382,
+      "lines": 18,
+      "sha256": "61e4b01b9efb88f75d4ae26321cfda8b7a56c229732a2c0adc67cd5aea03ac0c"
+    },
+    {
+      "script": "test_logger.py",
+      "path": "src/test_logger.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 90,
+      "lines": 5,
+      "sha256": "194d110a63ac7751811ac27da4f32f8147d4f4f1162a6087fb3a10f54b9d8220"
+    },
+    {
+      "script": "test_mysql_connection.py",
+      "path": "src/test_mysql_connection.py",
+      "module": "QA & Validation",
+      "version": "v1.0.0-PROD",
+      "bytes": 736,
+      "lines": 27,
+      "sha256": "049f727267be1d6b16658b164af55522af729d9d240c04b48631462b819d977d"
+    },
+    {
+      "script": "text_standardization.py",
+      "path": "src/text_standardization.py",
+      "module": "Cleaning & Standardization",
+      "version": "v1.0.0-PROD",
+      "bytes": 17696,
+      "lines": 829,
+      "sha256": "d5423407e242dd64b9791ce1eb9eee97f14f3319d6231fb42bfccba7a6db9399"
+    },
+    {
+      "script": "utils.py",
+      "path": "src/utils.py",
+      "module": "Core ETL & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 605,
+      "lines": 32,
+      "sha256": "27a22bb9e05ba7454ebf22d73a61441e23c13cf6ae5cedee709e49b9e7a87f0f"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+﻿file_name,status,rows,date_columns,standardized_values,repaired_values,invalid_dates,unsupported_formats,blank_dates,error
+customers_master.csv,PASS,10000,"date_of_birth, registration_date",20000,0,0,0,0,
+products_master.csv,PASS,2500,launch_date,2500,0,0,0,0,
+sales_2024_01.csv,PASS,53200,order_date,53200,0,0,0,0,
+stores_master.csv,PASS,60,opening_date,60,0,0,0,0,

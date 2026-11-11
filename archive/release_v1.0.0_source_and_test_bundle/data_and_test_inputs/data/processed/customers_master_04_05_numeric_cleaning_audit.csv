@@ -1,0 +1,2 @@
+﻿column_name,numeric_type,rows_processed,values_cleaned,valid_numeric_values,blank_values,unresolved_values,non_integer_values,negative_values,zero_values,status
+,,10000,0,0,0,0,0,0,0,NO_NUMERIC_FIELDS

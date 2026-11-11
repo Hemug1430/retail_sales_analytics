@@ -1,0 +1,2 @@
+﻿dataset,input_file,business_key,rows_read,columns_read,insert_candidates,duplicate_skip_rows,update_or_history_review_rows,reject_rows,blank_business_key_rows,status
+products,products_master_04_06_missing_values_handled_04_07_duplicates_handled.csv,product_id,2500,21,2500,0,0,0,0,PASS

@@ -1,0 +1,1 @@
+promotion_id,promotion_name,promotion_type,start_date,end_date,discount_pct,applicable_category,applicable_channel,minimum_order_value,status,batch_id,source_file_name,source_row_number,record_hash,load_timestamp,created_at,updated_at,record_version,valid_from,valid_to,is_current

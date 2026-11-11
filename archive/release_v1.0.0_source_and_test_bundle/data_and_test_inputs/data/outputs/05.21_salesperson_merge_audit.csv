@@ -1,0 +1,1 @@
+run_timestamp,salesperson_id,source_file_name,source_row_number,batch_id,action,reason,old_record_hash,new_record_hash,old_store_id,new_store_id

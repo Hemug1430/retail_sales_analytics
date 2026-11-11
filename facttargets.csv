@@ -1,0 +1,3 @@
+target_id,target_month,store_id,category,revenue_target,profit_target,order_target,return_rate_target_pct,batch_id,source_file_name,source_row_number,record_hash,load_timestamp,created_at,updated_at
+TGT001,2026-10-01,STORE001,Electronics,50000.0,15000.0,250,2.5,B_20261008_TGT,targets_master.csv,1,ecf3f2f8803b466255acd0df6ea953836e64a642bce9863a89b95240180d9794,2026-10-08 08:46:25,2026-10-08 08:46:25,2026-10-08 08:46:25
+TGT002,2026-10-01,STORE002,Fashion,35000.0,12000.0,180,3.0,B_20261008_TGT,targets_master.csv,2,5d2ddd2da09273821fddc1624e134ee3471dae5cd27d1177b6fa310492beafaa,2026-10-08 08:46:25,2026-10-08 08:46:25,2026-10-08 08:46:25

@@ -1,0 +1,5 @@
+source_file,dataset,source_rows,accepted_rows,corrected_rows,duplicated_rows,rejected_rows,other_documented_rows,classified_rows,difference,status,reason,reconciliation_timestamp
+customers_master.csv,customers,10000,10000,0,0,0,0,10000,0,PASS,Source rows reconcile exactly with documented processing outcomes.,2026-10-07 10:58:51
+products_master.csv,products,2500,2500,0,0,0,0,2500,0,PASS,Source rows reconcile exactly with documented processing outcomes.,2026-10-07 10:58:51
+sales_2024_01.csv,sales,53200,34581,0,0,18619,0,53200,0,PASS,Source rows reconcile exactly with documented processing outcomes.,2026-10-07 10:58:51
+stores_master.csv,stores,60,60,0,0,0,0,60,0,PASS,Source rows reconcile exactly with documented processing outcomes.,2026-10-07 10:58:51

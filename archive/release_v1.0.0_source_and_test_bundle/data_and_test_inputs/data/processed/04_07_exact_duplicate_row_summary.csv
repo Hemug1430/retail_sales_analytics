@@ -1,0 +1,5 @@
+﻿processed_at,source_file,dataset_type,status,rows_read,unique_rows,exact_duplicate_rows,business_key_conflicts,output_rows,output_file
+2026-10-06T22:19:22,customers_master_04_06_missing_values_handled.csv,customers,PASS,10000,10000,0,0,10000,customers_master_04_06_missing_values_handled_04_07_duplicates_handled.csv
+2026-10-06T22:19:24,products_master_04_06_missing_values_handled.csv,products,PASS,2500,2500,0,0,2500,products_master_04_06_missing_values_handled_04_07_duplicates_handled.csv
+2026-10-06T22:20:20,sales_2024_01_04_06_missing_values_handled.csv,sales,PASS,53200,53200,0,0,53200,sales_2024_01_04_06_missing_values_handled_04_07_duplicates_handled.csv
+2026-10-06T22:20:22,stores_master_04_06_missing_values_handled.csv,stores,PASS,60,60,0,0,60,stores_master_04_06_missing_values_handled_04_07_duplicates_handled.csv

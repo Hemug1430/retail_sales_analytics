@@ -1,0 +1,1071 @@
+{
+  "release_tag": "v1.0.0-PROD",
+  "frozen_at": "2026-11-11 09:16:45",
+  "total_sql_scripts": 118,
+  "db_base_tables": 34,
+  "db_views": 11,
+  "scripts": [
+    {
+      "script": "02_06_targets_setup.sql",
+      "path": "sql/02_06_targets_setup.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 396,
+      "lines": 12,
+      "sha256": "3d86e8bf873be0a558c520e022a6faf498938b793d1a5d23795c3f470f40f640"
+    },
+    {
+      "script": "05.01_create_staging_tables.sql",
+      "path": "sql/05.01_create_staging_tables.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 7282,
+      "lines": 245,
+      "sha256": "9e8fc1709914d3d1c6d13065bf1f77b25476fc8d6cfc2815e0f0663eefa76bdc"
+    },
+    {
+      "script": "05.02_create_core_customer_table.sql",
+      "path": "sql/05.02_create_core_customer_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5500,
+      "lines": 250,
+      "sha256": "b106bfc2641b4b099f14272ce5b9147657c9786f8f5644aef0ce77cdaf9af84e"
+    },
+    {
+      "script": "05.03_create_core_product_table.sql",
+      "path": "sql/05.03_create_core_product_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3610,
+      "lines": 146,
+      "sha256": "635ff2c6a84dc71cb0c2d59ec600914d34a0de3b418a017929ccdbd906433b1f"
+    },
+    {
+      "script": "05.04_create_core_store_table.sql",
+      "path": "sql/05.04_create_core_store_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3452,
+      "lines": 144,
+      "sha256": "6ec8bff4699d292e6cd09d4d7e624622b7c34767106541c7b5316c74b7e8db0a"
+    },
+    {
+      "script": "05.05_create_core_salesperson_table.sql",
+      "path": "sql/05.05_create_core_salesperson_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2944,
+      "lines": 113,
+      "sha256": "1815de30452f34cc57956457bd7bee172450b1a5d8a7bd6606dced33e856b598"
+    },
+    {
+      "script": "05.06_create_core_promotion_table.sql",
+      "path": "sql/05.06_create_core_promotion_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3740,
+      "lines": 151,
+      "sha256": "282b1e51900e16088c2a16cf62efdbabea6dc7374b2d0047679ef71d3307f058"
+    },
+    {
+      "script": "05.07_create_fact_sales_table.sql",
+      "path": "sql/05.07_create_fact_sales_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 4604,
+      "lines": 185,
+      "sha256": "f264cbb08e3888d719bf6c4db9d590597f1f4ec87194abcb8f5413cc9ac340d9"
+    },
+    {
+      "script": "05.08_create_fact_returns_table.sql",
+      "path": "sql/05.08_create_fact_returns_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 4290,
+      "lines": 165,
+      "sha256": "13ceeb54b5f4bf30e37dac8e05afdab98883160ee744044f0a2196eb14a327d7"
+    },
+    {
+      "script": "05.09_create_fact_targets_table.sql",
+      "path": "sql/05.09_create_fact_targets_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 4110,
+      "lines": 159,
+      "sha256": "7621715da94dc79b8b8a8007ed20eeec0ca41e428c15dfb1deb41f330b8882ba"
+    },
+    {
+      "script": "05.10_create_primary_key_constraints.sql",
+      "path": "sql/05.10_create_primary_key_constraints.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3486,
+      "lines": 118,
+      "sha256": "ffc660ab51b248500e823798de8c38fe959890728285b31ee6c2a45d8dd94645"
+    },
+    {
+      "script": "05.11_create_foreign_key_constraints.sql",
+      "path": "sql/05.11_create_foreign_key_constraints.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5793,
+      "lines": 177,
+      "sha256": "0b0be9edfcf80a7e1a13b99eb40e6d3ec1ee1aa37456b8cc075e00a65616c402"
+    },
+    {
+      "script": "05.12_create_indexes.sql",
+      "path": "sql/05.12_create_indexes.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 13299,
+      "lines": 523,
+      "sha256": "4af9a2a1973e39b335cf9f9ac17ab18e3841161d7e8fd4057efc0962ee08080d"
+    },
+    {
+      "script": "05.13_create_etl_audit_table.sql",
+      "path": "sql/05.13_create_etl_audit_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 6091,
+      "lines": 221,
+      "sha256": "de4170e9eb16aaa86c6162819ad9f9f2d38d9b315ccd4795516720f74c1c97c7"
+    },
+    {
+      "script": "05.14_create_rejected_record_table.sql",
+      "path": "sql/05.14_create_rejected_record_table.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3690,
+      "lines": 129,
+      "sha256": "73dfc46597a631dd8aa14efad399f11b47f9f0402ff449946a03d0b6dcbf9b3d"
+    },
+    {
+      "script": "05.15_create_master_history_tables.sql",
+      "path": "sql/05.15_create_master_history_tables.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3546,
+      "lines": 134,
+      "sha256": "3edc04b71f208bf622b53bf6b0a359ee740337b1a65e627eae816d03a8b1ac37"
+    },
+    {
+      "script": "06.01_create_dim_date.sql",
+      "path": "sql/06.01_create_dim_date.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 4885,
+      "lines": 211,
+      "sha256": "2d5993c90c256046237ad7109857dc33a3709a5c0974bf391598a90f982084d7"
+    },
+    {
+      "script": "06.02_calculate_gross_revenue.sql",
+      "path": "sql/06.02_calculate_gross_revenue.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3523,
+      "lines": 122,
+      "sha256": "1cb7b597f2f1babde3fa46504482249e9e72aa61b3d3d4e1501d6ea552748c99"
+    },
+    {
+      "script": "06.03_calculate_discount_amount.sql",
+      "path": "sql/06.03_calculate_discount_amount.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3879,
+      "lines": 135,
+      "sha256": "5632266ffca1cde0bcf5093c2d69b6e37e27cb3b88a1e040a7b7364b726c43c7"
+    },
+    {
+      "script": "06.04_calculate_net_revenue.sql",
+      "path": "sql/06.04_calculate_net_revenue.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 4194,
+      "lines": 146,
+      "sha256": "69a73e58af92670677840d973830ba093d5f0154a7a9854341ca188616ba8218"
+    },
+    {
+      "script": "06.05_calculate_historical_cost.sql",
+      "path": "sql/06.05_calculate_historical_cost.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5235,
+      "lines": 194,
+      "sha256": "c0fa17f83b284905dd87ec084b0c5edfa4ba9a0b467aec30798dcba6b357d0c0"
+    },
+    {
+      "script": "06.06_calculate_total_cost.sql",
+      "path": "sql/06.06_calculate_total_cost.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3507,
+      "lines": 135,
+      "sha256": "08af1cd5ea3524d0f06a63d93ed290c9d530458ff2c79c4037f857f1a0321da5"
+    },
+    {
+      "script": "06.07_calculate_profit.sql",
+      "path": "sql/06.07_calculate_profit.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3396,
+      "lines": 137,
+      "sha256": "9d76e5807f901c8b2dae5318fdf68a87088ce55911d44c6e6706010113efa8ca"
+    },
+    {
+      "script": "06.08_calculate_profit_margin.sql",
+      "path": "sql/06.08_calculate_profit_margin.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3922,
+      "lines": 152,
+      "sha256": "a54a15b0d858ecce6f78e3933b931bdc7ad0dbe9d7e44751b7a340933c7aa3db"
+    },
+    {
+      "script": "06.09_calculate_return_refund_metrics.sql",
+      "path": "sql/06.09_calculate_return_refund_metrics.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1452,
+      "lines": 77,
+      "sha256": "4786f1bdeb84a0ab37e75f3a7c522d15e58673f59a0e112ba8f5f1248226858a"
+    },
+    {
+      "script": "06.10_calculate_average_order_value.sql",
+      "path": "sql/06.10_calculate_average_order_value.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2044,
+      "lines": 116,
+      "sha256": "23d2890aa905311575826e28a587fa25f340cf9703f51cc0bb81f8dd0a8390ad"
+    },
+    {
+      "script": "06.11_calculate_growth_metrics.sql",
+      "path": "sql/06.11_calculate_growth_metrics.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5949,
+      "lines": 312,
+      "sha256": "45ab6af5b432a8b8b57fdf3c49f90811de0a2510136961df4a80b66b4b8d6d1d"
+    },
+    {
+      "script": "06.12_calculate_target_achievement.sql",
+      "path": "sql/06.12_calculate_target_achievement.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 5249,
+      "lines": 272,
+      "sha256": "b1dd9ffc27e2576428808432cf1b4302ccb5349d1c622edafde0ee64a5c75263"
+    },
+    {
+      "script": "06.13_create_customer_segmentation.sql",
+      "path": "sql/06.13_create_customer_segmentation.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 4718,
+      "lines": 209,
+      "sha256": "ec1340ca2f0ffbb739f5ea50b4f4b7b1724e63216083577c025f00b43ab2d33e"
+    },
+    {
+      "script": "06.14_create_product_profitability_classification.sql",
+      "path": "sql/06.14_create_product_profitability_classification.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 3905,
+      "lines": 215,
+      "sha256": "9eb57e671c90533ff29b1d7f11086afcbda2f18396c2a7ec366cc540f56e1e73"
+    },
+    {
+      "script": "06.15_create_store_performance_classification.sql",
+      "path": "sql/06.15_create_store_performance_classification.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 14801,
+      "lines": 630,
+      "sha256": "977bf7d2cc835e55630572f2828469e71154cc968cdbbf581fe5b051da4530f7"
+    },
+    {
+      "script": "06.16_create_regional_performance_outputs.sql",
+      "path": "sql/06.16_create_regional_performance_outputs.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 924,
+      "lines": 37,
+      "sha256": "89e9df3bf16df066beb449ac3d5037b2df242e806a2e679d5810ea626601812a"
+    },
+    {
+      "script": "06.17_create_promotion_effectiveness_outputs.sql",
+      "path": "sql/06.17_create_promotion_effectiveness_outputs.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2100,
+      "lines": 50,
+      "sha256": "9122b8cdaaafef082d8d822b50c4e23fb9001990d40baf66259206ee0960d3fb"
+    },
+    {
+      "script": "06.18_create_return_analysis.sql",
+      "path": "sql/06.18_create_return_analysis.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1670,
+      "lines": 41,
+      "sha256": "87f589818a422cdb6313690e84425086cf9945c083a366e1b9f372562b6d7368"
+    },
+    {
+      "script": "06.19_create_ranking_outputs.sql",
+      "path": "sql/06.19_create_ranking_outputs.sql",
+      "module": "Analytics & Reporting",
+      "version": "v1.0.0-PROD",
+      "bytes": 1194,
+      "lines": 32,
+      "sha256": "a43205c8a027f2b98a945bfd4bc34b6465485a0d67277cf76be455ec2e24cb19"
+    },
+    {
+      "script": "06.20_create_running_totals.sql",
+      "path": "sql/06.20_create_running_totals.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1378,
+      "lines": 34,
+      "sha256": "22c963de537f880fabd62957f09c63d24829bcb5355467970db37dd633c4a403"
+    },
+    {
+      "script": "06.21_perform_univariate_eda.sql",
+      "path": "sql/06.21_perform_univariate_eda.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1933,
+      "lines": 42,
+      "sha256": "5d767e0c60bd085925bf722e9521f3ed6a949688ebbd2114791b21f6ff5956fd"
+    },
+    {
+      "script": "06.22_perform_bivariate_eda.sql",
+      "path": "sql/06.22_perform_bivariate_eda.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2346,
+      "lines": 53,
+      "sha256": "a687de7d874d42d354057257920d9df1bb99e07d017ebadb1e677620d7f682dc"
+    },
+    {
+      "script": "06.23_perform_multivariate_eda.sql",
+      "path": "sql/06.23_perform_multivariate_eda.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1888,
+      "lines": 42,
+      "sha256": "e490c4dea4c10dd0c24c2fb49c495d59ec820cd503a61f7f8c757280b1d1f3bb"
+    },
+    {
+      "script": "06.24_perform_descriptive_statistics.sql",
+      "path": "sql/06.24_perform_descriptive_statistics.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2358,
+      "lines": 47,
+      "sha256": "bb5bc48cd2dc5daae0933c268038958bd22a699d2dd5d94f73757e19d9bb4931"
+    },
+    {
+      "script": "06.25_perform_correlation_analysis.sql",
+      "path": "sql/06.25_perform_correlation_analysis.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1365,
+      "lines": 29,
+      "sha256": "f06e57f451c46247dd66185939ca841b4c99638f626a6c66bc6f228371092110"
+    },
+    {
+      "script": "06.26_investigate_outliers.sql",
+      "path": "sql/06.26_investigate_outliers.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1518,
+      "lines": 36,
+      "sha256": "7515e5d018590156c226ae8f50149045c55bd9c777bea3be1fe2ef94bb583392"
+    },
+    {
+      "script": "06.27_investigate_business_events.sql",
+      "path": "sql/06.27_investigate_business_events.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1894,
+      "lines": 42,
+      "sha256": "401b659202192789dd82dae3d28769e12be4add3d2d10ef218f0fe0668a6933c"
+    },
+    {
+      "script": "06.28_create_analytical_sales_view.sql",
+      "path": "sql/06.28_create_analytical_sales_view.sql",
+      "module": "Views & Semantic Layer",
+      "version": "v1.0.0-PROD",
+      "bytes": 2202,
+      "lines": 53,
+      "sha256": "49be2d326ce56f1b92b6111b2d70a31cf23d0f29ff08e9e45393cbba2471c142"
+    },
+    {
+      "script": "06.29_create_analytical_customer_view.sql",
+      "path": "sql/06.29_create_analytical_customer_view.sql",
+      "module": "Views & Semantic Layer",
+      "version": "v1.0.0-PROD",
+      "bytes": 2174,
+      "lines": 47,
+      "sha256": "752fecdb3f35e3226dc12d45c47064d67491bdd0e21e7c1e59f40d382cd5f5b1"
+    },
+    {
+      "script": "06.30_create_analytical_product_view.sql",
+      "path": "sql/06.30_create_analytical_product_view.sql",
+      "module": "Views & Semantic Layer",
+      "version": "v1.0.0-PROD",
+      "bytes": 2541,
+      "lines": 61,
+      "sha256": "f22717f90d5397c4067ab27b567ea77d6fa7c7261d67ec8a193e91561606348f"
+    },
+    {
+      "script": "06.31_create_analytical_store_view.sql",
+      "path": "sql/06.31_create_analytical_store_view.sql",
+      "module": "Views & Semantic Layer",
+      "version": "v1.0.0-PROD",
+      "bytes": 2640,
+      "lines": 67,
+      "sha256": "a2e5c417d4b84cce9162b434d0aba34e475227a36001816866778f9620002d76"
+    },
+    {
+      "script": "06.32_create_analytical_kpi_summary.sql",
+      "path": "sql/06.32_create_analytical_kpi_summary.sql",
+      "module": "Analytics & Reporting",
+      "version": "v1.0.0-PROD",
+      "bytes": 1749,
+      "lines": 36,
+      "sha256": "48dd2f755b91f13f0ca4ed3832338c9cd15b00a6ebb3933a2b65d540d9597217"
+    },
+    {
+      "script": "06.34_validate_analytics_formulas.sql",
+      "path": "sql/06.34_validate_analytics_formulas.sql",
+      "module": "Analytics & Reporting",
+      "version": "v1.0.0-PROD",
+      "bytes": 1206,
+      "lines": 23,
+      "sha256": "5e33d48db5326bb7e85204d6f2570cce43bd722276a839bbde24329a7c872f11"
+    },
+    {
+      "script": "07.02_configure_import_mode.sql",
+      "path": "sql/07.02_configure_import_mode.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 516,
+      "lines": 10,
+      "sha256": "5ab57cce012d9d3b4892bb6d11d1e2bed83dbc0e14f15529b27f53a3951e49fe"
+    },
+    {
+      "script": "07.03_create_power_query_staging.sql",
+      "path": "sql/07.03_create_power_query_staging.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 511,
+      "lines": 10,
+      "sha256": "7b8651780fd4a6413bb8faab5c4111f4c2cc2651a3a84525d784e6ca8e02fe94"
+    },
+    {
+      "script": "07.04_build_fact_sales_table.sql",
+      "path": "sql/07.04_build_fact_sales_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 570,
+      "lines": 12,
+      "sha256": "2645813a4b13834dffdf331e0ccbb9d3c41d3ffc43d248f7db56b2de491541bc"
+    },
+    {
+      "script": "07.05_build_fact_returns_table.sql",
+      "path": "sql/07.05_build_fact_returns_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 609,
+      "lines": 13,
+      "sha256": "505e118b36b0e56036c5083412952c22c5219785cd6532a098330588d92fed4a"
+    },
+    {
+      "script": "07.06_build_fact_targets_table.sql",
+      "path": "sql/07.06_build_fact_targets_table.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 614,
+      "lines": 13,
+      "sha256": "c358ae8ae04d07b24fa3bfd81ba840f0fe4663e115453adfb9c0d44fa7c4bdd0"
+    },
+    {
+      "script": "07.07_build_dim_customer.sql",
+      "path": "sql/07.07_build_dim_customer.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 691,
+      "lines": 13,
+      "sha256": "107b58c918d137f0ea463a778252252a24bd4d3fc7386890adb3d24aa0d4ef16"
+    },
+    {
+      "script": "07.08_build_dim_product.sql",
+      "path": "sql/07.08_build_dim_product.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 662,
+      "lines": 13,
+      "sha256": "87d66652091bd76f4a88afccb1c12b913356454c78b8355dc96e7199da9c65b8"
+    },
+    {
+      "script": "07.09_build_dim_store.sql",
+      "path": "sql/07.09_build_dim_store.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 684,
+      "lines": 13,
+      "sha256": "02df6b00f9186587074d7e9283cd68dae9d452d2c1cb370c9276134105e7ec8b"
+    },
+    {
+      "script": "07.10_build_dim_promotion.sql",
+      "path": "sql/07.10_build_dim_promotion.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 576,
+      "lines": 12,
+      "sha256": "bc03fb8c3417ac10084697f88604b1090390a78cefb75a74e1dbba10d600b6b5"
+    },
+    {
+      "script": "07.11_build_dim_date.sql",
+      "path": "sql/07.11_build_dim_date.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 675,
+      "lines": 14,
+      "sha256": "b369949049244d0db8541479667f048c68014d3b1d1c0420452c4d1a85ca6cb5"
+    },
+    {
+      "script": "07.12_create_star_schema_relationships.sql",
+      "path": "sql/07.12_create_star_schema_relationships.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 670,
+      "lines": 11,
+      "sha256": "87cff8b1be9b02ad6040a28e97880418c562bded1133256de10ece71062060f1"
+    },
+    {
+      "script": "07.13_validate_relationship_cardinality.sql",
+      "path": "sql/07.13_validate_relationship_cardinality.sql",
+      "module": "Validation & QA",
+      "version": "v1.0.0-PROD",
+      "bytes": 818,
+      "lines": 17,
+      "sha256": "6ab2ef2ed2e735c02e2d60ab55a563af43707964350c94103893c67526433c8b"
+    },
+    {
+      "script": "07.14_create_date_hierarchy.sql",
+      "path": "sql/07.14_create_date_hierarchy.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 662,
+      "lines": 13,
+      "sha256": "71e9e7cf43824a9d135308a889c7e784b279eaf2d9a0ad5b8ac00434a481c24a"
+    },
+    {
+      "script": "07.15_create_geography_hierarchy.sql",
+      "path": "sql/07.15_create_geography_hierarchy.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 633,
+      "lines": 13,
+      "sha256": "46790028a6a44024119c2e914132d5cc1ba19d3b5affaf0f1f980ba039fc106d"
+    },
+    {
+      "script": "07.16_create_product_hierarchy.sql",
+      "path": "sql/07.16_create_product_hierarchy.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 680,
+      "lines": 13,
+      "sha256": "2c79964f1cc37f3842243397210204cc1d9aa5c10b81f8f24f976ace41534efb"
+    },
+    {
+      "script": "07.17_create_total_revenue_measure.sql",
+      "path": "sql/07.17_create_total_revenue_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 656,
+      "lines": 12,
+      "sha256": "750173b3acf02b57fd01d7d71e9513e683495b34fa6980e0563f2eaaee918428"
+    },
+    {
+      "script": "07.18_create_total_cost_measure.sql",
+      "path": "sql/07.18_create_total_cost_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 725,
+      "lines": 12,
+      "sha256": "ade1494421ef8153cebe52650299e1053b1dac22ef4c9569aae7d8e51cd2326d"
+    },
+    {
+      "script": "07.19_create_total_profit_measure.sql",
+      "path": "sql/07.19_create_total_profit_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 686,
+      "lines": 12,
+      "sha256": "b9ae726f85887fd43fc4367002c0179bf15be894528ef4b6068e417461ce73b4"
+    },
+    {
+      "script": "07.20_create_profit_margin_measure.sql",
+      "path": "sql/07.20_create_profit_margin_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 751,
+      "lines": 12,
+      "sha256": "16ca03e2cc3d5336dc0bd870ef00f31c32bd9e7d0960ce5805330b5c8d09c671"
+    },
+    {
+      "script": "07.21_create_total_orders_measure.sql",
+      "path": "sql/07.21_create_total_orders_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 677,
+      "lines": 12,
+      "sha256": "b8213a4324e09ab3fcb700910c954d33129b3f8a52d4be03f7a8492229123344"
+    },
+    {
+      "script": "07.22_create_total_customers_measure.sql",
+      "path": "sql/07.22_create_total_customers_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 679,
+      "lines": 12,
+      "sha256": "340d60380bba7c7d88a33caa796791d0fb0423b96ef14906b7e93e2c4c749310"
+    },
+    {
+      "script": "07.23_create_total_quantity_measure.sql",
+      "path": "sql/07.23_create_total_quantity_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 664,
+      "lines": 12,
+      "sha256": "bd92d3821e905be48df3f296f02ce7dc5cf9a110e6e014d675f8a0de5e109473"
+    },
+    {
+      "script": "07.24_create_average_order_value_measure.sql",
+      "path": "sql/07.24_create_average_order_value_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 731,
+      "lines": 12,
+      "sha256": "c211e6e125c938310e44ca567ae35debd985caa50b4c24837d37fe02f2b7080e"
+    },
+    {
+      "script": "07.25_create_return_rate_measure.sql",
+      "path": "sql/07.25_create_return_rate_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 798,
+      "lines": 13,
+      "sha256": "b94fa288c077c1b1dcc539dbac371ece0d8b638ca7475590464af2d4e3f84c4a"
+    },
+    {
+      "script": "07.26_create_refund_amount_measure.sql",
+      "path": "sql/07.26_create_refund_amount_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 632,
+      "lines": 12,
+      "sha256": "721ca12f28815b3c8dfe6624a75f8aa3e7097b88385bf22be28597a53f7ed06a"
+    },
+    {
+      "script": "07.27_create_target_measure.sql",
+      "path": "sql/07.27_create_target_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 627,
+      "lines": 12,
+      "sha256": "df61a1df862137bff922dee7e7a7023127209cdbf93250b549c8cae182f24ba7"
+    },
+    {
+      "script": "07.28_create_target_achievement_measure.sql",
+      "path": "sql/07.28_create_target_achievement_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 833,
+      "lines": 12,
+      "sha256": "181f3201bbe546ea2b1cef1ca1a365dc1044691a0de47ab8754f42ae13ea43a4"
+    },
+    {
+      "script": "07.29_create_variance_to_target_measure.sql",
+      "path": "sql/07.29_create_variance_to_target_measure.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 772,
+      "lines": 12,
+      "sha256": "9ecf2ce610174fc0b37318abdd5e6b483849311903d4151e0231cb62110b8ac1"
+    },
+    {
+      "script": "07.30_create_time_intelligence_measures.sql",
+      "path": "sql/07.30_create_time_intelligence_measures.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 571,
+      "lines": 11,
+      "sha256": "a23aef54a1027e31b6ae334ba7ba928ef556334480233224796b1b512b973fd7"
+    },
+    {
+      "script": "07.31_create_previous_period_measures.sql",
+      "path": "sql/07.31_create_previous_period_measures.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 571,
+      "lines": 11,
+      "sha256": "799f7bb6854a2dc087729f3fef140e50512ff8ee52cb3e24d3f348773670d067"
+    },
+    {
+      "script": "07.32_create_mom_yoy_growth_measures.sql",
+      "path": "sql/07.32_create_mom_yoy_growth_measures.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 617,
+      "lines": 11,
+      "sha256": "0b6e49830f01499ca9953fc6959294de83c48c6ea880288c1e3a0d7d337dd461"
+    },
+    {
+      "script": "07.33_create_ranking_measures.sql",
+      "path": "sql/07.33_create_ranking_measures.sql",
+      "module": "Analytics & Reporting",
+      "version": "v1.0.0-PROD",
+      "bytes": 396,
+      "lines": 9,
+      "sha256": "cad87762a5abf44f56083ccce5250cb524111f38e1c2f471cad627f685660fc2"
+    },
+    {
+      "script": "07.34_07.35_dynamic_titles_and_formatting.sql",
+      "path": "sql/07.34_07.35_dynamic_titles_and_formatting.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 636,
+      "lines": 11,
+      "sha256": "e944c329d46d5f5a5ccabbec1e9f4ed80ac79a877a47008c07e52791ebc1757d"
+    },
+    {
+      "script": "07.36_configure_slicers_and_filters.sql",
+      "path": "sql/07.36_configure_slicers_and_filters.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 525,
+      "lines": 10,
+      "sha256": "6d863cf0a3ebd173e26e7cdf9aea2006263e233f99c4b18a15839c24ab87087b"
+    },
+    {
+      "script": "07.37_configure_refresh_settings.sql",
+      "path": "sql/07.37_configure_refresh_settings.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 606,
+      "lines": 11,
+      "sha256": "63e3ad03aeb44a93807b6a8f20c117dd68b2d2ba3df2924e95d3492177b9d944"
+    },
+    {
+      "script": "07.38_optimize_power_bi_model.sql",
+      "path": "sql/07.38_optimize_power_bi_model.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 589,
+      "lines": 11,
+      "sha256": "26fff764329c051991128c33a4d480f758edd6943cd93f6236689c4a4a59800e"
+    },
+    {
+      "script": "08.01_build_executive_dashboard.sql",
+      "path": "sql/08.01_build_executive_dashboard.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 729,
+      "lines": 12,
+      "sha256": "8175d2b06b5192653194982c0c76da879d956aa57a6ba4323279ae28abf914b2"
+    },
+    {
+      "script": "08.02_build_sales_analysis_page.sql",
+      "path": "sql/08.02_build_sales_analysis_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 798,
+      "lines": 12,
+      "sha256": "c209f265f0f80960de3042eebe6ad86806a1d004d962f43e5bc130c70f2c7a0e"
+    },
+    {
+      "script": "08.03_build_product_profitability_page.sql",
+      "path": "sql/08.03_build_product_profitability_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 930,
+      "lines": 17,
+      "sha256": "c82c0f766818b7a6d6c8eb4216590415c4d6585b2bc046a06f781bd530e28789"
+    },
+    {
+      "script": "08.04_build_store_and_region_page.sql",
+      "path": "sql/08.04_build_store_and_region_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 968,
+      "lines": 17,
+      "sha256": "aedc73de4c2a9ff717deda3d40efc0ec027311dc60571325c5d7a8cfcf0d8577"
+    },
+    {
+      "script": "08.05_build_customer_analysis_page.sql",
+      "path": "sql/08.05_build_customer_analysis_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 814,
+      "lines": 14,
+      "sha256": "572fbe12488baf93c15d8319f1ed6c2d5e5597e27e3c1346d2d5c94fa35478ba"
+    },
+    {
+      "script": "08.06_build_returns_analysis_page.sql",
+      "path": "sql/08.06_build_returns_analysis_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 861,
+      "lines": 16,
+      "sha256": "797f394a9ca72da01a4dfe15ad33f0d161a74269baf7b609b874f34918d37249"
+    },
+    {
+      "script": "08.07_build_targets_page.sql",
+      "path": "sql/08.07_build_targets_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 957,
+      "lines": 18,
+      "sha256": "dd07448b554c7ef60f88814b1089f41d408cb9a5925b2ee29656da32c3172287"
+    },
+    {
+      "script": "08.09_build_definitions_and_help_page.sql",
+      "path": "sql/08.09_build_definitions_and_help_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 646,
+      "lines": 11,
+      "sha256": "1760e44e7a294297e76539ffda54a63a682e799b5e2767e9cc2f643ffd10f725"
+    },
+    {
+      "script": "08.10_add_kpi_cards.sql",
+      "path": "sql/08.10_add_kpi_cards.sql",
+      "module": "Analytics & Reporting",
+      "version": "v1.0.0-PROD",
+      "bytes": 553,
+      "lines": 10,
+      "sha256": "5a5adb9995e02681f6ee5cca3897894209ed35718b8755a6c0943fe319ea27f5"
+    },
+    {
+      "script": "08.11_add_trend_visuals.sql",
+      "path": "sql/08.11_add_trend_visuals.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 548,
+      "lines": 10,
+      "sha256": "30a718b14b03e860f003b2c5ccf4920796eda4d927b48cfa18214ca536d0197e"
+    },
+    {
+      "script": "08.12_add_comparison_visuals.sql",
+      "path": "sql/08.12_add_comparison_visuals.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 561,
+      "lines": 10,
+      "sha256": "22d32c883ce66bf24dfe42fa04b23c21644f26104e3db741ed4e031d92296a80"
+    },
+    {
+      "script": "08.13_add_detailed_tables_matrices.sql",
+      "path": "sql/08.13_add_detailed_tables_matrices.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 537,
+      "lines": 10,
+      "sha256": "e7d11e3ceac26278bc0223e8443f9a655b0764a67df54a81de5ba51cc836d940"
+    },
+    {
+      "script": "08.14_add_slicers.sql",
+      "path": "sql/08.14_add_slicers.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 520,
+      "lines": 10,
+      "sha256": "a6ac77229acfb7cb03f7e970948b311949c0f9a885b1c1040231f82804f3ac90"
+    },
+    {
+      "script": "08.15_configure_filters_scope.sql",
+      "path": "sql/08.15_configure_filters_scope.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 556,
+      "lines": 10,
+      "sha256": "ac9cb1e3a7b37e86af2319423fb73dcf2dda65b5066fd0be80241cd6e82405bf"
+    },
+    {
+      "script": "08.16_configure_sorting_rules.sql",
+      "path": "sql/08.16_configure_sorting_rules.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 555,
+      "lines": 10,
+      "sha256": "8397bb14a9d66872338197055afd6e6f6e775b54ccbeaf32f8ff5df9c0dd3d14"
+    },
+    {
+      "script": "08.17_configure_grouping_bins.sql",
+      "path": "sql/08.17_configure_grouping_bins.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 549,
+      "lines": 10,
+      "sha256": "d247bb56cfae94f8b0d57b0f2e72d9be05a545742c931e052b42b826e0404c15"
+    },
+    {
+      "script": "08.18_configure_drill_down_features.sql",
+      "path": "sql/08.18_configure_drill_down_features.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 552,
+      "lines": 10,
+      "sha256": "7d75d35043c65f3fd194b6d2530456f4cec4dbdb7c174fb37b50a38962ee115a"
+    },
+    {
+      "script": "08.19_configure_drill_through_paths.sql",
+      "path": "sql/08.19_configure_drill_through_paths.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 556,
+      "lines": 10,
+      "sha256": "c5c20b7ecbc10a58c3a60e8ee7681facae66c4351dad3ce5ac4f75871d96b9f9"
+    },
+    {
+      "script": "08.20_build_report_page_tooltips.sql",
+      "path": "sql/08.20_build_report_page_tooltips.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 549,
+      "lines": 10,
+      "sha256": "181e3ea8f53f7e5f63da9b6fbdf1169252ac1d7abd0594b8c63b5929f868e1a4"
+    },
+    {
+      "script": "08.21_create_bookmarks_navigation.sql",
+      "path": "sql/08.21_create_bookmarks_navigation.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 535,
+      "lines": 10,
+      "sha256": "f17312fceb119a145b617848359ff15aeaad04c25b3bbeb80ae074e320c0d4c9"
+    },
+    {
+      "script": "08.22_create_navigation_buttons.sql",
+      "path": "sql/08.22_create_navigation_buttons.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 552,
+      "lines": 10,
+      "sha256": "4c7010148380dacc4b269733c2983c1b4e6f2da67dd33bd4dd4cdc2de9cab08f"
+    },
+    {
+      "script": "08.23_create_reset_filters_action.sql",
+      "path": "sql/08.23_create_reset_filters_action.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 553,
+      "lines": 10,
+      "sha256": "fa4a491e482257273dab61fddfb5806afae5ca4580a5eba5fe479adb6bb861bc"
+    },
+    {
+      "script": "08.24_apply_conditional_formatting_rules.sql",
+      "path": "sql/08.24_apply_conditional_formatting_rules.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 542,
+      "lines": 10,
+      "sha256": "9541a0f89fae6d02f7d6d02ba4208bbcba1e2f6e5cd59baf805d6e92a82a3c71"
+    },
+    {
+      "script": "08.25_configure_top_n_interactions.sql",
+      "path": "sql/08.25_configure_top_n_interactions.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 528,
+      "lines": 10,
+      "sha256": "05527dc23788742c5bd1771807ccf40bd3fd27c60471e92a2c8151dde73c1b6e"
+    },
+    {
+      "script": "08.26_apply_dynamic_titles.sql",
+      "path": "sql/08.26_apply_dynamic_titles.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 524,
+      "lines": 10,
+      "sha256": "c2b629a065d75085aadaeee03e822e47fff1eaa973624d77950fd2a4ac52934b"
+    },
+    {
+      "script": "08.27_validate_visual_choice.sql",
+      "path": "sql/08.27_validate_visual_choice.sql",
+      "module": "Validation & QA",
+      "version": "v1.0.0-PROD",
+      "bytes": 573,
+      "lines": 10,
+      "sha256": "47f06fce6b140facd5ddf0431408498f9c69e38161d404875e2b05682004000c"
+    },
+    {
+      "script": "08.28_apply_accessibility_standards.sql",
+      "path": "sql/08.28_apply_accessibility_standards.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 252,
+      "lines": 6,
+      "sha256": "c99a897b42b00b89b7f5271c7b54511cb825abd0424636c8ad41c299fc37c57e"
+    },
+    {
+      "script": "08.29_apply_consistent_report_design.sql",
+      "path": "sql/08.29_apply_consistent_report_design.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 261,
+      "lines": 6,
+      "sha256": "ee96170c0f0a0af204dd94d462ec18b1b7d3722927930c3721b162d52d250fa8"
+    },
+    {
+      "script": "08.30_optimize_report_performance.sql",
+      "path": "sql/08.30_optimize_report_performance.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 255,
+      "lines": 6,
+      "sha256": "ad30190b65b20bf5340d295e3c9e9c42875eb7c1800e3d320b7a8f63a23cb7b8"
+    },
+    {
+      "script": "5.23_Incremental Insert.sql",
+      "path": "sql/5.23_Incremental Insert.sql",
+      "module": "Merge & Load",
+      "version": "v1.0.0-PROD",
+      "bytes": 1213,
+      "lines": 48,
+      "sha256": "72a5250fe9ab233c4c8a911fc7175b65fe72fb5ff3ca0721611b4c4096143521"
+    },
+    {
+      "script": "8.08_build_transaction_detail_page.sql",
+      "path": "sql/8.08_build_transaction_detail_page.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 840,
+      "lines": 19,
+      "sha256": "88080e33d86afaea3efbb308a391f5ccd4f34198c108c229a5e74eb3df72a75c"
+    },
+    {
+      "script": "issuescript.sql",
+      "path": "sql/issuescript.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 282,
+      "lines": 14,
+      "sha256": "64f34bca933fde2012d8762a685ade5b1736e11391aefef53137604f0f795998"
+    },
+    {
+      "script": "schema.sql",
+      "path": "sql/schema.sql",
+      "module": "DDL & Schema",
+      "version": "v1.0.0-PROD",
+      "bytes": 4202,
+      "lines": 162,
+      "sha256": "01e4c5cfdf3b120d0b04adbe1d841f822cfb2c9528f9ae30bf36931e4de454e4"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+FILE: customers_master.csv
+================================================================================
+
+Rows    : 10000
+Columns : 15
+
+--- NULL PROFILE ---
+                           null_count  null_pct
+customer_id                         0       0.0
+customer_name                       0       0.0
+gender                              0       0.0
+date_of_birth                       0       0.0
+email                               0       0.0
+phone                               0       0.0
+city                                0       0.0
+state                               0       0.0
+region                              0       0.0
+postal_code                         0       0.0
+registration_date                   0       0.0
+customer_segment                    0       0.0
+preferred_channel                   0       0.0
+status                              0       0.0
+purchase_frequency_weight           0       0.0
+
+--- UNIQUE COUNTS ---
+                   column  unique_count
+              customer_id         10000
+            customer_name          9832
+                   gender             2
+            date_of_birth          7823
+                    email          9896
+                    phone         10000
+                     city           316
+                    state            10
+                   region             4
+              postal_code          9953
+        registration_date          1096
+         customer_segment             4
+        preferred_channel             3
+                   status             2
+purchase_frequency_weight             4
+
+--- NUMERIC PROFILE ---
+                                 min           max          mean        median
+phone                      256871.00  9.996358e+09  5.070083e+09  5.083762e+09
+postal_code                    11.00  9.996630e+05  5.032750e+05  5.025420e+05
+purchase_frequency_weight       0.45  4.750000e+00  1.190000e+00  1.000000e+00
+
+--- DATE PROFILE ---
+
+Column: date_of_birth
+Parse failures : 0
+Minimum date   : 1955-09-12
+Maximum date   : 2008-09-10
+
+Column: registration_date
+Parse failures : 0
+Minimum date   : 2023-09-11
+Maximum date   : 2026-09-10
+
+--- DUPLICATE PROFILE ---
+Duplicate rows : 0
+
+--- CATEGORY FREQUENCIES ---
+
+Column: customer_id
+customer_id
+CUST000001    1
+CUST000002    1
+CUST000003    1
+CUST000004    1
+CUST000005    1
+CUST000006    1
+CUST000007    1
+CUST000008    1
+CUST000009    1
+CUST000010    1
+CUST000011    1
+CUST000012    1
+CUST000013    1
+CUST000014    1
+CUST000015    1
+CUST000016    1
+CUST000017    1
+CUST000018    1
+CUST000019    1
+CUST000020    1
+
+Column: customer_name
+customer_name
+Tara Dewan            3
+Zilmil Sathe          2
+Akshay Nazareth       2
+Udant Aggarwal        2
+Ojas Suri             2
+Banjeet Kale          2
+Qasim Prabhakar       2
+Advik Virk            2
+Lavanya Verma         2
+Saumya Raja           2
+Qabil Gill            2
+Ekavir Luthra         2
+Kamala Patla          2
+Kabir Ramakrishnan    2
+Aachal Dara           2
+Vaishnavi Dey         2
+Mahika Sodhi          2
+Imaran Dubey          2
+Rushil Sheth          2
+Eta Mitra             2
+
+Column: gender
+gender
+Female    5014
+Male      4986
+
+Column: date_of_birth
+date_of_birth
+1961-10-21    5
+1980-12-13    5
+2005-07-06    5
+2002-08-22    5
+1961-12-26    4
+1968-07-12    4
+1966-01-23    4
+2000-11-29    4
+1961-05-27    4
+1996-09-29    4
+1997-02-18    4
+1996-05-20    4
+1959-07-19    4
+1983-11-17    4
+1957-08-03    4
+1971-03-16    4
+1979-12-28    4
+1973-01-15    4
+1969-02-10    4
+1992-01-16    4
+
+Column: email
+email
+ckala@example.net          3
+otara@example.net          3
+nisha34@example.org        2
+wkohli@example.com         2
+ychaudhary@example.net     2
+ebaral@example.org         2
+cbaria@example.com         2
+mugdha86@example.org       2
+kai15@example.com          2
+udarsh84@example.com       2
+divya74@example.com        2
+ayush70@example.net        2
+mkulkarni@example.org      2
+qbandi@example.com         2
+ytailor@example.org        2
+inadkarni@example.org      2
+vaishnavi22@example.com    2
+zbhagat@example.net        2
+zmittal@example.org        2
+vrana@example.net          2
+
+Column: city
+city
+Ghaziabad        60
+Aurangabad       58
+Jamalpur         51
+Anantapur        44
+Noida            43
+Narasaraopet     43
+Anand            43
+Lucknow          43
+Kochi            43
+Cuttack          42
+Erode            42
+Bangalore        41
+Panihati         41
+Guna             40
+Tiruvottiyur     40
+Gangtok          40
+Bidhannagar      40
+Rajahmundry      40
+Nandyal          40
+Muzaffarnagar    39
+
+Column: state
+state
+Delhi             1036
+West Bengal       1019
+Gujarat           1019
+Karnataka         1013
+Telangana         1004
+Odisha             999
+Maharashtra        998
+Andhra Pradesh     980
+Tamil Nadu         969
+Punjab             963
+
+Column: region
+region
+South    3966
+East     2018
+West     2017
+North    1999
+
+Column: registration_date
+registration_date
+2026-01-06    21
+2025-06-12    18
+2023-12-05    17
+2026-08-03    17
+2025-11-13    17
+2024-07-07    17
+2026-03-06    17
+2025-03-29    17
+2025-06-23    17
+2025-06-22    17
+2026-03-23    17
+2026-07-27    16
+2024-09-16    16
+2023-12-11    16
+2026-05-18    16
+2025-07-03    16
+2023-12-01    16
+2025-05-14    16
+2025-09-01    16
+2024-12-29    16
+
+Column: customer_segment
+customer_segment
+Regular       4000
+Occasional    3800
+Premium       1700
+VIP            500
+
+Column: preferred_channel
+preferred_channel
+Online        3352
+Mobile App    3332
+Offline       3316
+
+Column: status
+status
+Active      8974
+Inactive    1026

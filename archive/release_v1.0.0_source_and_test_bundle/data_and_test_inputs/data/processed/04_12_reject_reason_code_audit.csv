@@ -1,0 +1,5 @@
+﻿run_timestamp,source_file_name,rows_read,reject_rows,business_key,REQ_NULL,TYPE_PARSE,DOMAIN_INVALID,FK_UNKNOWN,DUP_CONFLICT,RETURN_EXCEEDS_SALE,PROMO_INELIGIBLE,SCHEMA_CHANGE,status,error
+2026-10-07 10:57:32,customers_master_04_11_business_validation.csv,10000,0,customer_id,0,0,0,0,0,0,0,0,PASS,
+2026-10-07 10:57:32,products_master_04_11_business_validation.csv,2500,0,product_id,0,0,0,0,0,0,0,0,PASS,
+2026-10-07 10:57:32,sales_2024_01_04_11_business_validation.csv,53200,18619,customer_id,0,0,18619,0,0,0,0,0,PASS,
+2026-10-07 10:57:32,stores_master_04_11_business_validation.csv,60,0,store_id,0,0,0,0,0,0,0,0,PASS,

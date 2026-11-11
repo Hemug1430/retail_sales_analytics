@@ -1,0 +1,23 @@
+﻿# Environment Variables
+.env
+
+# Python Virtual Environment
+.venv/
+
+# Log Files
+logs/
+
+# Python Cache
+__pycache__/
+*.pyc
+Retail_venv/
+backups/*.sql
+backups/*.zip
+
+
+*.msi
+
+
+data/
+archive/*.zip
+

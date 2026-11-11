@@ -1,0 +1,2 @@
+﻿dataset,status,reason,missing_fields,action
+products,REVIEW,Approved numeric product fields are not available in the current processed input.,"unit_cost, list_price, tax_rate_pct",No substitute fields used; no product values modified.

@@ -1,0 +1,61 @@
+store_id,store_name,store_type,city,state,region,postal_code,opening_date,floor_area_sqft,manager_name,status
+STORE001,Visakhapatnam High Street 1,High Street,Visakhapatnam,Andhra Pradesh,South,530001,2020-04-01,3319,Kavya Verma,Temporarily Closed
+STORE002,Bengaluru Neighborhood 2,Neighborhood,Bengaluru,Karnataka,South,560001,2020-07-25,26632,Anjali Kulkarni,Active
+STORE003,Hyderabad Mall 3,Mall,Hyderabad,Telangana,South,500001,2025-08-15,16325,Aditya Rao,Active
+STORE004,Hyderabad Mall 4,Mall,Hyderabad,Telangana,South,500001,2021-06-14,10123,Rakesh Kapoor,Active
+STORE005,Hyderabad Neighborhood 5,Neighborhood,Hyderabad,Telangana,South,500001,2025-04-17,9015,Riya Mehta,Active
+STORE006,Bengaluru Mall 6,Mall,Bengaluru,Karnataka,South,560001,2024-01-14,21809,Kavya Rao,Temporarily Closed
+STORE007,Coimbatore Neighborhood 7,Neighborhood,Coimbatore,Tamil Nadu,South,641001,2020-10-15,25376,Pooja Iyer,Active
+STORE008,Chennai Mall 8,Mall,Chennai,Tamil Nadu,South,600001,2020-09-28,9555,Manish Patel,Active
+STORE009,Hyderabad High Street 9,High Street,Hyderabad,Telangana,South,500001,2023-04-06,5669,Meera Menon,Active
+STORE010,Vijayawada High Street 10,High Street,Vijayawada,Andhra Pradesh,South,520001,2021-12-19,28947,Aditya Das,Active
+STORE011,Vijayawada Neighborhood 11,Neighborhood,Vijayawada,Andhra Pradesh,South,520001,2020-05-26,14903,Anil Kulkarni,Active
+STORE012,Chennai Mall 12,Mall,Chennai,Tamil Nadu,South,600001,2026-01-18,22767,Mohit Pillai,Active
+STORE013,Bengaluru High Street 13,High Street,Bengaluru,Karnataka,South,560001,2019-10-12,4001,Harish Nair,Active
+STORE014,Hyderabad Mall 14,Mall,Hyderabad,Telangana,South,500001,2021-08-11,5809,Naveen Gupta,Active
+STORE015,Kochi Neighborhood 15,Neighborhood,Kochi,Kerala,South,682001,2026-02-16,29832,Mohit Singh,Active
+STORE016,Chennai Neighborhood 16,Neighborhood,Chennai,Tamil Nadu,South,600001,2022-12-26,9365,Kavya Reddy,Active
+STORE017,Vijayawada Mall 17,Mall,Vijayawada,Andhra Pradesh,South,520001,2026-02-13,8107,Riya Verma,Temporarily Closed
+STORE018,Bengaluru Outlet 18,Outlet,Bengaluru,Karnataka,South,560001,2024-03-08,14933,Kavya Kulkarni,Active
+STORE019,Pune High Street 19,High Street,Pune,Maharashtra,West,411001,2022-08-21,27676,Akash Verma,Active
+STORE020,Goa Neighborhood 20,Neighborhood,Goa,Goa,West,403001,2019-05-12,28879,Lakshmi Joshi,Active
+STORE021,Ahmedabad Mall 21,Mall,Ahmedabad,Gujarat,West,380001,2019-09-29,9413,Sahil Iyer,Active
+STORE022,Pune Mall 22,Mall,Pune,Maharashtra,West,411001,2026-05-08,18858,Neha Das,Active
+STORE023,Pune Mall 23,Mall,Pune,Maharashtra,West,411001,2021-12-20,7075,Isha Kulkarni,Active
+STORE024,Nagpur High Street 24,High Street,Nagpur,Maharashtra,West,440001,2021-12-12,26978,Sanjay Mehta,Active
+STORE025,Nagpur High Street 25,High Street,Nagpur,Maharashtra,West,440001,2023-06-24,14361,Harish Kumar,Active
+STORE026,Nagpur Outlet 26,Outlet,Nagpur,Maharashtra,West,440001,2024-07-14,5478,Akash Patel,Active
+STORE027,Pune Outlet 27,Outlet,Pune,Maharashtra,West,411001,2026-01-14,7742,Pooja Kapoor,Active
+STORE028,Mumbai Neighborhood 28,Neighborhood,Mumbai,Maharashtra,West,400001,2023-04-26,15004,Shivani Das,Active
+STORE029,Nagpur Mall 29,Mall,Nagpur,Maharashtra,West,440001,2021-10-26,20628,Aarav Patel,Active
+STORE030,Nashik Mall 30,Mall,Nashik,Maharashtra,West,422001,2025-01-08,27104,Kavya Iyer,Active
+STORE031,Mumbai High Street 31,High Street,Mumbai,Maharashtra,West,400001,2022-04-17,16746,Deepak Das,Active
+STORE032,Mumbai Neighborhood 32,Neighborhood,Mumbai,Maharashtra,West,400001,2021-12-14,18903,Deepika Naidu,Active
+STORE033,Delhi Mall 33,Mall,Delhi,Delhi,North,110001,2026-01-05,12279,Rakesh Kapoor,Active
+STORE034,Gurugram Mall 34,Mall,Gurugram,Haryana,North,122001,2020-09-18,14752,Deepak Kulkarni,Active
+STORE035,Ludhiana Mall 35,Mall,Ludhiana,Punjab,North,141001,2024-12-12,2518,Shivani Iyer,Closed
+STORE036,Jaipur Neighborhood 36,Neighborhood,Jaipur,Rajasthan,North,302001,2019-03-21,6165,Mohit Nair,Active
+STORE037,Gurugram Mall 37,Mall,Gurugram,Haryana,North,122001,2019-08-26,10392,Sahil Reddy,Active
+STORE038,Delhi Neighborhood 38,Neighborhood,Delhi,Delhi,North,110001,2024-06-13,29239,Ananya Kulkarni,Active
+STORE039,Ludhiana Neighborhood 39,Neighborhood,Ludhiana,Punjab,North,141001,2020-05-30,6707,Rahul Kulkarni,Active
+STORE040,Gurugram High Street 40,High Street,Gurugram,Haryana,North,122001,2021-12-21,19790,Shivani Mehta,Active
+STORE041,Gurugram Neighborhood 41,Neighborhood,Gurugram,Haryana,North,122001,2025-01-17,27248,Divya Nair,Active
+STORE042,Jaipur High Street 42,High Street,Jaipur,Rajasthan,North,302001,2026-04-15,14736,Prakash Naidu,Active
+STORE043,Jaipur High Street 43,High Street,Jaipur,Rajasthan,North,302001,2020-05-10,10623,Harish Reddy,Active
+STORE044,Noida Neighborhood 44,Neighborhood,Noida,Uttar Pradesh,North,201301,2019-03-28,21777,Rohit Verma,Active
+STORE045,Chandigarh Outlet 45,Outlet,Chandigarh,Chandigarh,North,160017,2021-06-21,2735,Ananya Sharma,Active
+STORE046,Bhubaneswar Mall 46,Mall,Bhubaneswar,Odisha,East,751001,2019-10-04,3529,Manish Reddy,Active
+STORE047,Guwahati Neighborhood 47,Neighborhood,Guwahati,Assam,East,781001,2021-09-01,11625,Raj Shah,Active
+STORE048,Guwahati Neighborhood 48,Neighborhood,Guwahati,Assam,East,781001,2020-06-25,26202,Sahil Pillai,Active
+STORE049,Ranchi High Street 49,High Street,Ranchi,Jharkhand,East,834001,2021-09-22,28210,Rahul Mehta,Active
+STORE050,Bhubaneswar Mall 50,Mall,Bhubaneswar,Odisha,East,751001,2020-01-22,5676,Pooja Menon,Active
+STORE051,Ranchi Mall 51,Mall,Ranchi,Jharkhand,East,834001,2023-08-11,17803,Akash Patel,Active
+STORE052,Kolkata High Street 52,High Street,Kolkata,West Bengal,East,700001,2023-07-08,26362,Manish Patel,Active
+STORE053,Bhubaneswar Outlet 53,Outlet,Bhubaneswar,Odisha,East,751001,2021-02-23,8732,Riya Das,Active
+STORE054,Bhubaneswar High Street 54,High Street,Bhubaneswar,Odisha,East,751001,2023-09-25,8512,Kavya Das,Active
+STORE055,Bhopal Mall 55,Mall,Bhopal,Madhya Pradesh,Central,462001,2019-11-05,17020,Rohit Patel,Active
+STORE056,Indore Mall 56,Mall,Indore,Madhya Pradesh,Central,452001,2026-04-25,20213,Aarav Reddy,Active
+STORE057,Bhopal Outlet 57,Outlet,Bhopal,Madhya Pradesh,Central,462001,2020-11-12,15817,Raj Mishra,Active
+STORE058,Bhopal Neighborhood 58,Neighborhood,Bhopal,Madhya Pradesh,Central,462001,2023-07-01,4421,Deepak Joshi,Active
+STORE059,Indore Neighborhood 59,Neighborhood,Indore,Madhya Pradesh,Central,452001,2023-05-19,11190,Priya Nair,Active
+STORE060,Jabalpur Outlet 60,Outlet,Jabalpur,Madhya Pradesh,Central,482001,2025-03-26,24188,Raj Kumar,Active

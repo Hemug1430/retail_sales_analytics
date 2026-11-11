@@ -1,0 +1,6 @@
+﻿child_column,parent_dataset,parent_column,rule,status,rows_checked,blank_values,valid_references,invalid_references,parent_dataset_available,message
+customer_id,customers,customer_id,OPTIONAL,PASS,53200,1607,51593,0,True,Optional blank references preserved; all populated references resolve.
+product_id,products,product_id,REQUIRED,PASS,53200,0,53200,0,True,All required references resolve to existing parent keys.
+store_id,stores,store_id,REQUIRED,INVALID,53200,0,0,53200,True,Required reference contains blank or unresolved parent keys.
+salesperson_id,salespersons,salesperson_id,CONDITIONAL,REVIEW,53200,13260,0,0,False,Parent dataset/key is not available in the current processed inputs. Reference cannot be confirmed yet.
+promotion_id,promotions,promotion_id,OPTIONAL,REVIEW,53200,53200,0,0,False,Parent dataset/key is not available in the current processed inputs. Reference cannot be confirmed yet.

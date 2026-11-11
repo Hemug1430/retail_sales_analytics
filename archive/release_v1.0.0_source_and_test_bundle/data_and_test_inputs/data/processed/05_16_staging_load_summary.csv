@@ -1,0 +1,4 @@
+file,dataset,table,status,rows_read,rows_loaded,rows_skipped_existing,reason
+customers_master_cleaned_staging.csv,customers,stg_customers,PASS,10000,0,10000,All rows were already loaded.
+products_master_cleaned_staging.csv,products,stg_products,REVIEW,2500,0,0,"stg_products: required columns missing from cleaned data: ['unit_cost', 'list_price', 'tax_rate_pct']"
+sales_2024_01_cleaned_staging.csv,sales,stg_sales,PASS,53200,0,53200,All rows were already loaded.

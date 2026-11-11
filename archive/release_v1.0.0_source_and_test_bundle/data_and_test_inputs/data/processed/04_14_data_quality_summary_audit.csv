@@ -1,0 +1,5 @@
+source_file,dataset,batch_id,total_rows,accepted_rows,corrected_rows,duplicated_rows,rejected_rows,missing_rows,invalid_rows,outlier_rows,reconciliation_status,summary_created_at
+customers_master_cleaned_staging.csv,customers,BATCH_20261007_105738_5EBBA7,10000,10000,0,0,0,0,0,0,PASS,2026-10-07 10:58:41
+products_master_cleaned_staging.csv,products,BATCH_20261007_105738_5EBBA7,2500,2500,0,0,0,0,0,0,PASS,2026-10-07 10:58:41
+sales_2024_01_cleaned_staging.csv,sales,BATCH_20261007_105738_5EBBA7,53200,34581,0,0,18619,0,18619,2628,PASS,2026-10-07 10:58:41
+stores_master_cleaned_staging.csv,stores,BATCH_20261007_105738_5EBBA7,60,60,0,0,0,0,0,0,PASS,2026-10-07 10:58:41

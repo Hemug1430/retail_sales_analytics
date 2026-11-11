@@ -1,0 +1,2 @@
+﻿dataset,input_file,business_key,rows_read,columns_read,insert_candidates,duplicate_skip_rows,update_or_history_review_rows,reject_rows,blank_business_key_rows,status
+customers,customers_master_04_06_missing_values_handled_04_07_duplicates_handled.csv,customer_id,10000,20,10000,0,0,0,0,PASS

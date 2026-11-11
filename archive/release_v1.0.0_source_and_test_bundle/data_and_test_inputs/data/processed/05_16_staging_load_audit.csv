@@ -1,0 +1,5 @@
+file,dataset,table,status,rows_read,rows_loaded,rows_skipped_existing,reason
+customers_master_cleaned_staging.csv,customers,stg_customers,PASS,10000,0,10000,All rows were already loaded or no insertable columns remained.
+products_master_cleaned_staging.csv,products,stg_products,PASS,2500,0,2500,All rows were already loaded or no insertable columns remained.
+sales_2024_01_cleaned_staging.csv,sales,stg_sales,PASS,53200,0,53200,All rows were already loaded or no insertable columns remained.
+stores_master_cleaned_staging.csv,stores,stg_stores,PASS,60,0,60,All rows were already loaded or no insertable columns remained.

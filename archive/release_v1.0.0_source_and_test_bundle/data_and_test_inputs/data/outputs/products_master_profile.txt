@@ -1,0 +1,217 @@
+FILE: products_master.csv
+================================================================================
+
+Rows    : 2500
+Columns : 16
+
+--- NULL PROFILE ---
+                   null_count  null_pct
+product_id                  0       0.0
+product_name                0       0.0
+category                    0       0.0
+subcategory                 0       0.0
+brand                       0       0.0
+supplier_name               0       0.0
+unit_price                  0       0.0
+cost_price                  0       0.0
+profit_margin_pct           0       0.0
+gst_percent                 0       0.0
+stock_quantity              0       0.0
+launch_date                 0       0.0
+status                      0       0.0
+weight_kg                   0       0.0
+rating                      0       0.0
+warranty_months             0       0.0
+
+--- UNIQUE COUNTS ---
+           column  unique_count
+       product_id          2500
+     product_name           125
+         category             5
+      subcategory            25
+            brand            25
+    supplier_name          2409
+       unit_price          2500
+       cost_price          2500
+profit_margin_pct          1708
+      gst_percent             3
+   stock_quantity           911
+      launch_date          1372
+           status             2
+        weight_kg          1587
+           rating            21
+  warranty_months             5
+
+--- NUMERIC PROFILE ---
+                      min       max      mean    median
+unit_price         133.75  68547.98  30965.07  30966.97
+cost_price         106.72  49970.74  24811.74  24863.74
+profit_margin_pct   10.01     39.99     24.90     25.06
+gst_percent          5.00     18.00     14.27     18.00
+stock_quantity      10.00   1000.00    502.09    495.00
+weight_kg            0.10     24.98     12.32     12.17
+rating               3.00      5.00      3.99      4.00
+warranty_months      0.00     36.00     15.96     12.00
+
+--- DATE PROFILE ---
+
+Column: launch_date
+Parse failures : 0
+Minimum date   : 2021-09-15
+Maximum date   : 2026-09-13
+
+--- DUPLICATE PROFILE ---
+Duplicate rows : 0
+
+--- CATEGORY FREQUENCIES ---
+
+Column: product_id
+product_id
+PROD000001    1
+PROD000002    1
+PROD000003    1
+PROD000004    1
+PROD000005    1
+PROD000006    1
+PROD000007    1
+PROD000008    1
+PROD000009    1
+PROD000010    1
+PROD000011    1
+PROD000012    1
+PROD000013    1
+PROD000014    1
+PROD000015    1
+PROD000016    1
+PROD000017    1
+PROD000018    1
+PROD000019    1
+PROD000020    1
+
+Column: product_name
+product_name
+Sony Mobile                  33
+Adidas Shirt                 29
+Sony Smart TV                29
+Dove Shampoo                 29
+Lakme Perfume                29
+Puma Kurti                   28
+Allen Solly Jacket           27
+Milton Cookware              27
+Levis Jacket                 27
+Organic India Wheat Flour    26
+LG Laptop                    26
+Organic India Tea            26
+Prestige Dining Table        26
+OnePlus Laptop               26
+Cello Cookware               26
+Himalaya Shampoo             25
+IKEA Dining Table            25
+Dove Moisturizer             25
+Prestige Cookware            25
+IKEA Sofa                    25
+
+Column: category
+category
+Fashion                   509
+Beauty & Personal Care    505
+Home & Kitchen            504
+Electronics               500
+Grocery                   482
+
+Column: subcategory
+subcategory
+Mobile          116
+Cookware        116
+Jacket          114
+Perfume         112
+Laptop          112
+Dining Table    110
+Kurti           107
+Shampoo         106
+Shirt           106
+Wheat Flour     104
+Cooking Oil     101
+Tea             100
+Moisturizer      99
+Sofa             97
+Face Wash        96
+Jeans            96
+Smart TV         96
+Headphones       93
+Curtains         93
+Soap             92
+
+Column: brand
+brand
+Sony             124
+Puma             116
+Dove             115
+Milton           109
+Prestige         108
+L'Oreal          107
+Levis            107
+Organic India    105
+India Gate       105
+Adidas           102
+IKEA             101
+Fortune          100
+Allen Solly      100
+Himalaya          97
+Cello             97
+LG                95
+OnePlus           95
+Samsung           94
+Lakme             94
+Nivea             92
+
+Column: supplier_name
+supplier_name
+Mander and Sons    4
+Rattan Inc         3
+Sharma Ltd         3
+Dua Ltd            3
+Keer Ltd           3
+Dhar Inc           3
+Bhagat and Sons    3
+Jaggi Inc          3
+Mammen and Sons    3
+Nayar Inc          2
+Andra Group        2
+Pingle LLC         2
+Magar LLC          2
+Dixit PLC          2
+Vasa Group         2
+Dara Ltd           2
+Kalita Ltd         2
+Mittal Inc         2
+Singhal LLC        2
+Loke PLC           2
+
+Column: launch_date
+launch_date
+2023-02-05    6
+2026-04-12    6
+2022-06-19    6
+2023-09-24    5
+2023-01-17    5
+2023-09-04    5
+2024-02-27    5
+2022-05-18    5
+2024-03-19    5
+2025-10-12    5
+2024-11-20    5
+2022-07-12    5
+2026-07-02    5
+2022-06-05    5
+2021-12-20    5
+2022-11-05    5
+2026-09-12    5
+2026-08-09    5
+2023-06-28    5
+2024-05-15    5
+
+Column: status
+status
+Active          2236
+Discontinued     264

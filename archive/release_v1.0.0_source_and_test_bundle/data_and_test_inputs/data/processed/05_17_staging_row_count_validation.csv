@@ -1,0 +1,4 @@
+dataset,table_name,expected_file,expected_rows,actual_rows,difference,batch_count,source_file_count,missing_batch_id_rows,missing_source_file_rows,matching_source_file_rows,status,reason
+customers,stg_customers,customers_master_cleaned_staging.csv,10000,10000,0,1,1,0,0,10000,PASS,Expected rows match staging rows and batch/source lineage is preserved.
+products,stg_products,products_master_cleaned_staging.csv,2500,2500,0,1,1,0,0,2500,PASS,Expected rows match staging rows and batch/source lineage is preserved.
+sales,stg_sales,sales_2024_01_cleaned_staging.csv,53200,53200,0,1,1,0,0,53200,PASS,Expected rows match staging rows and batch/source lineage is preserved.
