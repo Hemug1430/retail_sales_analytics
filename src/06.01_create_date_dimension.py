@@ -1,93 +1,255 @@
+
+import sys
+from pathlib import Path
+from datetime import date, timedelta
+
 import mysql.connector
-from datetime import datetime, timedelta
 
-print("==================================================")
-print("06.01 - CREATE DATE DIMENSION DATA")
-print("==================================================")
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-print("Connecting to database...")
-try:
-    conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Root",
-        database="retail_sales_db"
+from config import DB_CONFIG
+
+START_DATE = date(2024, 1, 1)
+END_DATE = date(2027, 12, 31)
+
+EXPECTED_COLUMNS = {
+    "date_key", "date", "day", "day_name",
+    "weekday_number", "week", "week_start_date",
+    "month_number", "month_name", "quarter",
+    "year_quarter", "year", "year_month",
+    "weekend_flag", "day_type"
+}
+
+
+def build_date_record(current_date):
+    iso_calendar = current_date.isocalendar()
+
+    weekday_number = current_date.isoweekday()
+    week_start_date = current_date - timedelta(
+        days=weekday_number - 1
     )
-    cursor = conn.cursor()
-    print("Database connection: SUCCESS\n")
 
-    print("Dropping old table cache...")
-    cursor.execute("DROP TABLE IF EXISTS dim_date;")
-    conn.commit()
+    quarter_number = (current_date.month - 1) // 3 + 1
+    quarter = f"Q{quarter_number}"
 
-    print("Initializing clean structural dim_date storage layout...")
-    # Fixed query string with clear column definitions and correct comma mapping syntax
-    cursor.execute("""
-        CREATE TABLE dim_date (
-            date_key DATE PRIMARY KEY,
-            day_number INT,
-            day_name VARCHAR(15),
-            week_number INT,
-            month_number INT,
-            month_name VARCHAR(15),
-            quarter_number INT,
-            year_number INT,
-            year_month VARCHAR(10),
-            is_weekend INT
-        );
-    """)
-    conn.commit()
+    is_weekend = weekday_number in (6, 7)
 
-    start_date = datetime(2024, 1, 1)
-    end_date = datetime(2026, 12, 31)
-    current_date = start_date
+    return (
+        int(current_date.strftime("%Y%m%d")),
+        current_date,
+        current_date.day,
+        current_date.strftime("%A"),
+        weekday_number,
+        iso_calendar.week,
+        week_start_date,
+        current_date.month,
+        current_date.strftime("%B"),
+        quarter,
+        f"{current_date.year}-{quarter}",
+        current_date.year,
+        current_date.strftime("%Y-%m"),
+        "Yes" if is_weekend else "No",
+        "Weekend" if is_weekend else "Weekday"
+    )
 
-    print("Generating comprehensive calendar matrix entries...")
-    insert_sql = """
-        INSERT INTO dim_date (
-            date_key, day_number, day_name, week_number, 
-            month_number, month_name, quarter_number, year_number, 
-            year_month, is_weekend
-        ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
-    """
 
-    inserted_count = 0
-    while current_date <= end_date:
-        date_str = current_date.strftime("%Y-%m-%d")
-        day_num = current_date.day
-        day_nm = current_date.strftime("%A")
-        
-        # Safely extract the integer index [1] from the isocalendar tuple structure
-        week_num = int(current_date.isocalendar()[1])
-        month_num = current_date.month
-        month_nm = current_date.strftime("%B")
-        quarter_num = (month_num - 1) // 3 + 1
-        year_num = current_date.year
-        year_month_str = current_date.strftime("%Y-%m")
-        is_wknd = 1 if current_date.weekday() in (5, 6) else 0
+def main():
+    connection = None
+    cursor = None
 
-        params = (
-            date_str, day_num, day_nm, week_num,
-            month_num, month_nm, quarter_num, year_num,
-            year_month_str, is_wknd
-        )
-        
-        cursor.execute(insert_sql, params)
-        inserted_count += 1
-        current_date += timedelta(days=1)
+    try:
+        print("=" * 60)
+        print("06.01 - CREATE DATE DIMENSION DATA")
+        print("=" * 60)
 
-    conn.commit()
-    print(f"Calendar generation successfully populated: {inserted_count} consecutive days inserted.")
-    print("--------------------------------------------------")
-    print("==================================================")
-    print("06.01 STATUS: PASS")
-    print("==================================================")
+        print("Connecting to database...")
+        connection = mysql.connector.connect(**DB_CONFIG)
+        cursor = connection.cursor(dictionary=True)
 
-except Exception as e:
-    print(f"Execution Error: {e}")
-    if 'conn' in locals():
-        conn.rollback()
-    print("06.01 STATUS: FAILED")
-finally:
-    if 'cursor' in locals(): cursor.close()
-    if 'conn' in locals(): conn.close()
+        print("Database connection: SUCCESS")
+
+        # Verify existing table
+        cursor.execute("SHOW TABLES LIKE 'dim_date'")
+
+        if cursor.fetchone() is None:
+            raise RuntimeError(
+                "dim_date does not exist. "
+                "Automatic table creation is not permitted."
+            )
+
+        # Verify existing schema
+        cursor.execute("SHOW COLUMNS FROM dim_date")
+
+        actual_columns = {
+            row["Field"] for row in cursor.fetchall()
+        }
+
+        if actual_columns != EXPECTED_COLUMNS:
+            raise RuntimeError(
+                f"Schema mismatch. "
+                f"Missing: {EXPECTED_COLUMNS - actual_columns}; "
+                f"Unexpected: {actual_columns - EXPECTED_COLUMNS}"
+            )
+
+        print("Existing dim_date schema: VERIFIED")
+
+        # Check existing data
+        cursor.execute("""
+            SELECT
+                COUNT(*) AS total_rows,
+                MIN(`date`) AS first_date,
+                MAX(`date`) AS last_date
+            FROM `dim_date`
+        """)
+
+        existing = cursor.fetchone()
+
+        print(f"Existing rows: {existing['total_rows']}")
+        print(f"First date: {existing['first_date']}")
+        print(f"Last date: {existing['last_date']}")
+
+        # Generate calendar records
+        records = []
+        current_date = START_DATE
+
+        while current_date <= END_DATE:
+            records.append(build_date_record(current_date))
+            current_date += timedelta(days=1)
+
+        print(f"Expected calendar dates: {len(records)}")
+
+        # Backticks protect identifiers such as year_month.
+        insert_sql = """
+            INSERT IGNORE INTO `dim_date` (
+                `date_key`,
+                `date`,
+                `day`,
+                `day_name`,
+                `weekday_number`,
+                `week`,
+                `week_start_date`,
+                `month_number`,
+                `month_name`,
+                `quarter`,
+                `year_quarter`,
+                `year`,
+                `year_month`,
+                `weekend_flag`,
+                `day_type`
+            )
+            VALUES (
+                %s, %s, %s, %s, %s,
+                %s, %s, %s, %s, %s,
+                %s, %s, %s, %s, %s
+            )
+        """
+
+        cursor.executemany(insert_sql, records)
+        inserted_count = cursor.rowcount
+
+        connection.commit()
+
+        print(f"New dates inserted: {inserted_count}")
+
+        # Verify calendar coverage
+        cursor.execute("""
+            SELECT
+                COUNT(*) AS total_rows,
+                COUNT(DISTINCT `date`) AS distinct_dates,
+                MIN(`date`) AS first_date,
+                MAX(`date`) AS last_date,
+                COUNT(*) - COUNT(DISTINCT `date`)
+                    AS duplicate_dates
+            FROM `dim_date`
+            WHERE `date` BETWEEN %s AND %s
+        """, (START_DATE, END_DATE))
+
+        result = cursor.fetchone()
+
+        expected_count = (END_DATE - START_DATE).days + 1
+
+        print("\nDATE DIMENSION VERIFICATION")
+        print("-" * 45)
+        print(f"Expected dates       : {expected_count}")
+        print(f"Actual rows          : {result['total_rows']}")
+        print(f"Distinct dates       : {result['distinct_dates']}")
+        print(f"First date           : {result['first_date']}")
+        print(f"Last date            : {result['last_date']}")
+        print(f"Duplicate dates      : {result['duplicate_dates']}")
+
+        if (
+            result["total_rows"] != expected_count
+            or result["distinct_dates"] != expected_count
+            or result["duplicate_dates"] != 0
+        ):
+            raise RuntimeError("Calendar coverage validation failed.")
+
+        # Validate all calendar attributes
+        cursor.execute("""
+            SELECT *
+            FROM `dim_date`
+            WHERE `date` BETWEEN %s AND %s
+            ORDER BY `date`
+        """, (START_DATE, END_DATE))
+
+        actual_records = cursor.fetchall()
+
+        mismatch_count = 0
+        check_date = START_DATE
+
+        for actual in actual_records:
+            expected = build_date_record(check_date)
+
+            actual_tuple = (
+                actual["date_key"],
+                actual["date"],
+                actual["day"],
+                actual["day_name"],
+                actual["weekday_number"],
+                actual["week"],
+                actual["week_start_date"],
+                actual["month_number"],
+                actual["month_name"],
+                actual["quarter"],
+                actual["year_quarter"],
+                actual["year"],
+                actual["year_month"],
+                actual["weekend_flag"],
+                actual["day_type"]
+            )
+
+            if actual_tuple != expected:
+                mismatch_count += 1
+
+            check_date += timedelta(days=1)
+
+        print(f"Attribute mismatches : {mismatch_count}")
+
+        if mismatch_count != 0:
+            raise RuntimeError(
+                "Calendar attribute validation failed."
+            )
+
+        print("\n06.01 STATUS: PASS")
+        print("=" * 60)
+
+    except Exception as error:
+        if connection is not None and connection.is_connected():
+            connection.rollback()
+
+        print(f"\nExecution Error: {error}")
+        print("06.01 STATUS: FAILED")
+        raise
+
+    finally:
+        if cursor is not None:
+            cursor.close()
+
+        if connection is not None and connection.is_connected():
+            connection.close()
+            print("Database connection closed.")
+
+
+if __name__ == "__main__":
+    main()
