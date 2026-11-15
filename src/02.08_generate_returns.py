@@ -1,54 +1,85 @@
+"""
+02.08 - Generate Returns
+Frozen Document 02 CSV header:
+return_id,sales_line_id,return_date,quantity_returned,return_reason,
+return_status,refund_method,refund_amount,processed_store_id
+"""
 
 import csv
-import os
 import random
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import mysql.connector
-from dotenv import load_dotenv
+from config import DB_CONFIG
 
 
-# --------------------------------------------------
-# Project configuration
-# --------------------------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(BASE_DIR / ".env")
+ROOT = Path(__file__).resolve().parent.parent
+OUTPUT = ROOT / "data" / "synthetic" / "returns_master.csv"
 
-OUTPUT_PATH = BASE_DIR / "data" / "synthetic" / "returns_master.csv"
+FIELDS = [
+    "return_id",
+    "sales_line_id",
+    "return_date",
+    "quantity_returned",
+    "return_reason",
+    "return_status",
+    "refund_method",
+    "refund_amount",
+    "processed_store_id",
+]
+
+REASONS = [
+    "Damaged",
+    "Wrong Product",
+    "Quality Issue",
+    "Size/Fit Issue",
+    "Customer Changed Mind",
+    "Late Delivery",
+    "Other",
+]
+
+STATUSES = [
+    "Requested",
+    "Approved",
+    "Rejected",
+    "Refunded",
+]
+
+REFUND_METHODS = [
+    "Original Payment",
+    "Store Credit",
+    "Cash",
+]
 
 
-def get_db_connection():
-    """Connect using the credentials stored in .env."""
+def as_date(value):
+    if isinstance(value, datetime):
+        return value.date()
 
-    required = ["DB_HOST", "DB_NAME", "DB_USER", "DB_PASSWORD"]
-    missing = [key for key in required if not os.getenv(key)]
+    if isinstance(value, date):
+        return value
 
-    if missing:
-        raise RuntimeError(
-            "Missing database configuration: " + ", ".join(missing)
-        )
-
-    return mysql.connector.connect(
-        host=os.getenv("DB_HOST"),
-        port=int(os.getenv("DB_PORT", "3306")),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME")
-    )
+    return datetime.strptime(
+        str(value),
+        "%Y-%m-%d"
+    ).date()
 
 
 def main():
-    conn = None
+
+    connection = None
     cursor = None
 
     try:
-        print("Connecting to database to pull valid sample sales transactions...")
 
-        conn = get_db_connection()
-        cursor = conn.cursor(dictionary=True)
+        connection = mysql.connector.connect(**DB_CONFIG)
 
-        query = """
+        cursor = connection.cursor(
+            dictionary=True
+        )
+
+        cursor.execute("""
             SELECT
                 sales_line_id,
                 store_id,
@@ -56,119 +87,166 @@ def main():
                 quantity,
                 unit_selling_price,
                 discount_pct
-            FROM factsales
-            LIMIT 2500
-        """
 
-        cursor.execute(query)
+            FROM factsales
+
+            WHERE order_status = 'Completed'
+              AND quantity > 0
+
+            ORDER BY
+                order_date,
+                sales_line_id
+
+            LIMIT 2500
+        """)
+
         sales = cursor.fetchall()
 
-        allowed_reasons = [
-            "Damaged",
-            "Wrong Product",
-            "Quality Issue",
-            "Size/Fit Issue",
-            "Customer Changed Mind",
-            "Late Delivery",
-            "Other"
-        ]
+        if not sales:
+            raise RuntimeError(
+                "No Completed sales with positive quantity found."
+            )
 
-        print(
-            f"Generating realistic returns from "
-            f"{len(sales)} valid transaction rows..."
+        OUTPUT.parent.mkdir(
+            parents=True,
+            exist_ok=True
         )
 
-        OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        token = datetime.now().strftime(
+            "%y%m%d%H%M"
+        )
 
-        with open(
-            OUTPUT_PATH,
-            mode="w",
+        count = 0
+
+        with OUTPUT.open(
+            "w",
             newline="",
             encoding="utf-8"
-        ) as file:
-            writer = csv.writer(file)
+        ) as handle:
 
-            writer.writerow([
-                "return_id",
-                "order_id",
-                "product_id",
-                "store_id",
-                "return_date",
-                "quantity",
-                "refund_amount",
-                "return_reason",
-                "status"
-            ])
+            writer = csv.DictWriter(
+                handle,
+                fieldnames=FIELDS
+            )
 
-            return_id_counter = 100001
+            writer.writeheader()
 
-            for sale in sales:
-                if random.random() < 0.15:
+            for index, sale in enumerate(
+                sales,
+                start=1
+            ):
 
-                    ret_qty = random.randint(
-                        1,
-                        int(sale["quantity"])
+                if random.random() >= 0.15:
+                    continue
+
+                qty = random.randint(
+                    1,
+                    int(sale["quantity"])
+                )
+
+                order_date = as_date(
+                    sale["order_date"]
+                )
+
+                return_date = (
+                    order_date
+                    + timedelta(days=random.randint(1, 30))
+                )
+
+                status = random.choices(
+                    STATUSES,
+                    weights=[20, 25, 15, 40],
+                    k=1
+                )[0]
+
+                if status == "Refunded":
+
+                    method = random.choice(
+                        REFUND_METHODS
                     )
 
-                    order_dt = sale["order_date"]
-
-                    if isinstance(order_dt, str):
-                        order_dt = datetime.strptime(
-                            order_dt,
-                            "%Y-%m-%d"
+                    net_unit = (
+                        float(sale["unit_selling_price"])
+                        * (
+                            1
+                            - float(sale["discount_pct"]) / 100
                         )
-
-                    ret_date = order_dt + timedelta(
-                        days=random.randint(1, 14)
                     )
 
-                    price_per_item = float(
-                        sale["unit_selling_price"]
-                    )
-
-                    pct_discount = (
-                        float(sale["discount_pct"])
-                        if sale["discount_pct"] is not None
-                        else 0.0
-                    )
-
-                    actual_item_cost = price_per_item * (
-                        1.0 - pct_discount
-                    )
-
-                    refund_amt = round(
-                        actual_item_cost * ret_qty,
+                    amount = round(
+                        net_unit * qty,
                         2
                     )
 
-                    writer.writerow([
-                        f"RET{return_id_counter}",
-                        sale["sales_line_id"],
-                        "PROD_001",
-                        sale["store_id"],
-                        ret_date.strftime("%Y-%m-%d"),
-                        ret_qty,
-                        refund_amt,
-                        random.choice(allowed_reasons),
-                        "Completed"
-                    ])
+                else:
 
-                    return_id_counter += 1
+                    method = ""
+                    amount = ""
+
+                writer.writerow({
+
+                    "return_id": (
+                        f"RET{token}{index:04d}"
+                    ),
+
+                    "sales_line_id": (
+                        sale["sales_line_id"]
+                    ),
+
+                    "return_date": (
+                        return_date.isoformat()
+                    ),
+
+                    "quantity_returned": qty,
+
+                    "return_reason": random.choice(
+                        REASONS
+                    ),
+
+                    "return_status": status,
+
+                    "refund_method": method,
+
+                    "refund_amount": amount,
+
+                    "processed_store_id": (
+                        sale["store_id"] or ""
+                    ),
+
+                })
+
+                count += 1
 
         print(
-            f"Success! Created returns file at: {OUTPUT_PATH}"
+            f"02.08 STATUS: PASS | "
+            f"Sales examined={len(sales):,} | "
+            f"Returns={count:,}"
+        )
+
+        print(f"Output: {OUTPUT}")
+
+        print(
+            "Header: " + ",".join(FIELDS)
         )
 
     except Exception as exc:
-        print(f"Generation failed: {exc}")
+
+        print(
+            f"02.08 STATUS: FAILED - {exc}"
+        )
+
         raise
 
     finally:
+
         if cursor is not None:
             cursor.close()
 
-        if conn is not None and conn.is_connected():
-            conn.close()
+        if (
+            connection is not None
+            and connection.is_connected()
+        ):
+            connection.close()
 
 
 if __name__ == "__main__":
