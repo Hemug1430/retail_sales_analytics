@@ -1,5 +1,6 @@
-import mysql.connector
+﻿import mysql.connector
 from datetime import datetime
+from config import DB_CONFIG
 
 print("==================================================")
 print("06.33 - PUSH PYTHON ANALYTICAL OUTPUTS TO MYSQL")
@@ -7,12 +8,7 @@ print("==================================================")
 
 try:
     # 1. Establish data link connection matrix
-    conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Root",
-        database="retail_sales_db"
-    )
+    conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
     print("Database Connection: SUCCESS")
 
@@ -55,3 +51,4 @@ except Exception as e:
 finally:
     if 'cursor' in locals(): cursor.close()
     if 'conn' in locals(): conn.close()
+
