@@ -10,7 +10,7 @@ An end-to-end **Enterprise Retail Data Engineering, MySQL Star-Schema Warehouse,
 | :--- | :---: | :---: |
 | **Eligible Sales Transactions (`factsales`)** | `34,581` orders | `0.00` variance across Source, Staging, Core & BI |
 | **Gross / Net Sales Revenue** | `1,701,953,364.69` | Verified across Python, MySQL & DAX (`10.02`) |
-| **Verified Returns & Refunds (`factreturns`)** | `19,999,194.53` | Reconciled across `factreturns` & Power BI |
+| **Realized Refunds (`factreturns`, Refunded status only)** | `19,999,194.53` | Reconciled across `factreturns` & Power BI |
 | **Net Revenue After Returns** | `1,681,954,170.16` | Audited & certified (`docs/10.02_Final_Reconciliation_Certificate.md`) |
 | **Automated QA & Regression Coverage** | `50` QA modules (`44/44` suites passing) | `0` open defects (`docs/09.48_Defect_Log_and_Retest_Ledger.md`) |
 | **Security & Reproducibility Audits** | `0` embedded secrets / `3/3` rebuild gates | Certified (`10.13` & `10.14`) |

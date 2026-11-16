@@ -31,7 +31,7 @@ def run():
         ch_desc = ", ".join(f"{ch}={r2((r2(v)/tot_rev)*Decimal(100))}%" for ch, v in ch_rows)
         u4 = len(ch_rows) == 2
         scenarios.append(("UAT-04", "Omnichannel Strategy", "Store vs Online Channel Mix", ch_desc, "PASS" if u4 else "FAIL"))
-        (ref_amt, ret_units) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COALESCE(SUM(quantity_returned),0) FROM factreturns")).fetchone()
+        (ref_amt, ret_units) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COALESCE(SUM(quantity_returned),0) FROM factreturns WHERE return_status = 'Refunded'")).fetchone()
         ret_rate = r2((Decimal(int(ret_units))/Decimal(tot_units))*Decimal(100))
         u5 = r2(ref_amt) > 0 and ret_rate < Decimal("5.00")
         scenarios.append(("UAT-05", "Loss Prevention Lead", "Refund & Return Rate Audit", f"TotalRefunds={r2(ref_amt):,.2f}, ReturnRate={ret_rate}%", "PASS" if u5 else "FAIL"))

@@ -27,7 +27,7 @@ def run():
     with get_db_engine().begin() as c:
         rev = "(f.quantity * f.unit_selling_price * (1 - COALESCE(f.discount_pct, 0)/100.0))"
         (f_rev, f_cnt) = c.execute(text(f"SELECT ROUND(SUM({rev}),2), COUNT(*) FROM factsales f")).fetchone()
-        (ref_amt, _) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COUNT(*) FROM factreturns")).fetchone()
+        (ref_amt, _) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COUNT(*) FROM factreturns WHERE return_status = 'Refunded'")).fetchone()
         next_bid = int(c.execute(text("SELECT COALESCE(MAX(batch_id),0)+1 FROM pipeline_execution_logs")).scalar())
         cols = [col for col, *_ in c.execute(text("SHOW COLUMNS FROM pipeline_execution_logs")).fetchall()]
         ins_cols = [col for col in cols if col.lower() not in ("id", "log_id", "execution_id")]

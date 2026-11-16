@@ -32,7 +32,7 @@ def run():
         v1, v2 = abs(core_rev - r2(st_rev)), abs(core_rev - r2(pr_rev))
         g2_ok = v1 <= Decimal("0.05") and v2 <= Decimal("0.05")
         gates.append(("REC-02", "Trusted Core -> Analytical Views", f"Core={core_rev:,.2f} | StoreView={r2(st_rev):,.2f} (Diff={v1:.2f}) | ProdView={r2(pr_rev):,.2f} (Diff={v2:.2f})", "PASS" if g2_ok else "FAIL"))
-        (ref_amt, ret_cnt) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COUNT(*) FROM factreturns")).fetchone()
+        (ref_amt, ret_cnt) = c.execute(text("SELECT ROUND(COALESCE(SUM(refund_amount),0),2), COUNT(*) FROM factreturns WHERE return_status = 'Refunded'")).fetchone()
         net_after_ret = core_rev - r2(ref_amt)
         g3_ok = r2(ref_amt) > 0 and net_after_ret > 0
         gates.append(("REC-03", "Returns & Net Adjusted Total", f"GrossNet={core_rev:,.2f} - Refunds={r2(ref_amt):,.2f} ({int(ret_cnt)} returns) = {net_after_ret:,.2f}", "PASS" if g3_ok else "FAIL"))
