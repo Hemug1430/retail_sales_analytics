@@ -1,14 +1,14 @@
 import mysql.connector
 
+from config import DB_CONFIG
+
 print("==================================================")
 print("05.32 - OPTIMIZE SQL QUERIES")
 print("==================================================")
 
 print("Connecting to database...")
 try:
-    conn = mysql.connector.connect(
-        host="localhost", user="root", password="Root", database="retail_sales_db"
-    )
+    conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor()
     print("Database connection: SUCCESS\n")
 

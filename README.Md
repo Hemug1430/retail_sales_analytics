@@ -1,4 +1,4 @@
-﻿# Retail Sales Analytics Platform (`v1.0.0-PROD`)
+# Retail Sales Analytics Platform (`v1.0.0-PROD`)
 
 An end-to-end **Enterprise Retail Data Engineering, MySQL Star-Schema Warehouse, Automated QA Suite, and Power BI Executive Analytics** solution built with **Python 3.12**, **MySQL 8**, **SQLAlchemy**, and **Power BI**.
 
@@ -34,7 +34,7 @@ retail_sales_analytics/
 ├── sql/                  # MySQL DDL schemas, merge procedures, analytical views & QA queries
 ├── dashboards/           # Active & frozen release Power BI files (Retail_Sales_Analytics_Model_v1.0.0-PROD.pbix)
 ├── docs/                 # SOP Runbook, Handover Checklist, User Guide, Manifests & Sign-Off Certificates
-├── tests/                # Unit and integration test suites
+├── notebooks/            # Phase 02 synthetic-data generator notebooks
 ├── requirements.txt      # Pinned Python runtime dependencies
 └── README.Md             # Project overview and quickstart guide
 ```
@@ -43,7 +43,7 @@ retail_sales_analytics/
 
 ## Quickstart & Operations
 
-1. **Configure Environment:** Create a local `.env` file with `DB_HOST`, `DB_PORT`, `DB_NAME=retail_sales_db`, `DB_USER`, and `DB_PASSWORD` (excluded from Git via `.gitignore`).
+1. **Configure Environment:** Create a local `.env` file with `DB_HOST`, `DB_PORT`, `DB_NAME=retail_sales_db`, `DB_USER`, and `DB_PASSWORD` (excluded from Git via `.gitignore`; copy `.env.example` as a starting point).
 2. **Install Dependencies:**
    ```powershell
    python -m venv .venv

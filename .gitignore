@@ -21,3 +21,12 @@ backups/*.zip
 data/
 archive/*.zip
 
+
+# Virtual environments / notebooks
+retail_env/
+**/retail_env/
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+venv/
+env/
+*.pyd

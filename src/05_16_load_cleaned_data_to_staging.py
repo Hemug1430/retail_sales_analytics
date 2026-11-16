@@ -158,8 +158,13 @@ DB_USER = get_env(
 DB_PASSWORD = get_env(
     "MYSQL_PASSWORD",
     "DB_PASSWORD",
-    default="Root",
+    default=None,
 )
+
+if not DB_PASSWORD:
+    raise ValueError(
+        "DB_PASSWORD (or MYSQL_PASSWORD) must be set in .env"
+    )
 
 
 # ============================================================

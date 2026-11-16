@@ -1,14 +1,14 @@
 import mysql.connector
 
+from config import DB_CONFIG
+
 print("==================================================")
 print("05.33 - VALIDATE DATABASE INTEGRITY")
 print("==================================================")
 
 print("Connecting to database...")
 try:
-    conn = mysql.connector.connect(
-        host="localhost", user="root", password="Root", database="retail_sales_db"
-    )
+    conn = mysql.connector.connect(**DB_CONFIG)
     cursor = conn.cursor(dictionary=True)
     print("Database connection: SUCCESS\n")
 
