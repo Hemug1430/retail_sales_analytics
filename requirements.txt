@@ -1,4 +1,7 @@
-﻿mysql-connector-python==26.10.0
+﻿Faker==40.54.0
+mysql-connector-python==26.10.0
 numpy==2.5.3
 pandas==3.0.6
+PyMySQL==1.2.4
 python-dotenv==1.2.4
+SQLAlchemy==2.1.8
