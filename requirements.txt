@@ -73,3 +73,5 @@ tzdata==2026.3
 uvicorn==0.52.4
 wcwidth==0.8.3
 xarray==2026.7.0
+mysql-connector-python==26.10.0
+python-dotenv==1.2.4
