@@ -17,14 +17,14 @@ SELECT
     -- Multi-variable quantitative tracking metrics
     COUNT(DISTINCT fs.sales_line_id) AS total_transactions,
     SUM(fs.quantity) AS total_units_moved,
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS net_revenue_earned,
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS net_revenue_earned,
     
     -- Advanced multi-variable profit metrics tracking estimated margins
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) - 
-          SUM(fs.quantity * (fs.unit_selling_price * 0.60)), 2) AS estimated_contribution_profit,
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) - 
+          SUM(fs.quantity * p.unit_cost), 2) AS estimated_contribution_profit,
           
     -- Interactive efficiency metric (Revenue earned per individual unit sold)
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) / SUM(fs.quantity), 2) AS average_revenue_per_unit
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) / SUM(fs.quantity), 2) AS average_revenue_per_unit
 
 FROM factsales fs
 INNER JOIN core_products p ON fs.product_id = p.product_id

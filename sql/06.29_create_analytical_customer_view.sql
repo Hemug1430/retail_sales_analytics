@@ -7,7 +7,7 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS analytics_derived_customer_summary;
 
 -- Compile a high-performance customer profiling layout layer for downstream analytics
-CREATE VIEW analytics_derived_customer_summary AS
+CREATE OR REPLACE VIEW analytics_derived_customer_summary AS
 SELECT 
     fs.customer_id,
     
@@ -16,23 +16,24 @@ SELECT
     SUM(fs.quantity) AS total_units_purchased,
     
     -- Monetary & Value Spread KPIs
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS lifetime_net_spend,
-    ROUND(AVG(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS average_order_value,
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS lifetime_net_spend,
+    ROUND(AVG(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS average_order_value,
     
     -- Margin Contribution KPIs (Assuming standard 60% production cost baseline)
     ROUND(
-        SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) - 
-        SUM(fs.quantity * (fs.unit_selling_price * 0.60)), 2
+        SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) - 
+        SUM(fs.quantity * p.unit_cost), 2
     ) AS customer_contribution_profit,
     
     -- Dynamic Behavioral Segmentation Flags based on monetary spend velocity
     CASE 
-        WHEN SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) >= 500000 THEN 'VIP Tier'
-        WHEN SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) >= 200000 THEN 'Premium Tier'
+        WHEN SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) >= 500000 THEN 'VIP Tier'
+        WHEN SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) >= 200000 THEN 'Premium Tier'
         ELSE 'Core Retail Tier'
     END AS customer_value_segment
 
 FROM factsales fs
+INNER JOIN core_products p ON fs.product_id = p.product_id
 GROUP BY fs.customer_id;
 
 -- Execute a verification checkpoint query audit to confirm view accuracy

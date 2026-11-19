@@ -13,7 +13,7 @@ SELECT
 -- 1. CREATE PROFIT MARGIN VIEW
 --
 -- Definition:
--- Profit Margin % = Profit / Net Revenue × 100
+-- Profit Margin % = Profit / Net Revenue Ã— 100
 --
 -- Zero-denominator treatment:
 -- If Net Revenue = 0, Profit Margin % = 0.

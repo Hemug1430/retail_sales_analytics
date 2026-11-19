@@ -12,9 +12,11 @@ No table creation, renaming or truncation.
 All staging and merge operations are scoped by batch_id.
 """
 
+import argparse
 import csv
 import hashlib
 import json
+import re
 import uuid
 
 from datetime import date, datetime
@@ -192,9 +194,9 @@ def parse_amount(value):
 # 4. READ CSV AND GENERATE BATCH
 # ============================================================
 
-def read_source():
+def read_source(csv_path=CSV_PATH):
 
-    raw_bytes = CSV_PATH.read_bytes()
+    raw_bytes = csv_path.read_bytes()
 
     file_hash = sha256(raw_bytes)
 
@@ -207,7 +209,7 @@ def read_source():
 
     rows = []
 
-    with CSV_PATH.open(
+    with csv_path.open(
         "r",
         newline="",
         encoding="utf-8-sig"
@@ -281,9 +283,17 @@ def read_source():
 # 5. NORMALIZE RECORD
 # ============================================================
 
+def normalize_store_id(value):
+    val = clean(value)
+    if not val:
+        return None
+    m = re.match(r"^STORE0+(\d{3})$", val.upper())
+    return f"STORE{m.group(1)}" if m else val
+
+
 def normalize(raw):
 
-    return {
+    rec = {
 
         "return_id": clean(
             raw.get("return_id")
@@ -320,12 +330,16 @@ def normalize(raw):
             raw.get("refund_amount")
         ),
 
-        "processed_store_id": clean(
+        "processed_store_id": normalize_store_id(
             raw.get("processed_store_id")
             or raw.get("store_id")
         ),
 
     }
+    if rec["return_status"] != "Refunded":
+        rec["refund_method"] = None
+        rec["refund_amount"] = None
+    return rec
 
 
 # ============================================================
@@ -874,7 +888,7 @@ def update_file_log(
 # 14. MAIN
 # ============================================================
 
-def main():
+def process_file(csv_path=CSV_PATH):
 
     connection = None
     cursor = None
@@ -896,10 +910,10 @@ def main():
 
     try:
 
-        if not CSV_PATH.exists():
+        if not csv_path.exists():
 
             raise FileNotFoundError(
-                f"CSV not found: {CSV_PATH}"
+                f"CSV not found: {csv_path}"
             )
 
         (
@@ -907,9 +921,9 @@ def main():
             file_hash,
             file_size,
             batch_id
-        ) = read_source()
+        ) = read_source(csv_path)
 
-        file_name = CSV_PATH.name
+        file_name = csv_path.name
         records_read = len(rows)
 
         file_id = sha256(
@@ -1196,7 +1210,27 @@ def main():
                 continue
 
             # ------------------------------------------------
-            # VALIDATE RETURN DATE
+            if record["processed_store_id"] is not None:
+                cursor.execute(
+                    "SELECT 1 FROM core_stores WHERE store_id = %s LIMIT 1",
+                    (record["processed_store_id"],),
+                )
+                if cursor.fetchone() is None:
+                    insert_reject(
+                        cursor,
+                        batch_id,
+                        file_name,
+                        row_number,
+                        record["return_id"],
+                        digest,
+                        "FK_UNKNOWN",
+                        f"processed_store_id {record['processed_store_id']} does not exist in core_stores",
+                        raw,
+                    )
+                    counts["rejected"] += 1
+                    continue
+
+        # VALIDATE RETURN DATE
             # ------------------------------------------------
 
             if (
@@ -1546,6 +1580,27 @@ def main():
         ):
 
             connection.close()
+
+
+def main():
+    parser = argparse.ArgumentParser(description="05.24 Returns Incremental Insert (single or multi-month)")
+    parser.add_argument("--file", type=str, default=None, help="Process a specific CSV file path")
+    parser.add_argument("--limit", type=int, default=None, help="Limit number of monthly returns_20*.csv files (e.g. 2 for 2-month test)")
+    args = parser.parse_args()
+
+    if args.file:
+        files = [Path(args.file)]
+    else:
+        files = sorted((ROOT / "data" / "synthetic").glob("returns_20*.csv"))
+        if not files and CSV_PATH.exists():
+            files = [CSV_PATH]
+        if args.limit:
+            files = files[:args.limit]
+
+    print(f"05.24 MULTI-FILE RUN: {len(files)} file(s) queued")
+    for idx, fpath in enumerate(files, start=1):
+        print(f"\n--- [{idx}/{len(files)}] Processing {fpath.name} ---")
+        process_file(fpath)
 
 
 if __name__ == "__main__":

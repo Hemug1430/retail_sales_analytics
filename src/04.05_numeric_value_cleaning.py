@@ -80,6 +80,27 @@ NUMERIC_FIELDS = {
 }
 
 
+# Monthly files (sales_YYYY_MM.csv etc.) share the rules of the
+# January template entries above.
+MONTHLY_RULE_TEMPLATES = [
+    (re.compile(r"^sales_\d{4}_\d{2}\.csv$"), "sales_2024_01.csv"),
+    (re.compile(r"^returns_\d{4}_\d{2}\.csv$"), "returns_2024_01.csv"),
+    (re.compile(r"^targets_\d{4}_\d{2}\.csv$"), "targets_2024_01.csv"),
+]
+
+
+def get_field_rules(file_name):
+    """Return numeric rules for a file, including any monthly file."""
+    if file_name in NUMERIC_FIELDS:
+        return NUMERIC_FIELDS[file_name]
+
+    for pattern, template in MONTHLY_RULE_TEMPLATES:
+        if pattern.match(file_name):
+            return NUMERIC_FIELDS[template]
+
+    return {}
+
+
 # ============================================================
 # HELPER FUNCTIONS
 # ============================================================
@@ -319,7 +340,7 @@ def process_file(file_path):
     print(f"Rows read  : {len(df):,}")
     print(f"Columns    : {len(df.columns)}")
 
-    field_rules = NUMERIC_FIELDS.get(file_name, {})
+    field_rules = get_field_rules(file_name)
 
     audit_rows = []
 

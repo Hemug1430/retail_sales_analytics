@@ -156,6 +156,11 @@ APPROVED_VALUES = {
     "payment_method": {
         "cash": "Cash",
         "card": "Card",
+        # Doc 02 allows only Cash | Card | UPI | Wallet | Net Banking.
+        # The simulated sales files use the specific card types, which
+        # are standardized to the approved parent value "Card".
+        "credit card": "Card",
+        "debit card": "Card",
         "upi": "UPI",
         "wallet": "Wallet",
         "net banking": "Net Banking",

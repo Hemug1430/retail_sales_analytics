@@ -27,6 +27,7 @@ Important:
 """
 
 from pathlib import Path
+import re
 import pandas as pd
 import numpy as np
 
@@ -123,11 +124,42 @@ def flag_row(df, mask, reason):
 # SALES VALIDATION
 # ============================================================
 
+def list_sales_datasets():
+    """Every sales month present in data/processed, oldest first."""
+    keys = set()
+
+    for file_path in PROCESSED_DIR.glob("sales_*.csv"):
+        match = re.match(r"^(sales_\d{4}_\d{2})_", file_path.name)
+
+        if match:
+            keys.add(match.group(1))
+
+    return sorted(keys)
+
+
 def validate_sales():
-    path = find_processed_dataset("sales_2024_01")
+    """Validate every monthly sales dataset; return one status frame."""
+    keys = list_sales_datasets() or ["sales_2024_01"]
+
+    frames = []
+
+    for key in keys:
+        result = validate_sales_dataset(key)
+
+        if result is not None:
+            frames.append(result)
+
+    if not frames:
+        return None
+
+    return pd.concat(frames, ignore_index=True)
+
+
+def validate_sales_dataset(dataset_key):
+    path = find_processed_dataset(dataset_key)
 
     if path is None:
-        print("Sales dataset not found. Skipping sales validation.")
+        print(f"Sales dataset {dataset_key} not found. Skipping.")
         return None
 
     df = pd.read_csv(path, encoding="utf-8-sig")
@@ -450,7 +482,7 @@ def validate_sales():
 
     output_path = (
         PROCESSED_DIR
-        / "sales_2024_01_04_11_business_validation.csv"
+        / f"{dataset_key}_04_11_business_validation.csv"
     )
 
     df.to_csv(
@@ -478,7 +510,7 @@ def validate_sales():
 
     print(f"\nOutput : {output_path}")
 
-    return df
+    return df[["business_validation_status"]].copy()
 
 
 # ============================================================

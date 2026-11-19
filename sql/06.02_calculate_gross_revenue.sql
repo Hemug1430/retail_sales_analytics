@@ -18,7 +18,7 @@ CREATE SCHEMA IF NOT EXISTS analytics;
 -- 2. CREATE REUSABLE GROSS REVENUE VIEW
 --
 -- Frozen definition:
--- Gross Sales = Quantity × Unit Selling Price
+-- Gross Sales = Quantity Ã— Unit Selling Price
 -- Completed sales only.
 --
 -- Cancelled lines are retained but contribute zero

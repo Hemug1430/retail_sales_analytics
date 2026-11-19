@@ -1,3 +1,4 @@
+import re
 """
 Retail Sales Analytics
 Tracker 04.08 - Handle Business-Key Duplicates
@@ -75,8 +76,11 @@ def find_04_07_files():
         name = file_path.name.lower()
 
         for dataset in BUSINESS_KEYS:
-            if dataset in name and dataset not in selected:
-                selected[dataset] = file_path
+            if dataset in name:
+                m = re.match(r"^(sales_\d{4}_\d{2})", name) if dataset == "sales" else None
+                key = m.group(1) if m else dataset
+                if key not in selected:
+                    selected[key] = file_path
                 break
 
     return selected
@@ -478,7 +482,7 @@ def main():
 
     for dataset, input_file in files.items():
 
-        business_key = BUSINESS_KEYS[dataset]
+        business_key = BUSINESS_KEYS["sales" if dataset.startswith("sales_") else dataset]
 
         success = process_dataset(
             dataset=dataset,

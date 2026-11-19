@@ -1,3 +1,4 @@
+import re
 """
 Retail Sales Analytics
 Tracker 04.09 - Validate Foreign-Key Candidates
@@ -142,16 +143,18 @@ def find_latest_04_08_files():
         for dataset in PRIMARY_KEYS:
 
             if dataset in name:
+                m = re.match(r"^(sales_\d{4}_\d{2})", name) if dataset == "sales" else None
+                key = m.group(1) if m else dataset
 
-                if dataset not in latest:
-                    latest[dataset] = file_path
+                if key not in latest:
+                    latest[key] = file_path
 
                 else:
-                    current_time = latest[dataset].stat().st_mtime
+                    current_time = latest[key].stat().st_mtime
                     new_time = file_path.stat().st_mtime
 
                     if new_time > current_time:
-                        latest[dataset] = file_path
+                        latest[key] = file_path
 
                 break
 

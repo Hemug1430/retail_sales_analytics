@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS analytics;
 
 DROP VIEW IF EXISTS analytics.vw_average_order_value;
 
-CREATE VIEW analytics.vw_average_order_value AS
+CREATE OR REPLACE VIEW analytics.vw_average_order_value AS
 
 WITH eligible_sales AS
 (

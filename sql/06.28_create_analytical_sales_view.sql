@@ -7,7 +7,7 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS analytics_derived_sales_summary;
 
 -- Compile a unified, high-performance analytical layer view for Power BI dashboards
-CREATE VIEW analytics_derived_sales_summary AS
+CREATE OR REPLACE VIEW analytics_derived_sales_summary AS
 SELECT 
     fs.sales_line_id,
     fs.order_date,
@@ -23,13 +23,13 @@ SELECT
     
     -- Derived Financial Calculations
     ROUND(fs.quantity * fs.unit_selling_price, 2) AS line_item_gross_revenue,
-    ROUND(fs.quantity * fs.unit_selling_price * COALESCE(fs.discount_pct, 0), 2) AS line_item_discount_markdown,
-    ROUND(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0)), 2) AS line_item_net_revenue,
+    ROUND(fs.quantity * fs.unit_selling_price * COALESCE(fs.discount_pct, 0) / 100.0, 2) AS line_item_discount_markdown,
+    ROUND(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0), 2) AS line_item_net_revenue,
     
     -- Corporate Contribution Margin Formulas (Assuming a 60% standard production cost baseline)
     ROUND(
-        (fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) - 
-        (fs.quantity * (fs.unit_selling_price * 0.60)), 2
+        (fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) - 
+        (fs.quantity * p.unit_cost), 2
     ) AS line_item_contribution_profit,
     
     -- Operational Flag Indicators

@@ -18,7 +18,7 @@ ORDER BY performance_month, geography_level;
 
 USE retail_sales_db;
 
-SHOW CREATE VIEW analytics.vw_regional_performance_outputs;
+SHOW CREATE OR REPLACE VIEW analytics.vw_regional_performance_outputs;
 
 ## verifcation step
 

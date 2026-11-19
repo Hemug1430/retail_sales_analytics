@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS analytics;
 
 DROP VIEW IF EXISTS analytics.vw_growth_metrics;
 
-CREATE VIEW analytics.vw_growth_metrics AS
+CREATE OR REPLACE VIEW analytics.vw_growth_metrics AS
 
 WITH eligible_sales AS
 (

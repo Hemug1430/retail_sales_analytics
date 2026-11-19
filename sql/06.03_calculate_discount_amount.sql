@@ -13,7 +13,7 @@ SELECT
 --
 -- Frozen definition:
 -- Discount Amount =
--- (Quantity × Unit Selling Price) × Discount Percentage / 100
+-- (Quantity Ã— Unit Selling Price) Ã— Discount Percentage / 100
 --
 -- Completed sales only.
 -- ------------------------------------------------------------
@@ -37,7 +37,7 @@ SELECT
         THEN
             CAST(gr.gross_sales AS DECIMAL(18,4))
             *
-            CAST(COALESCE(fs.discount_pct, 0) AS DECIMAL(18,4))
+            CAST(COALESCE(fs.discount_pct, 0) / 100.0 AS DECIMAL(18,4))
             / 100
         ELSE
             CAST(0 AS DECIMAL(18,4))

@@ -363,6 +363,26 @@ def main():
             continue
 
         # ----------------------------------------------------
+        # NARROW TO THE SUMMARY ROW OF THIS SAME FILE
+        # (monthly files such as sales_2024_02.csv must not be
+        # compared with the combined total of all months)
+        # ----------------------------------------------------
+
+        if "source_file" in matching.columns:
+
+            file_stem = Path(file_name).stem.lower()
+
+            same_file = matching[
+                matching["source_file"]
+                .astype(str)
+                .str.lower()
+                .str.startswith(file_stem + "_")
+            ]
+
+            if not same_file.empty:
+                matching = same_file
+
+        # ----------------------------------------------------
         # ENSURE ONE DATASET SUMMARY
         # ----------------------------------------------------
 

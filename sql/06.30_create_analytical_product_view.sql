@@ -7,7 +7,7 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS analytics_derived_product_summary;
 
 -- Compile a high-performance product and category performance view layer
-CREATE VIEW analytics_derived_product_summary AS
+CREATE OR REPLACE VIEW analytics_derived_product_summary AS
 WITH ProductBaseMetrics AS (
     SELECT 
         fs.product_id,
@@ -17,8 +17,8 @@ WITH ProductBaseMetrics AS (
         SUM(fs.quantity) AS total_quantity_sold,
         
         -- Financial Performance Metrics
-        ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS net_sales_revenue,
-        ROUND(SUM(fs.quantity * (fs.unit_selling_price * 0.60)), 2) AS estimated_total_cost,
+        ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS net_sales_revenue,
+        ROUND(SUM(fs.quantity * p.unit_cost), 2) AS estimated_total_cost,
         
         -- Return Volumetric Tracking (Linking with factreturns mapping)
         COUNT(DISTINCT fr.return_id) AS total_units_returned

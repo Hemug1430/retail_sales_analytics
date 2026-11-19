@@ -9,7 +9,7 @@ SELECT
     'Festival Spike Analysis' AS event_target,
     fs.order_date,
     COUNT(fs.sales_line_id) AS transactional_order_volume,
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS single_day_net_revenue
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS single_day_net_revenue
 FROM factsales fs
 GROUP BY fs.order_date
 ORDER BY single_day_net_revenue DESC
@@ -21,7 +21,7 @@ SELECT
     fs.store_id,
     DATE_FORMAT(fs.order_date, '%Y') AS sales_year,
     COUNT(DISTINCT fs.sales_line_id) AS annual_transaction_volume,
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS annual_net_revenue
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS annual_net_revenue
 FROM factsales fs
 GROUP BY fs.store_id, DATE_FORMAT(fs.order_date, '%Y')
 ORDER BY fs.store_id ASC, sales_year ASC;

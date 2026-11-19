@@ -7,7 +7,7 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS vw_return_financial_impact_analytics;
 
 -- Compile a reusable reporting view layer for Power BI dashboard connectivity
-CREATE VIEW vw_return_financial_impact_analytics AS
+CREATE OR REPLACE VIEW vw_return_financial_impact_analytics AS
 SELECT 
     fs.store_id,
     fs.product_id,
@@ -20,7 +20,7 @@ SELECT
     (COUNT(DISTINCT fr.return_id) / COUNT(DISTINCT fs.sales_line_id)) * 100 AS product_return_rate_percentage,
     
     -- Cash flow return metrics
-    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) AS original_gross_sales,
+    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) AS original_gross_sales,
     SUM(COALESCE(fr.refund_amount, 0)) AS total_capital_refunded_outflow
 
 FROM factsales fs

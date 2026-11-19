@@ -1,11 +1,18 @@
 ﻿import glob, hashlib, os, shutil, subprocess, zipfile
 from datetime import datetime
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine,text
 from dotenv import load_dotenv
 load_dotenv()
 def get_db_engine():
-    u, p, h, pt, d = os.getenv("DB_USER","root"), os.getenv("DB_PASSWORD",""), os.getenv("DB_HOST","localhost"), os.getenv("DB_PORT","3306"), os.getenv("DB_NAME","retail_sales_db")
-    return create_engine(f"mysql+pymysql://{u}:{p}@{h}:{pt}/{d}")
+    u = os.getenv("DB_USER", "root")
+    p = os.getenv("DB_PASSWORD", "")
+    h = os.getenv("DB_HOST", "localhost")
+    pt = os.getenv("DB_PORT", "3306")
+    d = os.getenv("DB_NAME", "retail_sales_db")
+
+    return create_engine(
+        f"mysql+pymysql://{u}:{p}@{h}:{pt}/{d}"
+    )
 def sha256_file(path):
     h = hashlib.sha256()
     with open(path, "rb") as f:

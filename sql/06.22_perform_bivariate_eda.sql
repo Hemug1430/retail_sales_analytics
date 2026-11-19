@@ -9,7 +9,7 @@ SELECT
     fs.store_id,
     COUNT(fs.sales_line_id) AS total_orders,
     SUM(fs.quantity) AS total_units_sold,
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS net_revenue
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS net_revenue
 FROM factsales fs
 GROUP BY fs.store_id
 ORDER BY net_revenue DESC;
@@ -18,10 +18,10 @@ ORDER BY net_revenue DESC;
 SELECT 
     '06.22 STATUS: PASS' AS status_check,
     p.category,
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))), 2) AS net_revenue,
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)), 2) AS net_revenue,
     -- Estimating gross margin impact assuming product cost baseline averages 60% of original selling price
-    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) - 
-          SUM(fs.quantity * (fs.unit_selling_price * 0.60)), 2) AS estimated_profit_margin
+    ROUND(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) - 
+          SUM(fs.quantity * p.unit_cost), 2) AS estimated_profit_margin
 FROM factsales fs
 INNER JOIN core_products p ON fs.product_id = p.product_id
 GROUP BY p.category

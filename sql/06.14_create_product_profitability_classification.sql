@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS analytics;
 
 DROP VIEW IF EXISTS analytics.vw_product_profitability_classification;
 
-CREATE VIEW analytics.vw_product_profitability_classification AS
+CREATE OR REPLACE VIEW analytics.vw_product_profitability_classification AS
 
 WITH product_summary AS
 (

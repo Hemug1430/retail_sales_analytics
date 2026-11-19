@@ -14,6 +14,7 @@ Important:
 """
 
 from pathlib import Path
+import re
 import pandas as pd
 
 
@@ -66,6 +67,35 @@ def load_csv(file_path):
 # FIND LATEST 04.08 OUTPUT
 # ============================================================
 
+SALES_MONTH_PATTERN = re.compile(r"sales_(\d{4}_\d{2})")
+
+
+def find_all_sales_files():
+    """Latest 04.08 output for every sales month, oldest month first."""
+    latest = {}
+
+    for file_path in PROCESSED_DIR.glob("*.csv"):
+        name = file_path.name.lower()
+
+        if "04_08_business_key_duplicates_handled" not in name:
+            continue
+
+        match = SALES_MONTH_PATTERN.match(name)
+
+        if not match:
+            continue
+
+        month = match.group(1)
+
+        if (
+            month not in latest
+            or file_path.stat().st_mtime > latest[month].stat().st_mtime
+        ):
+            latest[month] = file_path
+
+    return [latest[m] for m in sorted(latest)]
+
+
 def find_latest_file(dataset):
 
     candidates = []
@@ -77,7 +107,7 @@ def find_latest_file(dataset):
         if dataset == "sales":
 
             if (
-                "sales_2024_01" in name
+                SALES_MONTH_PATTERN.match(name)
                 and "04_08_business_key_duplicates_handled" in name
             ):
                 candidates.append(file_path)
@@ -350,9 +380,16 @@ def process_sales(file_path):
         ignore_index=True
     )
 
+    month_match = SALES_MONTH_PATTERN.match(Path(file_path).name.lower())
+    month_tag = (
+        ""
+        if month_match is None or month_match.group(1) == "2024_01"
+        else f"_{month_match.group(1)}"
+    )
+
     output_file = (
         OUTPUT_DIR
-        / "04_10_sales_outlier_flags.csv"
+        / f"04_10_sales{month_tag}_outlier_flags.csv"
     )
 
     flags_df.to_csv(
@@ -574,7 +611,7 @@ def main():
     print("TRACKER 04.10 - FLAG OUTLIERS FOR INVESTIGATION")
     print("=" * 80)
 
-    sales_file = find_latest_file("sales")
+    sales_files = find_all_sales_files()
     products_file = find_latest_file("products")
 
     sales_result = {
@@ -593,11 +630,22 @@ def main():
     # SALES
     # --------------------------------------------------------
 
-    if sales_file:
+    if sales_files:
 
-        sales_result = process_sales(
-            sales_file
-        )
+        month_results = [
+            process_sales(sales_file)
+            for sales_file in sales_files
+        ]
+
+        sales_result = {
+            "status": (
+                "PASS"
+                if all(r["status"] == "PASS" for r in month_results)
+                else "REVIEW"
+            ),
+            "flags": sum(r["flags"] for r in month_results),
+            "fields": max(r["fields"] for r in month_results),
+        }
 
     else:
 

@@ -24,9 +24,10 @@ Important:
 from pathlib import Path
 from datetime import datetime
 import logging
+import re
 
 import pandas as pd
-from sqlalchemy import create_engine, text
+from sqlalchemy import bindparam, create_engine, text
 
 from config import DB_CONFIG, PROCESSED_DATA_PATH, LOG_FOLDER
 
@@ -57,6 +58,7 @@ DATASET_CONFIG = {
     "sales": {
         "table": "stg_sales",
         "file_pattern": "sales_2024_01_cleaned_staging.csv",
+        "file_regex": r"^sales_\d{4}_\d{2}_cleaned_staging\.csv$",
     },
 }
 
@@ -147,6 +149,7 @@ def validate_staging_table(
     table_name,
     expected_file_name,
     expected_rows,
+    expected_file_names=None,
 ):
     """
     Validate one staging table.
@@ -196,7 +199,7 @@ def validate_staging_table(
             ) AS missing_source_file_rows,
             SUM(
                 CASE
-                    WHEN source_file_name = :expected_file
+                    WHEN source_file_name IN :expected_files
                     THEN 1
                     ELSE 0
                 END
@@ -205,10 +208,17 @@ def validate_staging_table(
         """
     )
 
+    if not expected_file_names:
+        expected_file_names = [expected_file_name]
+
+    count_sql = count_sql.bindparams(
+        bindparam("expected_files", expanding=True)
+    )
+
     row = connection.execute(
         count_sql,
         {
-            "expected_file": expected_file_name,
+            "expected_files": list(expected_file_names),
         },
     ).mappings().first()
 
@@ -260,10 +270,12 @@ def validate_staging_table(
     # Current staging load should represent one batch/file
     checks.append(
         batch_count == 1
+        if len(expected_file_names) == 1
+        else batch_count >= 1
     )
 
     checks.append(
-        source_file_count == 1
+        source_file_count == len(expected_file_names)
     )
 
     if all(checks):
@@ -302,9 +314,10 @@ def validate_staging_table(
                 f"staging contains {batch_count} distinct batch IDs"
             )
 
-        if source_file_count != 1:
+        if source_file_count != len(expected_file_names):
             reasons.append(
-                f"staging contains {source_file_count} distinct source files"
+                f"staging contains {source_file_count} distinct source files "
+                f"(expected {len(expected_file_names)})"
             )
 
         result["reason"] = "; ".join(reasons)
@@ -371,7 +384,18 @@ def main():
 
         for dataset_name, config in DATASET_CONFIG.items():
 
-            expected_file = STAGING_FOLDER / config["file_pattern"]
+            if "file_regex" in config:
+                matched = sorted(
+                    f.name
+                    for f in STAGING_FOLDER.glob("*_cleaned_staging.csv")
+                    if re.match(config["file_regex"], f.name)
+                )
+            else:
+                matched = [config["file_pattern"]]
+
+            expected_file = STAGING_FOLDER / (
+                matched[0] if matched else config["file_pattern"]
+            )
 
             if not expected_file.exists():
                 result = {
@@ -404,16 +428,22 @@ def main():
 
                 continue
 
-            expected_rows = get_expected_row_count(
-                expected_file
+            expected_rows = sum(
+                get_expected_row_count(STAGING_FOLDER / name)
+                for name in (matched or [config["file_pattern"]])
             )
 
             result = validate_staging_table(
                 connection=connection,
                 dataset_name=dataset_name,
                 table_name=config["table"],
-                expected_file_name=config["file_pattern"],
+                expected_file_name=(
+                    f"{len(matched)} files (" + matched[0] + " ...)"
+                    if len(matched) > 1
+                    else config["file_pattern"]
+                ),
                 expected_rows=expected_rows,
+                expected_file_names=matched or None,
             )
 
             results.append(result)

@@ -236,7 +236,32 @@ def count_missing_rows(df):
     return 0
 
 
-def count_outlier_rows(dataset):
+
+def audit_matches(file_name, dataset, key):
+    """
+    True when an audit file belongs to this dataset/month.
+
+    Month-tagged audits (sales_2024_02_...) belong to that month only.
+    Untagged sales audits are attributed to the first month only, so they
+    are never added to every monthly file.
+    """
+    name = file_name.lower()
+    tag = re.search(r"sales_(\d{4}_\d{2})", name)
+
+    if dataset == "sales" and key and key.startswith("sales_"):
+        if tag:
+            return key == f"sales_{tag.group(1)}"
+        return "sales" in name and key == "sales_2024_01"
+
+    return dataset in name
+
+
+def audit_key(file_name, dataset):
+    match = re.match(r"(sales_\d{4}_\d{2})", file_name.lower())
+    return match.group(1) if match else dataset
+
+
+def count_outlier_rows(dataset, key=None):
     """
     Read the 04.10 outlier audit generated for the dataset.
     """
@@ -249,7 +274,7 @@ def count_outlier_rows(dataset):
 
     for file in possible_files:
 
-        if dataset not in file.name.lower():
+        if not audit_matches(file.name, dataset, key):
             continue
 
         try:
@@ -304,7 +329,7 @@ def count_outlier_rows(dataset):
     return total
 
 
-def count_duplicate_rows(dataset):
+def count_duplicate_rows(dataset, key=None):
     """
     Read 04.07 / 04.08 duplicate audit evidence.
     """
@@ -321,7 +346,7 @@ def count_duplicate_rows(dataset):
 
     for file in files:
 
-        if dataset not in file.name.lower():
+        if not audit_matches(file.name, dataset, key):
             continue
 
         try:
@@ -353,7 +378,7 @@ def count_duplicate_rows(dataset):
     return total
 
 
-def count_corrected_rows(dataset):
+def count_corrected_rows(dataset, key=None):
     """
     Look for explicit correction evidence.
 
@@ -380,7 +405,7 @@ def count_corrected_rows(dataset):
         if file.suffix.lower() != ".csv":
             continue
 
-        if dataset not in file.name.lower():
+        if not audit_matches(file.name, dataset, key):
             continue
 
         try:
@@ -472,15 +497,15 @@ def main():
         invalid_rows = count_invalid_rows(df)
 
         duplicated_rows = count_duplicate_rows(
-            dataset
+            dataset, audit_key(file.name, dataset)
         )
 
         corrected_rows = count_corrected_rows(
-            dataset
+            dataset, audit_key(file.name, dataset)
         )
 
         outlier_rows = count_outlier_rows(
-            dataset
+            dataset, audit_key(file.name, dataset)
         )
 
         # Accepted means rows without a standardized

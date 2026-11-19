@@ -13,7 +13,7 @@ SELECT
 -- 1. CREATE TOTAL COST VIEW
 --
 -- Definition:
--- Total Cost = Quantity × Historical Unit Cost
+-- Total Cost = Quantity Ã— Historical Unit Cost
 --
 -- Eligible sales:
 --   - Completed sales

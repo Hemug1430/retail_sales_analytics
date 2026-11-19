@@ -7,14 +7,14 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS vw_monthly_running_totals;
 
 -- Compile a monthly category cumulative reporting view layer
-CREATE VIEW vw_monthly_running_totals AS
+CREATE OR REPLACE VIEW vw_monthly_running_totals AS
 SELECT 
     DATE_FORMAT(fs.order_date, '%Y-%m') AS sales_month,
     p.category AS category,
-    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) AS monthly_revenue,
+    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) AS monthly_revenue,
     
     -- SQL Window function to calculate the running cumulative total
-    SUM(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0)))) 
+    SUM(SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0))) 
         OVER (
             PARTITION BY p.category 
             ORDER BY DATE_FORMAT(fs.order_date, '%Y-%m')

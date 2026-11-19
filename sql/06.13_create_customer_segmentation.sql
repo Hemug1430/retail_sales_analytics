@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS analytics;
 
 DROP VIEW IF EXISTS analytics.vw_customer_segmentation;
 
-CREATE VIEW analytics.vw_customer_segmentation AS
+CREATE OR REPLACE VIEW analytics.vw_customer_segmentation AS
 
 WITH
 latest_date AS

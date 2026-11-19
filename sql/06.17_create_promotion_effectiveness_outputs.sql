@@ -7,7 +7,7 @@ USE retail_sales_db;
 DROP VIEW IF EXISTS vw_promotion_effectiveness_analytics;
 
 -- Compile a reusable reporting layer for Power BI dashboard connectivity
-CREATE VIEW vw_promotion_effectiveness_analytics AS
+CREATE OR REPLACE VIEW vw_promotion_effectiveness_analytics AS
 SELECT 
     CASE 
         WHEN fs.promotion_id IS NULL OR fs.promotion_id = '' OR fs.promotion_id = 'PROMO000' THEN 'Non-Promoted'
@@ -23,14 +23,15 @@ SELECT
     
     -- Financial performance indicators
     SUM(fs.quantity * fs.unit_selling_price) AS gross_sales_revenue,
-    SUM(fs.quantity * fs.unit_selling_price * COALESCE(fs.discount_pct, 0)) AS total_markdown_discounts,
-    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) AS net_sales_revenue,
+    SUM(fs.quantity * fs.unit_selling_price * COALESCE(fs.discount_pct, 0) / 100.0) AS total_markdown_discounts,
+    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) AS net_sales_revenue,
     
     -- Margin impact indicators
-    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0))) - 
-    SUM(fs.quantity * COALESCE(fs.unit_selling_price * 0.60, 15.00)) AS estimated_contribution_margin
+    SUM(fs.quantity * fs.unit_selling_price * (1 - COALESCE(fs.discount_pct, 0) / 100.0)) - 
+    SUM(fs.quantity * COALESCE(p.unit_cost, 15.00)) AS estimated_contribution_margin
 
 FROM factsales fs
+INNER JOIN core_products p ON fs.product_id = p.product_id
 GROUP BY 
     CASE 
         WHEN fs.promotion_id IS NULL OR fs.promotion_id = '' OR fs.promotion_id = 'PROMO000' THEN 'Non-Promoted'

@@ -1292,6 +1292,7 @@ def insert_dataframe(
     table_name: str,
     df: pd.DataFrame,
 ) -> int:
+    df = df.astype(object).where(pd.notna(df), None)
 
     if df.empty:
         return 0
@@ -1299,6 +1300,10 @@ def insert_dataframe(
     records = df.to_dict(
         orient="records"
     )
+    records = [
+        {k: (None if pd.isna(v) or (isinstance(v, str) and v.strip().lower() == "nan") else v) for k, v in r.items()}
+        for r in records
+    ]
 
     columns = list(
         df.columns

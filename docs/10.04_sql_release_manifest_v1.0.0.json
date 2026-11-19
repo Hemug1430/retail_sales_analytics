@@ -1,10 +1,64 @@
 {
   "release_tag": "v1.0.0-PROD",
-  "frozen_at": "2026-11-11 09:16:45",
-  "total_sql_scripts": 118,
+  "frozen_at": "2026-11-19 12:03:30",
+  "total_sql_scripts": 126,
   "db_base_tables": 34,
   "db_views": 11,
   "scripts": [
+    {
+      "script": "_workbench_06_views.sql",
+      "path": "_workbench_06_views.sql",
+      "module": "Views & Semantic Layer",
+      "version": "v1.0.0-PROD",
+      "bytes": 4357,
+      "lines": 106,
+      "sha256": "0732ba8bfa0412217978345f97e45d509da0d1fed277092048d8b5d86adb6bcd"
+    },
+    {
+      "script": "retail_sales_db_full_backup_20261111_091805.sql",
+      "path": "backups/retail_sales_db_full_backup_20261111_091805.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 41545958,
+      "lines": 1902,
+      "sha256": "763d1e9e3e991cea39860d1d81015387fb4451b3ec2a6d9f24815c9e3f4e6a05"
+    },
+    {
+      "script": "retail_sales_db_full_backup_20261116_105319.sql",
+      "path": "backups/retail_sales_db_full_backup_20261116_105319.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 41749965,
+      "lines": 1910,
+      "sha256": "e4861aa326015040882a453d2606ae3b3798d56a24072983604966e6989d0f4f"
+    },
+    {
+      "script": "retail_sales_db_full_backup_20261116_111549.sql",
+      "path": "backups/retail_sales_db_full_backup_20261116_111549.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 41749965,
+      "lines": 1910,
+      "sha256": "22556b120b24d86d1bc32f81630bc610cde72d0aab824ee7a8e5d9944d5c5b80"
+    },
+    {
+      "script": "retail_sales_db_full_backup_20261117_075013.sql",
+      "path": "backups/retail_sales_db_full_backup_20261117_075013.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 41753945,
+      "lines": 1911,
+      "sha256": "c84952446196db65379d407aade9151910d68397c378ea580f40725261fc90ec"
+    },
+    {
+      "script": "retail_sales_db_full_backup_20261119_104914.sql",
+      "path": "backups/retail_sales_db_full_backup_20261119_104914.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 1990520410,
+      "lines": 3783,
+      "sha256": "8d4f0e3bc2d3e071a36a45df3038a2f4231bc8bbaa34472d5003ba805776b335"
+    },
     {
       "script": "02_06_targets_setup.sql",
       "path": "sql/02_06_targets_setup.sql",
@@ -154,180 +208,180 @@
       "path": "sql/06.01_create_dim_date.sql",
       "module": "DDL & Schema",
       "version": "v1.0.0-PROD",
-      "bytes": 4885,
+      "bytes": 4887,
       "lines": 211,
-      "sha256": "2d5993c90c256046237ad7109857dc33a3709a5c0974bf391598a90f982084d7"
+      "sha256": "b88db106677a76a09e096f93ca84964ee4fb033e728d2452d8f877f74bd070a7"
     },
     {
       "script": "06.02_calculate_gross_revenue.sql",
       "path": "sql/06.02_calculate_gross_revenue.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3523,
+      "bytes": 3528,
       "lines": 122,
-      "sha256": "1cb7b597f2f1babde3fa46504482249e9e72aa61b3d3d4e1501d6ea552748c99"
+      "sha256": "eb559c99b09d0f2c4c8d15bdd2dad660a706ef0a9349c13ff54d6e1a4094f77e"
     },
     {
       "script": "06.03_calculate_discount_amount.sql",
       "path": "sql/06.03_calculate_discount_amount.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3879,
+      "bytes": 3895,
       "lines": 135,
-      "sha256": "5632266ffca1cde0bcf5093c2d69b6e37e27cb3b88a1e040a7b7364b726c43c7"
+      "sha256": "47050e6ef1ee901cc217cbc407f47cae7c9a6625ab805bc4b39d63d49946cefe"
     },
     {
       "script": "06.04_calculate_net_revenue.sql",
       "path": "sql/06.04_calculate_net_revenue.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 4194,
+      "bytes": 4196,
       "lines": 146,
-      "sha256": "69a73e58af92670677840d973830ba093d5f0154a7a9854341ca188616ba8218"
+      "sha256": "98d539b3d345543f3d6aa7fc3087a9113e93aa15bb549d8376f9b640d61c9da6"
     },
     {
       "script": "06.05_calculate_historical_cost.sql",
       "path": "sql/06.05_calculate_historical_cost.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 5235,
+      "bytes": 5237,
       "lines": 194,
-      "sha256": "c0fa17f83b284905dd87ec084b0c5edfa4ba9a0b467aec30798dcba6b357d0c0"
+      "sha256": "d732bc783ac3dfddb213d90f657b232b1951896da14534c8f37b91ecb57f536e"
     },
     {
       "script": "06.06_calculate_total_cost.sql",
       "path": "sql/06.06_calculate_total_cost.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3507,
+      "bytes": 3512,
       "lines": 135,
-      "sha256": "08af1cd5ea3524d0f06a63d93ed290c9d530458ff2c79c4037f857f1a0321da5"
+      "sha256": "a3ede35d4bbedb2728a45294deaeb670b592c2c42853925fc0d76ed4503a4880"
     },
     {
       "script": "06.07_calculate_profit.sql",
       "path": "sql/06.07_calculate_profit.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3396,
+      "bytes": 3398,
       "lines": 137,
-      "sha256": "9d76e5807f901c8b2dae5318fdf68a87088ce55911d44c6e6706010113efa8ca"
+      "sha256": "1ccc4ffad76c39352aba0234e57fb7efea1a6ba2e3a3809218ede5424465bc0a"
     },
     {
       "script": "06.08_calculate_profit_margin.sql",
       "path": "sql/06.08_calculate_profit_margin.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3922,
+      "bytes": 3927,
       "lines": 152,
-      "sha256": "a54a15b0d858ecce6f78e3933b931bdc7ad0dbe9d7e44751b7a340933c7aa3db"
+      "sha256": "9cb64bb950467c6602f5e21edfaa5001e648180d046f0638a6980faed401c483"
     },
     {
       "script": "06.09_calculate_return_refund_metrics.sql",
       "path": "sql/06.09_calculate_return_refund_metrics.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 1452,
+      "bytes": 1541,
       "lines": 77,
-      "sha256": "4786f1bdeb84a0ab37e75f3a7c522d15e58673f59a0e112ba8f5f1248226858a"
+      "sha256": "93bdd8de2df5c5c651226d589d48989985d1043c4c3fab7309033a8e85d77be3"
     },
     {
       "script": "06.10_calculate_average_order_value.sql",
       "path": "sql/06.10_calculate_average_order_value.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 2044,
+      "bytes": 2172,
       "lines": 116,
-      "sha256": "23d2890aa905311575826e28a587fa25f340cf9703f51cc0bb81f8dd0a8390ad"
+      "sha256": "e758874bcd8249ca95ad128c1e4985227c4002f8a7ec3913de4556368318d971"
     },
     {
       "script": "06.11_calculate_growth_metrics.sql",
       "path": "sql/06.11_calculate_growth_metrics.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 5949,
+      "bytes": 6273,
       "lines": 312,
-      "sha256": "45ab6af5b432a8b8b57fdf3c49f90811de0a2510136961df4a80b66b4b8d6d1d"
+      "sha256": "2878b2bc71df5294be97969719ac3ea28e46213959444bc9c6bc0817d7141706"
     },
     {
       "script": "06.12_calculate_target_achievement.sql",
       "path": "sql/06.12_calculate_target_achievement.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 5249,
+      "bytes": 5533,
       "lines": 272,
-      "sha256": "b1dd9ffc27e2576428808432cf1b4302ccb5349d1c622edafde0ee64a5c75263"
+      "sha256": "12d0354e0b5d85661b64785368187f52b4254dd0024c9139c5de41690a91a42e"
     },
     {
       "script": "06.13_create_customer_segmentation.sql",
       "path": "sql/06.13_create_customer_segmentation.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 4718,
+      "bytes": 4939,
       "lines": 209,
-      "sha256": "ec1340ca2f0ffbb739f5ea50b4f4b7b1724e63216083577c025f00b43ab2d33e"
+      "sha256": "f3206848838110d7e84684d8fc6c222ef026efe77905714bab157af0718052d9"
     },
     {
       "script": "06.14_create_product_profitability_classification.sql",
       "path": "sql/06.14_create_product_profitability_classification.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 3905,
+      "bytes": 4132,
       "lines": 215,
-      "sha256": "9eb57e671c90533ff29b1d7f11086afcbda2f18396c2a7ec366cc540f56e1e73"
+      "sha256": "002941226098e52144a0897b6b417fe4322cb8589f2b97a26e236e40d4a9f005"
     },
     {
       "script": "06.15_create_store_performance_classification.sql",
       "path": "sql/06.15_create_store_performance_classification.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 14801,
+      "bytes": 15443,
       "lines": 630,
-      "sha256": "977bf7d2cc835e55630572f2828469e71154cc968cdbbf581fe5b051da4530f7"
+      "sha256": "605c09331026d9a49611ec17dd4d095f32e655e94661f92f00ce041a91462b00"
     },
     {
       "script": "06.16_create_regional_performance_outputs.sql",
       "path": "sql/06.16_create_regional_performance_outputs.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 924,
+      "bytes": 973,
       "lines": 37,
-      "sha256": "89e9df3bf16df066beb449ac3d5037b2df242e806a2e679d5810ea626601812a"
+      "sha256": "a2cb6cccdcb3b4d0ddfcba23d99f25a2cdd9251ac71645bcc7f7cb685fd83864"
     },
     {
       "script": "06.17_create_promotion_effectiveness_outputs.sql",
       "path": "sql/06.17_create_promotion_effectiveness_outputs.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 2100,
-      "lines": 50,
-      "sha256": "9122b8cdaaafef082d8d822b50c4e23fb9001990d40baf66259206ee0960d3fb"
+      "bytes": 2178,
+      "lines": 51,
+      "sha256": "8db368b6ecd735a23af5559e9b95e84cb149a70cccf379873db8eebbe2bddb87"
     },
     {
       "script": "06.18_create_return_analysis.sql",
       "path": "sql/06.18_create_return_analysis.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 1670,
+      "bytes": 1730,
       "lines": 41,
-      "sha256": "87f589818a422cdb6313690e84425086cf9945c083a366e1b9f372562b6d7368"
+      "sha256": "161ba9abbffe82377041d270a30c610d119441daa93c1abba2ce533e0f5712d5"
     },
     {
       "script": "06.19_create_ranking_outputs.sql",
       "path": "sql/06.19_create_ranking_outputs.sql",
       "module": "Analytics & Reporting",
       "version": "v1.0.0-PROD",
-      "bytes": 1194,
+      "bytes": 1269,
       "lines": 32,
-      "sha256": "a43205c8a027f2b98a945bfd4bc34b6465485a0d67277cf76be455ec2e24cb19"
+      "sha256": "773df34399465f46544a8c99b8f4afa13595ba7048ba7d4342dc94eb029b35d3"
     },
     {
       "script": "06.20_create_running_totals.sql",
       "path": "sql/06.20_create_running_totals.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 1378,
+      "bytes": 1405,
       "lines": 34,
-      "sha256": "22c963de537f880fabd62957f09c63d24829bcb5355467970db37dd633c4a403"
+      "sha256": "f051a3d6779200a133bad8525e6595a9b919d9548c63f44d37dc7c9138eea469"
     },
     {
       "script": "06.21_perform_univariate_eda.sql",
@@ -343,18 +397,18 @@
       "path": "sql/06.22_perform_bivariate_eda.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 2346,
+      "bytes": 2404,
       "lines": 53,
-      "sha256": "a687de7d874d42d354057257920d9df1bb99e07d017ebadb1e677620d7f682dc"
+      "sha256": "01df71fd26408e4cf3d3b6264283815e0f6b3f10f2dec073b64b5cf4ddb77028"
     },
     {
       "script": "06.23_perform_multivariate_eda.sql",
       "path": "sql/06.23_perform_multivariate_eda.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 1888,
+      "bytes": 1893,
       "lines": 42,
-      "sha256": "e490c4dea4c10dd0c24c2fb49c495d59ec820cd503a61f7f8c757280b1d1f3bb"
+      "sha256": "87d1d8be1930ebf073f0af29399e46f739a1519269b0b1d2ccedea8cfa782787"
     },
     {
       "script": "06.24_perform_descriptive_statistics.sql",
@@ -388,27 +442,27 @@
       "path": "sql/06.27_investigate_business_events.sql",
       "module": "Maintenance & Utility",
       "version": "v1.0.0-PROD",
-      "bytes": 1894,
+      "bytes": 1910,
       "lines": 42,
-      "sha256": "401b659202192789dd82dae3d28769e12be4add3d2d10ef218f0fe0668a6933c"
+      "sha256": "fc045397ba7694e133ac8af6b58bcd23a4a842e6032d80a48bf05a18586a43fd"
     },
     {
       "script": "06.28_create_analytical_sales_view.sql",
       "path": "sql/06.28_create_analytical_sales_view.sql",
       "module": "Views & Semantic Layer",
       "version": "v1.0.0-PROD",
-      "bytes": 2202,
+      "bytes": 2218,
       "lines": 53,
-      "sha256": "49be2d326ce56f1b92b6111b2d70a31cf23d0f29ff08e9e45393cbba2471c142"
+      "sha256": "b1dd51c6aa23b4e38a4fc45df5a0aa03f45fd54b8bd160386f17f7c95c7c9c9e"
     },
     {
       "script": "06.29_create_analytical_customer_view.sql",
       "path": "sql/06.29_create_analytical_customer_view.sql",
       "module": "Views & Semantic Layer",
       "version": "v1.0.0-PROD",
-      "bytes": 2174,
-      "lines": 47,
-      "sha256": "752fecdb3f35e3226dc12d45c47064d67491bdd0e21e7c1e59f40d382cd5f5b1"
+      "bytes": 2266,
+      "lines": 48,
+      "sha256": "543127aa888da67c4ca37be7f6f4038c6237b6fbcf4cf7e7cb767e9c4c3be03c"
     },
     {
       "script": "06.30_create_analytical_product_view.sql",
@@ -417,34 +471,52 @@
       "version": "v1.0.0-PROD",
       "bytes": 2541,
       "lines": 61,
-      "sha256": "f22717f90d5397c4067ab27b567ea77d6fa7c7261d67ec8a193e91561606348f"
+      "sha256": "d73a56f3b3a7867930bb6af1451ed1fd3d74bd89cf090035d2f87bffef7bb135"
     },
     {
       "script": "06.31_create_analytical_store_view.sql",
       "path": "sql/06.31_create_analytical_store_view.sql",
       "module": "Views & Semantic Layer",
       "version": "v1.0.0-PROD",
-      "bytes": 2640,
-      "lines": 67,
-      "sha256": "a2e5c417d4b84cce9162b434d0aba34e475227a36001816866778f9620002d76"
+      "bytes": 2700,
+      "lines": 68,
+      "sha256": "c45561e3d24b4340b819a742dd2d55aba508467a7af183ff0932924251232700"
     },
     {
       "script": "06.32_create_analytical_kpi_summary.sql",
       "path": "sql/06.32_create_analytical_kpi_summary.sql",
       "module": "Analytics & Reporting",
       "version": "v1.0.0-PROD",
-      "bytes": 1749,
-      "lines": 36,
-      "sha256": "48dd2f755b91f13f0ca4ed3832338c9cd15b00a6ebb3933a2b65d540d9597217"
+      "bytes": 1821,
+      "lines": 38,
+      "sha256": "e2a5b0d6dbc300d7107f2299e349c9d9b60602e33cf1c88a8b3cd8fe663b778a"
     },
     {
       "script": "06.34_validate_analytics_formulas.sql",
       "path": "sql/06.34_validate_analytics_formulas.sql",
       "module": "Analytics & Reporting",
       "version": "v1.0.0-PROD",
-      "bytes": 1206,
+      "bytes": 1230,
       "lines": 23,
-      "sha256": "5e33d48db5326bb7e85204d6f2570cce43bd722276a839bbde24329a7c872f11"
+      "sha256": "77b98ee0ce83550122827aa5de2c879c6cf45105b9a52330745425ddfd2f62f2"
+    },
+    {
+      "script": "06.37_fix_legacy_return_status.sql",
+      "path": "sql/06.37_fix_legacy_return_status.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 2020,
+      "lines": 47,
+      "sha256": "3c456d82871bbd1c29ae5e2972557770c7ce81f77e27b8014b25331618a66477"
+    },
+    {
+      "script": "06.38_remove_seed_target_rows.sql",
+      "path": "sql/06.38_remove_seed_target_rows.sql",
+      "module": "Maintenance & Utility",
+      "version": "v1.0.0-PROD",
+      "bytes": 618,
+      "lines": 13,
+      "sha256": "4aa9e0f6a030013f54f52413ca81c805ec0171d9ebf5f8759ed58c77e09429f1"
     },
     {
       "script": "07.02_configure_import_mode.sql",
