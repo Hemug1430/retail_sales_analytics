@@ -36,3 +36,5 @@ incoming/sales_*.csv
 !incoming/sales_2024_01.csv
 
 *.csv
+
+analytics_derived_sales_summary.csv
