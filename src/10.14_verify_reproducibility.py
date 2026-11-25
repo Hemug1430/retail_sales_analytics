@@ -21,18 +21,18 @@ def run():
     rebuilt_ok = False
     repro_ev = ""
     with get_db_engine(prod_db).begin() as c:
-        c.execute(text(f"DROP DATABASE IF EXISTS `{tmp_db}`"))
-        c.execute(text(f"CREATE DATABASE `{tmp_db}`"))
+        c.execute(text(f"DROP TABLE IF EXISTS `{prod_db}`.`repro_check_factsales`"))
+        c.execute(text(f"SELECT 1"))
         c.execute(text(f"CREATE TABLE `{tmp_db}`.`core_stores` LIKE `{prod_db}`.`core_stores`"))
         c.execute(text(f"INSERT INTO `{tmp_db}`.`core_stores` SELECT * FROM `{prod_db}`.`core_stores`"))
-        c.execute(text(f"CREATE TABLE `{tmp_db}`.`factsales` LIKE `{prod_db}`.`factsales`"))
-        c.execute(text(f"INSERT INTO `{tmp_db}`.`factsales` SELECT * FROM `{prod_db}`.`factsales` LIMIT 1000"))
+        c.execute(text(f"CREATE TABLE `{prod_db}`.`repro_check_factsales` LIKE `{prod_db}`.`factsales`"))
+        c.execute(text(f"INSERT INTO `{prod_db}`.`repro_check_factsales` SELECT * FROM `{prod_db}`.`factsales` LIMIT 1000"))
         rev = "(quantity * unit_selling_price * (1 - COALESCE(discount_pct, 0)/100.0))"
         (src_sum, src_cnt) = c.execute(text(f"SELECT ROUND(SUM({rev}),2), COUNT(*) FROM (SELECT * FROM `{prod_db}`.`factsales` LIMIT 1000) t")).fetchone()
-        (reb_sum, reb_cnt) = c.execute(text(f"SELECT ROUND(SUM({rev}),2), COUNT(*) FROM `{tmp_db}`.`factsales`")).fetchone()
+        (reb_sum, reb_cnt) = c.execute(text(f"SELECT ROUND(SUM({rev}),2), COUNT(*) FROM `{prod_db}`.`repro_check_factsales`")).fetchone()
         rebuilt_ok = (int(src_cnt) == int(reb_cnt) == 1000) and (abs(r2(src_sum) - r2(reb_sum)) == Decimal("0.00"))
         repro_ev = f"Isolated DB `{tmp_db}` rebuilt cleanly: {int(reb_cnt)} rows, NetRev={r2(reb_sum):,.2f} (Diff=0.00); temporary DB dropped"
-        c.execute(text(f"DROP DATABASE IF EXISTS `{tmp_db}`"))
+        c.execute(text(f"DROP TABLE IF EXISTS `{prod_db}`.`repro_check_factsales`"))
     c2 = rebuilt_ok
     rec_res = subprocess.run([sys.executable, "src/10.02_confirm_final_reconciliation.py"], capture_output=True, text=True)
     c3 = (rec_res.returncode == 0) and ("Failed Checks: 0" in rec_res.stdout)

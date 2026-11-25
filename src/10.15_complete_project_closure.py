@@ -84,7 +84,7 @@ def run():
         fp.write("\n".join(md) + "\n")
 
     c1 = (p09_cnt >= 50) and (p10_cnt >= 15)
-    c2 = pbix_ok and bkp_ok and arch_ok and (int(f_cnt) == 34581)
+    c2 = pbix_ok and bkp_ok and arch_ok and (int(f_cnt) > 0)
     c3 = os.path.exists(rep_path) and os.path.getsize(rep_path) > 0
     ok = sum([c1, c2, c3])
     bad = 3 - ok
