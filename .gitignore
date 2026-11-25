@@ -38,3 +38,5 @@ incoming/sales_*.csv
 *.csv
 
 analytics_derived_sales_summary.csv
+
+anaconda_projects/
