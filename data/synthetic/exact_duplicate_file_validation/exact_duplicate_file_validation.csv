@@ -1,0 +1,2 @@
+source_file,duplicate_file,source_rows,duplicate_rows,source_columns,duplicate_columns,source_file_size_bytes,duplicate_file_size_bytes,row_count_same,schema_same,file_size_same,sha256_same,exact_duplicate_confirmed
+sales_2025-06.csv,sales_2025-06_DUPLICATE.csv,65300,65300,15,15,9330242,9330242,True,True,True,True,True

@@ -1,0 +1,8 @@
+day_number,day_name,day_type,store_transaction_multiplier,online_transaction_multiplier
+0,Monday,Weekday,1.0,1.0
+1,Tuesday,Weekday,1.0,1.0
+2,Wednesday,Weekday,1.0,1.0
+3,Thursday,Weekday,1.0,1.0
+4,Friday,Weekday,1.2,1.1
+5,Saturday,Weekend,1.3,1.15
+6,Sunday,Weekend,1.35,1.2

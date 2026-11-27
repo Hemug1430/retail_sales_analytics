@@ -1,0 +1,4 @@
+dataset,rows_checked,invalid_customer_ids,invalid_product_ids,invalid_store_ids,invalid_salesperson_ids,invalid_promotion_ids,status,blank_sales_line_ids,invalid_sales_line_ids,blank_store_ids,blank_categories,invalid_categories
+sales,2118200,0.0,0.0,0.0,0.0,0.0,VALID,,,,,
+returns,118758,,,,,,VALID,0.0,0.0,,,
+targets,8980,,,0.0,,,VALID,,,0.0,0.0,0.0

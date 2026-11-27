@@ -1,0 +1,6 @@
+validation,expected,actual,passed
+file_count,32,32,True
+row_count,2118200,2118200,True
+schema_consistent,True,True,True
+required_columns,True,False,False
+duplicate_complete_rows,0,0,True

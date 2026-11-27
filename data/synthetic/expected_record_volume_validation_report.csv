@@ -1,0 +1,9 @@
+dataset,expected_rows,actual_rows,status
+customers_master,10000,10000,VALID
+products_master,2500,2500,VALID
+stores_master,60,60,VALID
+salespersons_master,500,500,VALID
+promotions_master,72,72,VALID
+sales,2118200,2118200,VALID
+returns,118400,118400,VALID
+targets,8980,8980,VALID

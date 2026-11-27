@@ -1,0 +1,61 @@
+store_id,store_name,store_type,city,state,region,opening_date,floor_area_sqft,status
+STORE001,Ludhiana Neighborhood Store 01,Neighborhood,Ludhiana,Punjab,North,2024-05-04,7425,Active
+STORE002,Nagpur Mall Store 02,Mall,Nagpur,Maharashtra,West,2019-11-06,5233,Active
+STORE003,Raipur Outlet Store 03,Outlet,Raipur,Chhattisgarh,Central,2019-02-11,3154,Active
+STORE004,Kochi Mall Store 04,Mall,Kochi,Kerala,South,2025-03-17,7477,Active
+STORE005,Bengaluru High Street Store 05,High Street,Bengaluru,Karnataka,South,2021-03-29,5874,Active
+STORE006,Nashik Outlet Store 06,Outlet,Nashik,Maharashtra,West,2020-12-25,11480,Active
+STORE007,Bhopal High Street Store 07,High Street,Bhopal,Madhya Pradesh,Central,2020-10-19,9073,Active
+STORE008,Jabalpur Mall Store 08,Mall,Jabalpur,Madhya Pradesh,Central,2020-02-02,10625,Inactive
+STORE009,Gurugram Neighborhood Store 09,Neighborhood,Gurugram,Haryana,North,2025-03-02,2416,Active
+STORE010,Pune Neighborhood Store 10,Neighborhood,Pune,Maharashtra,West,2019-10-10,8072,Active
+STORE011,Chennai Mall Store 11,Mall,Chennai,Tamil Nadu,South,2024-08-28,10792,Active
+STORE012,Lucknow High Street Store 12,High Street,Lucknow,Uttar Pradesh,North,2025-03-15,7982,Active
+STORE013,Nashik High Street Store 13,High Street,Nashik,Maharashtra,West,2026-06-28,5540,Active
+STORE014,Siliguri High Street Store 14,High Street,Siliguri,West Bengal,East,2023-07-17,11077,Active
+STORE015,Surat Outlet Store 15,Outlet,Surat,Gujarat,West,2019-08-23,5093,Active
+STORE016,Bhubaneswar High Street Store 16,High Street,Bhubaneswar,Odisha,East,2023-12-04,2271,Active
+STORE017,Coimbatore Mall Store 17,Mall,Coimbatore,Tamil Nadu,South,2022-06-28,8416,Active
+STORE018,Nagpur Mall Store 18,Mall,Nagpur,Maharashtra,West,2019-03-04,9168,Active
+STORE019,Guwahati Mall Store 19,Mall,Guwahati,Assam,East,2019-02-26,1688,Active
+STORE020,Visakhapatnam Neighborhood Store 20,Neighborhood,Visakhapatnam,Andhra Pradesh,South,2019-09-13,10297,Active
+STORE021,Goa Mall Store 21,Mall,Goa,Goa,West,2020-10-05,3327,Active
+STORE022,Chennai High Street Store 22,High Street,Chennai,Tamil Nadu,South,2020-11-17,5815,Active
+STORE023,Gwalior Neighborhood Store 23,Neighborhood,Gwalior,Madhya Pradesh,Central,2023-03-15,3243,Active
+STORE024,Goa Neighborhood Store 24,Neighborhood,Goa,Goa,West,2024-01-09,9817,Active
+STORE025,Chandigarh Mall Store 25,Mall,Chandigarh,Chandigarh,North,2019-02-16,4146,Active
+STORE026,Nagpur Outlet Store 26,Outlet,Nagpur,Maharashtra,West,2023-09-04,1509,Inactive
+STORE027,Vijayawada High Street Store 27,High Street,Vijayawada,Andhra Pradesh,South,2020-08-04,7447,Active
+STORE028,Ludhiana Neighborhood Store 28,Neighborhood,Ludhiana,Punjab,North,2024-12-28,5446,Active
+STORE029,Nagpur Outlet Store 29,Outlet,Nagpur,Maharashtra,West,2024-06-06,9462,Active
+STORE030,Kolkata Outlet Store 30,Outlet,Kolkata,West Bengal,East,2024-11-12,3560,Active
+STORE031,Pune Neighborhood Store 31,Neighborhood,Pune,Maharashtra,West,2023-07-16,4205,Inactive
+STORE032,Ahmedabad High Street Store 32,High Street,Ahmedabad,Gujarat,West,2022-06-21,4970,Active
+STORE033,Chandigarh Neighborhood Store 33,Neighborhood,Chandigarh,Chandigarh,North,2020-10-10,6607,Active
+STORE034,Surat Outlet Store 34,Outlet,Surat,Gujarat,West,2022-09-21,8677,Active
+STORE035,Guwahati High Street Store 35,High Street,Guwahati,Assam,East,2023-11-30,2549,Active
+STORE036,Chennai Mall Store 36,Mall,Chennai,Tamil Nadu,South,2021-04-08,11141,Active
+STORE037,Gurugram Mall Store 37,Mall,Gurugram,Haryana,North,2025-10-14,2464,Active
+STORE038,Gurugram Mall Store 38,Mall,Gurugram,Haryana,North,2026-04-18,6913,Active
+STORE039,Delhi High Street Store 39,High Street,Delhi,Delhi,North,2018-12-16,9453,Active
+STORE040,Bhubaneswar High Street Store 40,High Street,Bhubaneswar,Odisha,East,2025-05-10,10855,Active
+STORE041,Vijayawada High Street Store 41,High Street,Vijayawada,Andhra Pradesh,South,2025-10-03,8169,Active
+STORE042,Bhubaneswar Mall Store 42,Mall,Bhubaneswar,Odisha,East,2020-04-05,7304,Active
+STORE043,Jabalpur High Street Store 43,High Street,Jabalpur,Madhya Pradesh,Central,2024-11-03,2387,Active
+STORE044,Visakhapatnam Neighborhood Store 44,Neighborhood,Visakhapatnam,Andhra Pradesh,South,2022-07-01,2493,Active
+STORE045,Surat Neighborhood Store 45,Neighborhood,Surat,Gujarat,West,2021-10-18,3290,Active
+STORE046,Gurugram Mall Store 46,Mall,Gurugram,Haryana,North,2021-04-07,3796,Active
+STORE047,Kochi Mall Store 47,Mall,Kochi,Kerala,South,2020-03-23,2735,Active
+STORE048,Jaipur Neighborhood Store 48,Neighborhood,Jaipur,Rajasthan,North,2020-09-24,3104,Active
+STORE049,Kolkata Neighborhood Store 49,Neighborhood,Kolkata,West Bengal,East,2025-05-25,1741,Active
+STORE050,Delhi Outlet Store 50,Outlet,Delhi,Delhi,North,2021-10-06,4224,Active
+STORE051,Kochi High Street Store 51,High Street,Kochi,Kerala,South,2019-10-09,8070,Active
+STORE052,Indore Mall Store 52,Mall,Indore,Madhya Pradesh,Central,2019-09-10,7896,Active
+STORE053,Chennai Outlet Store 53,Outlet,Chennai,Tamil Nadu,South,2022-02-18,6173,Active
+STORE054,Kochi Neighborhood Store 54,Neighborhood,Kochi,Kerala,South,2019-09-22,10605,Active
+STORE055,Visakhapatnam Neighborhood Store 55,Neighborhood,Visakhapatnam,Andhra Pradesh,South,2021-12-15,6361,Active
+STORE056,Bengaluru Outlet Store 56,Outlet,Bengaluru,Karnataka,South,2026-02-10,10383,Active
+STORE057,Kolkata Neighborhood Store 57,Neighborhood,Kolkata,West Bengal,East,2021-10-29,11071,Active
+STORE058,Kochi High Street Store 58,High Street,Kochi,Kerala,South,2024-01-14,4079,Active
+STORE059,Hyderabad Outlet Store 59,Outlet,Hyderabad,Telangana,South,2021-02-24,4544,Active
+STORE060,Delhi Neighborhood Store 60,Neighborhood,Delhi,Delhi,North,2025-10-07,5353,Active

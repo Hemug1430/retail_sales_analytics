@@ -1,0 +1,6 @@
+payment_method,target_share_pct
+UPI,35.0
+Credit Card,25.0
+Debit Card,20.0
+Cash,10.0
+Net Banking,10.0

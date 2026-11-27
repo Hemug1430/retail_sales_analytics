@@ -1,0 +1,73 @@
+promotion_id,promotion_name,promotion_type,start_date,end_date,discount_pct,applicable_category,applicable_channel,minimum_order_value,status
+PROMO00001,"Choudhury, Bakshi and Maharaj Retail Campaign",Seasonal,2025-07-10,2025-07-18,14.36,Fashion,Online,500,Expired
+PROMO00002,Dewan Ltd Retail Campaign,Festive,2025-03-21,2025-04-03,28.77,Beauty & Personal Care,Online,2000,Expired
+PROMO00003,"Chahal, Sami and Balay Retail Campaign",Flash Sale,2025-01-24,2025-02-02,23.3,Electronics,Online,500,Expired
+PROMO00004,Kamdar and Sons Retail Campaign,Festive,2026-01-28,2026-03-08,19.97,Beauty & Personal Care,Online,2000,Expired
+PROMO00005,"Bala, Issac and Saini Retail Campaign",Festive,2025-06-21,2025-08-01,8.9,Home & Kitchen,Online,1500,Expired
+PROMO00006,Mall-Ahuja Retail Campaign,Loyalty,2026-08-13,2026-08-31,8.9,Electronics,Online,3000,Expired
+PROMO00007,Sami LLC Retail Campaign,Flash Sale,2025-08-04,2025-09-01,6.45,Fashion,Online,500,Expired
+PROMO00008,Kale LLC Retail Campaign,Clearance,2025-03-21,2025-04-03,26.65,Electronics,Store,0,Expired
+PROMO00009,Rai Inc Retail Campaign,Clearance,2025-10-06,2025-11-04,20.03,Beauty & Personal Care,Store,5000,Expired
+PROMO00010,Lalla-Bassi Retail Campaign,Seasonal,2026-07-21,2026-08-26,22.7,Beauty & Personal Care,Online,1500,Expired
+PROMO00011,Yadav-Dash Retail Campaign,Seasonal,2025-10-22,2025-12-03,5.51,Fashion,Both,2000,Expired
+PROMO00012,Memon Ltd Retail Campaign,Clearance,2026-04-26,2026-06-08,29.25,Grocery,Both,0,Expired
+PROMO00013,Handa-Boase Retail Campaign,Seasonal,2025-02-05,2025-02-26,25.81,Fashion,Online,5000,Expired
+PROMO00014,"Kari, Mann and Buch Retail Campaign",Festive,2025-06-30,2025-07-13,10.31,Home & Kitchen,Store,1500,Expired
+PROMO00015,Rai LLC Retail Campaign,Clearance,2025-12-19,2026-01-05,9.55,Fashion,Store,500,Expired
+PROMO00016,"Patla, Gaba and Prabhakar Retail Campaign",Clearance,2025-10-03,2025-10-14,9.59,Beauty & Personal Care,Both,500,Expired
+PROMO00017,Loke Ltd Retail Campaign,Loyalty,2026-06-15,2026-07-07,12.61,Grocery,Store,1500,Expired
+PROMO00018,"Bora, Garg and Walla Retail Campaign",Clearance,2026-07-21,2026-08-31,18.12,Grocery,Both,1000,Expired
+PROMO00019,Gade Group Retail Campaign,Seasonal,2025-10-22,2025-11-12,15.8,Electronics,Store,1500,Expired
+PROMO00020,Kanda-Nair Retail Campaign,Clearance,2026-08-20,2026-08-31,12.28,Grocery,Both,3000,Expired
+PROMO00021,Karnik Inc Retail Campaign,Clearance,2025-09-03,2025-09-23,20.3,Home & Kitchen,Store,3000,Expired
+PROMO00022,Loyal-Bhatti Retail Campaign,Flash Sale,2025-06-13,2025-06-29,8.49,Fashion,Online,500,Expired
+PROMO00023,"Murty, Kala and Tata Retail Campaign",Loyalty,2025-11-04,2025-12-15,12.3,Fashion,Both,2000,Expired
+PROMO00024,"Shanker, Dhar and Lanka Retail Campaign",Flash Sale,2025-04-19,2025-06-02,14.16,Home & Kitchen,Store,500,Expired
+PROMO00025,Yohannan LLC Retail Campaign,Festive,2026-08-04,2026-08-31,16.4,Home & Kitchen,Online,5000,Expired
+PROMO00026,"Sangha, Rastogi and Pathak Retail Campaign",Seasonal,2025-06-20,2025-07-04,24.63,Grocery,Both,500,Expired
+PROMO00027,Upadhyay Group Retail Campaign,Flash Sale,2025-03-12,2025-04-26,9.99,Electronics,Store,1500,Expired
+PROMO00028,Choudhary and Sons Retail Campaign,Loyalty,2026-05-03,2026-06-08,17.86,Beauty & Personal Care,Store,2000,Expired
+PROMO00029,Sami PLC Retail Campaign,Seasonal,2025-02-19,2025-03-05,19.81,Beauty & Personal Care,Store,5000,Expired
+PROMO00030,Raj-Sidhu Retail Campaign,Clearance,2026-02-15,2026-03-01,6.16,Fashion,Store,500,Expired
+PROMO00031,Apte-Contractor Retail Campaign,Flash Sale,2026-06-14,2026-06-21,20.19,Fashion,Both,5000,Expired
+PROMO00032,"Loke, Oak and Choudhury Retail Campaign",Festive,2025-08-16,2025-09-24,9.26,Electronics,Both,1000,Expired
+PROMO00033,Dugar-Setty Retail Campaign,Loyalty,2025-01-03,2025-02-17,6.63,Grocery,Online,1000,Expired
+PROMO00034,"Lall, Tella and Gokhale Retail Campaign",Festive,2026-01-30,2026-03-12,28.72,Beauty & Personal Care,Online,2000,Expired
+PROMO00035,Misra Ltd Retail Campaign,Clearance,2026-01-30,2026-03-09,29.14,Electronics,Online,1000,Expired
+PROMO00036,"Issac, Dua and Prakash Retail Campaign",Clearance,2026-08-16,2026-08-31,25.21,Electronics,Online,2000,Expired
+PROMO00037,Zacharia PLC Retail Campaign,Seasonal,2025-01-01,2025-01-13,12.62,Home & Kitchen,Online,5000,Expired
+PROMO00038,"Naik, Suresh and Bahl Retail Campaign",Loyalty,2025-03-28,2025-04-12,7.44,Grocery,Both,1500,Expired
+PROMO00039,Mohanty-Khatri Retail Campaign,Loyalty,2025-02-14,2025-03-03,22.11,Fashion,Both,5000,Expired
+PROMO00040,Brar Inc Retail Campaign,Loyalty,2026-07-23,2026-08-26,16.0,Grocery,Both,5000,Expired
+PROMO00041,Biswas-Walia Retail Campaign,Festive,2026-08-18,2026-08-31,8.05,Home & Kitchen,Both,3000,Expired
+PROMO00042,Dave Ltd Retail Campaign,Clearance,2026-01-05,2026-02-09,17.38,Beauty & Personal Care,Store,0,Expired
+PROMO00043,"Gandhi, Lanka and Wable Retail Campaign",Festive,2026-04-17,2026-05-08,5.86,Electronics,Store,0,Expired
+PROMO00044,Kakar-Zacharia Retail Campaign,Loyalty,2026-08-10,2026-08-31,27.73,Grocery,Both,500,Expired
+PROMO00045,"Iyer, Muni and Rastogi Retail Campaign",Seasonal,2026-06-06,2026-06-17,11.47,Electronics,Online,0,Expired
+PROMO00046,"Prakash, Sarma and Varughese Retail Campaign",Seasonal,2025-12-17,2026-01-14,21.56,Electronics,Both,500,Expired
+PROMO00047,Kota and Sons Retail Campaign,Clearance,2025-02-19,2025-03-29,12.79,Grocery,Both,500,Expired
+PROMO00048,Bail-Karpe Retail Campaign,Loyalty,2026-04-03,2026-05-16,18.0,Home & Kitchen,Online,5000,Expired
+PROMO00049,Amble Inc Retail Campaign,Flash Sale,2026-07-04,2026-08-06,18.67,Grocery,Online,0,Expired
+PROMO00050,"Bhargava, Karnik and Bir Retail Campaign",Flash Sale,2025-01-25,2025-02-23,9.62,Home & Kitchen,Store,1500,Expired
+PROMO00051,Bobal-Varkey Retail Campaign,Seasonal,2025-07-04,2025-07-17,29.24,Electronics,Store,3000,Expired
+PROMO00052,Sunder-Kala Retail Campaign,Clearance,2026-02-23,2026-03-08,24.38,Grocery,Online,500,Expired
+PROMO00053,Solanki and Sons Retail Campaign,Loyalty,2026-01-03,2026-02-07,28.49,Grocery,Store,500,Expired
+PROMO00054,Gupta-Chandra Retail Campaign,Clearance,2025-03-17,2025-04-22,27.37,Grocery,Online,1500,Expired
+PROMO00055,"Sankar, Pandya and Sampath Retail Campaign",Loyalty,2025-11-16,2025-11-29,19.95,Electronics,Both,2000,Expired
+PROMO00056,Bhagat-Chaudhari Retail Campaign,Seasonal,2025-02-17,2025-03-01,28.05,Grocery,Online,1500,Expired
+PROMO00057,Nori-Chopra Retail Campaign,Flash Sale,2025-07-13,2025-08-19,7.21,Grocery,Store,0,Expired
+PROMO00058,Gupta PLC Retail Campaign,Festive,2025-12-15,2026-01-15,9.9,Electronics,Store,1000,Expired
+PROMO00059,Sami and Sons Retail Campaign,Flash Sale,2025-08-05,2025-08-30,6.13,Home & Kitchen,Both,3000,Expired
+PROMO00060,Krish-Borra Retail Campaign,Loyalty,2025-12-11,2026-01-18,13.13,Grocery,Online,1000,Expired
+PROMO00061,"Chaudhari, Bedi and Zachariah Retail Campaign",Festive,2025-01-12,2025-01-22,14.72,Beauty & Personal Care,Both,2000,Expired
+PROMO00062,Khalsa and Sons Retail Campaign,Seasonal,2025-11-12,2025-12-09,11.78,Electronics,Online,2000,Expired
+PROMO00063,Srivastava-Kala Retail Campaign,Flash Sale,2025-11-08,2025-12-17,25.72,Beauty & Personal Care,Online,0,Expired
+PROMO00064,Gala Group Retail Campaign,Loyalty,2025-01-02,2025-01-14,13.92,Grocery,Online,2000,Expired
+PROMO00065,Lanka-Sha Retail Campaign,Seasonal,2025-08-10,2025-09-01,12.02,Home & Kitchen,Online,2000,Expired
+PROMO00066,Sur-Dubey Retail Campaign,Festive,2025-05-28,2025-07-11,18.57,Beauty & Personal Care,Online,2000,Expired
+PROMO00067,Kalla-Bhardwaj Retail Campaign,Seasonal,2026-03-26,2026-04-28,8.52,Beauty & Personal Care,Both,2000,Expired
+PROMO00068,"Bhat, Murthy and Bhandari Retail Campaign",Clearance,2025-02-08,2025-03-03,25.05,Grocery,Both,3000,Expired
+PROMO00069,"Sood, Thakkar and Wali Retail Campaign",Clearance,2025-05-03,2025-05-25,6.86,Fashion,Store,500,Expired
+PROMO00070,Trivedi Inc Retail Campaign,Clearance,2025-05-25,2025-06-30,29.67,Fashion,Online,0,Expired
+PROMO00071,Bir Ltd Retail Campaign,Flash Sale,2025-07-02,2025-08-14,24.31,Electronics,Online,2000,Expired
+PROMO00072,Dar-Koshy Retail Campaign,Festive,2026-03-26,2026-05-04,9.97,Fashion,Online,1000,Expired

@@ -1,0 +1,501 @@
+salesperson_id,salesperson_name,store_id,joining_date,role,status
+SP001,Aryan Maharaj,STORE041,2024-05-04,Sales Associate,Active
+SP002,Liam Chaudry,STORE016,2020-12-25,Sales Associate,Active
+SP003,Pahal Balay,STORE044,2024-08-28,Senior Sales Associate,Active
+SP004,Tejas Kaul,STORE038,2019-02-26,Sales Associate,Active
+SP005,Rushil Saini,STORE014,2023-03-15,Sales Associate,Active
+SP006,Arunima Ahuja,STORE036,2020-10-10,Sales Associate,Active
+SP007,Pahal Oak,STORE035,2025-05-10,Sales Associate,Active
+SP008,Tanveer Nayar,STORE018,2021-04-07,Sales Executive,Active
+SP009,Lajita Chatterjee,STORE052,2019-10-09,Sales Associate,Active
+SP010,Aishani Bassi,STORE018,2021-12-15,Sales Associate,Inactive
+SP011,Jeet Radhakrishnan,STORE022,2025-02-09,Sales Associate,Active
+SP012,Janaki Handa,STORE023,2019-07-28,Sales Executive,Active
+SP013,Chakradev Kari,STORE052,2024-11-23,Sales Associate,Active
+SP014,Fariq Kaul,STORE008,2025-06-23,Senior Sales Executive,Active
+SP015,Lajita Mall,STORE036,2026-04-10,Sales Associate,Active
+SP016,Nicholas Prabhakar,STORE057,2022-10-04,Sales Executive,Active
+SP017,Amara Bora,STORE046,2021-12-03,Sales Associate,Active
+SP018,Yash Gade,STORE050,2024-01-31,Sales Associate,Active
+SP019,Anamika Kanda,STORE015,2022-11-01,Sales Executive,Active
+SP020,Daksh Karnik,STORE030,2024-09-22,Senior Sales Associate,Active
+SP021,Diya Rattan,STORE024,2025-11-22,Sales Associate,Active
+SP022,Siddharth Murty,STORE045,2021-03-06,Sales Executive,Active
+SP023,Meghana Shanker,STORE039,2020-09-16,Senior Sales Associate,Active
+SP024,Liam Koshy,STORE016,2020-02-12,Sales Associate,Active
+SP025,Priya Rastogi,STORE060,2025-03-28,Senior Sales Associate,Active
+SP026,Lakshit Upadhyay,STORE044,2021-12-24,Sales Associate,Active
+SP027,Champak Choudhary,STORE004,2023-02-06,Sales Associate,Active
+SP028,Pahal Bhatt,STORE021,2020-03-14,Sales Associate,Active
+SP029,Upadhriti Wadhwa,STORE059,2022-03-05,Sales Executive,Active
+SP030,Ishwar Yadav,STORE021,2021-01-15,Sales Associate,Active
+SP031,Harini Choudhury,STORE057,2025-04-15,Sales Executive,Active
+SP032,Nakul Setty,STORE017,2021-05-25,Sales Associate,Active
+SP033,Xiti Gokhale,STORE035,2018-12-06,Sales Associate,Active
+SP034,Chanchal Tripathi,STORE058,2023-03-22,Senior Sales Associate,Active
+SP035,Michael Prakash,STORE009,2024-01-31,Senior Sales Associate,Active
+SP036,Aadi Naik,STORE004,2025-05-22,Sales Executive,Active
+SP037,Isaac Patil,STORE011,2023-01-22,Sales Executive,Active
+SP038,Wriddhish Bhardwaj,STORE005,2026-05-18,Sales Associate,Active
+SP039,Frederick Sunder,STORE030,2020-12-13,Senior Sales Associate,Inactive
+SP040,Jeremiah Dave,STORE056,2025-11-04,Sales Executive,Active
+SP041,Noah Lanka,STORE008,2024-07-06,Senior Sales Associate,Active
+SP042,Siddharth Zacharia,STORE018,2023-05-23,Sales Executive,Active
+SP043,Devika Rastogi,STORE019,2025-04-29,Sales Associate,Active
+SP044,Raksha Varughese,STORE047,2024-08-12,Sales Executive,Active
+SP045,Yug Kar,STORE033,2022-09-28,Sales Executive,Active
+SP046,Ansh Karpe,STORE007,2019-06-12,Sales Executive,Active
+SP047,Abhimanyu Bobal,STORE041,2023-11-28,Senior Sales Associate,Active
+SP048,Veer Bir,STORE024,2024-12-03,Sales Executive,Active
+SP049,Ganga Bobal,STORE050,2026-08-09,Sales Executive,Inactive
+SP050,Arya Sunder,STORE039,2023-04-11,Sales Associate,Active
+SP051,Urvashi Kibe,STORE060,2020-09-21,Sales Associate,Inactive
+SP052,Niharika Gupta,STORE052,2025-07-29,Sales Associate,Active
+SP053,Raagini Pandya,STORE057,2019-09-15,Senior Sales Associate,Active
+SP054,Unni Bhagat,STORE047,2022-07-04,Sales Associate,Active
+SP055,Darsh Rau,STORE049,2024-08-18,Senior Sales Associate,Active
+SP056,Ikbal Kothari,STORE043,2025-02-04,Sales Associate,Active
+SP057,Saumya Dey,STORE017,2020-07-13,Senior Sales Associate,Active
+SP058,Arya Shere,STORE014,2022-06-28,Sales Executive,Active
+SP059,Saanvi Chaudhari,STORE045,2021-01-10,Sales Associate,Active
+SP060,Girik Khalsa,STORE043,2019-05-02,Senior Sales Associate,Active
+SP061,Vedika Srivastava,STORE034,2020-04-25,Sales Associate,Active
+SP062,Daniel Gala,STORE005,2020-09-20,Sales Associate,Active
+SP063,Madhavi Lanka,STORE015,2022-02-15,Senior Sales Associate,Active
+SP064,Bhavika Sampath,STORE046,2026-10-13,Senior Sales Associate,Active
+SP065,Mohammed Gupta,STORE058,2024-10-29,Sales Associate,Active
+SP066,Dalbir Bhat,STORE033,2021-06-04,Sales Associate,Active
+SP067,Dakshesh Bedi,STORE014,2025-04-06,Senior Sales Associate,Active
+SP068,Yadavi Wali,STORE057,2023-11-14,Senior Sales Associate,Active
+SP069,Yashoda Buch,STORE051,2020-03-29,Sales Associate,Active
+SP070,Ekapad Bir,STORE007,2026-02-22,Sales Associate,Active
+SP071,Netra Dar,STORE028,2024-08-23,Sales Associate,Active
+SP072,Balveer Bumb,STORE004,2026-06-23,Senior Sales Associate,Inactive
+SP073,Advika Jayaraman,STORE007,2022-06-20,Sales Associate,Active
+SP074,William Lanka,STORE052,2024-08-06,Sales Executive,Active
+SP075,Charita Shankar,STORE013,2022-04-08,Senior Sales Associate,Active
+SP076,Aditya Shanker,STORE012,2021-08-04,Sales Associate,Active
+SP077,Ethan Yogi,STORE060,2024-03-08,Sales Associate,Active
+SP078,Kevin Palla,STORE055,2020-09-18,Senior Sales Associate,Active
+SP079,Yash Pingle,STORE035,2026-05-24,Sales Executive,Inactive
+SP080,Raksha Mittal,STORE060,2021-04-29,Sales Executive,Active
+SP081,Chandani Chawla,STORE027,2024-02-08,Sales Associate,Active
+SP082,Aishani D’Alia,STORE026,2026-11-21,Sales Executive,Active
+SP083,Nachiket Magar,STORE001,2026-06-21,Senior Sales Executive,Active
+SP084,Hemal Jani,STORE051,2021-04-19,Sales Executive,Active
+SP085,Yashasvi Suresh,STORE045,2024-09-30,Senior Sales Executive,Inactive
+SP086,George Sampath,STORE036,2021-01-14,Senior Sales Associate,Active
+SP087,Chaitanya Aggarwal,STORE013,2025-12-15,Sales Associate,Inactive
+SP088,Adweta Edwin,STORE038,2021-09-27,Senior Sales Associate,Active
+SP089,Prisha Andra,STORE021,2025-03-16,Sales Associate,Active
+SP090,Manthan Banik,STORE033,2019-11-08,Sales Executive,Active
+SP091,Manbir Sani,STORE004,2025-12-31,Senior Sales Executive,Active
+SP092,Darika Patla,STORE012,2019-12-26,Sales Associate,Active
+SP093,Ishita Kade,STORE056,2026-07-20,Sales Associate,Active
+SP094,Harshil Pandya,STORE057,2024-09-14,Senior Sales Associate,Active
+SP095,Mohammed Khalsa,STORE003,2025-07-15,Senior Sales Associate,Active
+SP096,Peter Sachar,STORE038,2026-04-04,Senior Sales Associate,Active
+SP097,Gaurangi Sabharwal,STORE017,2019-02-11,Sales Associate,Active
+SP098,Amara Dutta,STORE016,2025-09-22,Sales Associate,Active
+SP099,Lavanya Barad,STORE042,2025-08-07,Sales Associate,Active
+SP100,Tristan Iyengar,STORE049,2026-03-16,Sales Executive,Active
+SP101,Inaya Mody,STORE040,2025-11-06,Senior Sales Executive,Inactive
+SP102,Udant Bajwa,STORE005,2025-11-18,Senior Sales Associate,Active
+SP103,Mohini Narasimhan,STORE009,2024-07-07,Sales Executive,Active
+SP104,Arya Panchal,STORE057,2021-04-09,Sales Associate,Active
+SP105,Garima Bala,STORE029,2024-05-11,Sales Executive,Active
+SP106,Pranav Lanka,STORE040,2019-11-19,Senior Sales Executive,Active
+SP107,Radha Pai,STORE034,2019-03-24,Sales Associate,Active
+SP108,Rajata Vaidya,STORE020,2025-02-05,Sales Executive,Active
+SP109,Ranveer Kumar,STORE057,2019-11-20,Sales Associate,Active
+SP110,Aarav Venkatesh,STORE007,2019-04-12,Senior Sales Associate,Active
+SP111,Januja Sankar,STORE019,2026-10-10,Senior Sales Associate,Active
+SP112,Dipta Dash,STORE014,2019-07-01,Senior Sales Associate,Active
+SP113,Yashica More,STORE033,2025-01-09,Sales Associate,Inactive
+SP114,Eta Rau,STORE055,2024-07-28,Sales Associate,Active
+SP115,Joshua Handa,STORE054,2024-10-31,Sales Associate,Active
+SP116,Owen Mitra,STORE050,2022-06-24,Sales Associate,Inactive
+SP117,Daksha Mangat,STORE011,2022-05-10,Senior Sales Associate,Active
+SP118,Ekanta Shroff,STORE028,2020-09-09,Senior Sales Associate,Active
+SP119,Tanay Vaidya,STORE057,2022-08-29,Senior Sales Associate,Active
+SP120,Frado Mander,STORE003,2022-12-05,Sales Executive,Active
+SP121,Girik Keer,STORE010,2023-04-15,Sales Associate,Active
+SP122,Umang Issac,STORE024,2024-08-16,Sales Executive,Active
+SP123,Chakradhar Konda,STORE056,2020-02-26,Sales Associate,Active
+SP124,Tamanna Sachdeva,STORE044,2022-12-11,Sales Associate,Active
+SP125,Leena Talwar,STORE050,2026-06-10,Senior Sales Associate,Active
+SP126,Manbir Ahluwalia,STORE040,2022-04-20,Senior Sales Associate,Inactive
+SP127,Pavani Kanda,STORE016,2026-06-30,Sales Executive,Inactive
+SP128,Chandresh Krish,STORE052,2020-05-25,Sales Associate,Active
+SP129,Tanmayi Deol,STORE012,2026-09-15,Senior Sales Associate,Active
+SP130,Edhitha Savant,STORE060,2025-09-19,Sales Associate,Active
+SP131,Sanaya Dutt,STORE048,2024-02-11,Sales Executive,Active
+SP132,Shivani Lad,STORE051,2025-03-24,Senior Sales Associate,Active
+SP133,Aradhana Verma,STORE003,2025-04-18,Sales Executive,Active
+SP134,Anvi Sarraf,STORE053,2023-01-09,Sales Executive,Active
+SP135,Wahab Magar,STORE053,2019-07-24,Sales Executive,Active
+SP136,Faris Devi,STORE002,2021-10-04,Senior Sales Associate,Active
+SP137,Leela Dua,STORE018,2020-03-08,Sales Executive,Inactive
+SP138,Devansh Sachdeva,STORE018,2024-11-28,Sales Associate,Active
+SP139,Unnati Sagar,STORE044,2022-05-15,Senior Sales Executive,Active
+SP140,Osha Ramachandran,STORE002,2019-06-07,Sales Associate,Inactive
+SP141,Lajita Sood,STORE012,2026-08-07,Senior Sales Associate,Inactive
+SP142,Chanchal Ramakrishnan,STORE003,2018-12-14,Sales Associate,Active
+SP143,Thomas Sura,STORE047,2026-02-28,Sales Executive,Active
+SP144,Rajata Sunder,STORE033,2020-10-07,Sales Associate,Active
+SP145,Gayathri Ravel,STORE013,2019-02-24,Sales Associate,Active
+SP146,Unni Datta,STORE001,2025-01-22,Senior Sales Associate,Active
+SP147,Meera Bala,STORE044,2024-03-12,Senior Sales Associate,Active
+SP148,Krishna Shenoy,STORE043,2019-08-13,Sales Associate,Active
+SP149,Abha Raghavan,STORE043,2020-06-12,Sales Executive,Active
+SP150,Suhani Narain,STORE043,2021-09-08,Sales Executive,Active
+SP151,Arunima Sama,STORE020,2021-10-09,Senior Sales Associate,Active
+SP152,Upma Bahl,STORE021,2021-01-17,Sales Associate,Active
+SP153,Inaya Kapur,STORE009,2025-04-10,Sales Associate,Active
+SP154,Banjeet Balasubramanian,STORE025,2024-06-06,Senior Sales Associate,Inactive
+SP155,Anmol Dua,STORE040,2021-01-02,Senior Sales Associate,Active
+SP156,Urvashi Contractor,STORE054,2020-12-06,Sales Associate,Active
+SP157,Udyati Kunda,STORE028,2023-09-13,Sales Executive,Active
+SP158,Oliver Contractor,STORE021,2025-06-04,Sales Associate,Active
+SP159,Deepa Chokshi,STORE014,2025-07-08,Senior Sales Associate,Active
+SP160,Devika Prashad,STORE051,2023-10-28,Senior Sales Associate,Active
+SP161,Faqid Kibe,STORE019,2022-04-11,Senior Sales Associate,Active
+SP162,Jai Barman,STORE022,2019-10-08,Sales Associate,Inactive
+SP163,Kamala Biswas,STORE016,2021-11-08,Senior Sales Associate,Active
+SP164,Advik Salvi,STORE013,2023-03-16,Sales Associate,Active
+SP165,Hitesh Sant,STORE031,2025-11-23,Senior Sales Associate,Active
+SP166,Michael Saran,STORE030,2021-12-25,Sales Associate,Active
+SP167,Veda Shroff,STORE013,2020-05-26,Senior Sales Associate,Active
+SP168,Ekantika Korpal,STORE026,2022-08-10,Sales Associate,Active
+SP169,Arya Seshadri,STORE001,2025-12-19,Sales Executive,Active
+SP170,Ladli Nayar,STORE057,2020-12-22,Sales Associate,Active
+SP171,Ekta Gopal,STORE012,2019-02-23,Sales Executive,Active
+SP172,Isha Kuruvilla,STORE030,2023-01-18,Sales Associate,Active
+SP173,Anya Anne,STORE055,2021-10-18,Sales Associate,Active
+SP174,Frederick Khurana,STORE030,2023-04-19,Senior Sales Associate,Inactive
+SP175,Vrinda Khosla,STORE039,2025-01-10,Sales Associate,Active
+SP176,Vritti Sem,STORE029,2024-10-10,Senior Sales Associate,Active
+SP177,Girik Menon,STORE033,2025-08-24,Sales Associate,Inactive
+SP178,Yagnesh Mohan,STORE029,2020-10-14,Sales Executive,Active
+SP179,Urvashi Wali,STORE031,2024-07-19,Sales Associate,Active
+SP180,Ganga Pandey,STORE054,2021-10-29,Senior Sales Associate,Active
+SP181,Anika Mohan,STORE034,2024-11-17,Sales Associate,Active
+SP182,Jai Hans,STORE029,2021-01-15,Sales Associate,Active
+SP183,Qasim Handa,STORE018,2021-08-02,Sales Associate,Active
+SP184,Aradhana Vohra,STORE006,2020-09-28,Sales Associate,Active
+SP185,Harish Hari,STORE045,2023-12-24,Sales Associate,Active
+SP186,Jalsa Gola,STORE027,2021-06-03,Sales Associate,Active
+SP187,Jonathan Mahal,STORE027,2021-06-22,Sales Associate,Active
+SP188,Brinda Date,STORE025,2019-04-16,Sales Executive,Active
+SP189,Harshil Arora,STORE045,2024-04-29,Sales Associate,Active
+SP190,Upasna Srinivas,STORE037,2023-10-14,Sales Associate,Active
+SP191,Qarin Behl,STORE023,2022-08-25,Sales Associate,Active
+SP192,Ishaan Bhattacharyya,STORE058,2021-01-18,Senior Sales Executive,Active
+SP193,Ethan Bera,STORE048,2022-04-23,Senior Sales Associate,Active
+SP194,Daksha Chada,STORE058,2020-03-11,Sales Associate,Active
+SP195,Omaja Kara,STORE028,2021-01-05,Sales Associate,Active
+SP196,Shravya Savant,STORE043,2025-07-01,Senior Sales Associate,Active
+SP197,Dalaja Bhasin,STORE011,2021-06-06,Sales Executive,Inactive
+SP198,Sarthak Kakar,STORE040,2024-02-02,Senior Sales Associate,Inactive
+SP199,Naksh Khatri,STORE038,2021-02-25,Senior Sales Associate,Active
+SP200,Naksh Agate,STORE042,2020-05-19,Sales Associate,Active
+SP201,Upma Manne,STORE012,2022-05-18,Sales Associate,Active
+SP202,Bhavya Mandal,STORE014,2019-03-07,Sales Associate,Active
+SP203,Ekavir Kaur,STORE057,2024-11-18,Sales Associate,Active
+SP204,Rudra Sandal,STORE054,2026-10-05,Sales Associate,Active
+SP205,Manthan Lata,STORE031,2019-11-17,Sales Associate,Active
+SP206,Ekbal Bhasin,STORE023,2025-12-07,Sales Associate,Active
+SP207,Bhavya Sarna,STORE042,2020-04-24,Sales Associate,Active
+SP208,Daksha Rau,STORE016,2019-12-17,Sales Associate,Active
+SP209,Raksha Buch,STORE010,2021-03-20,Sales Associate,Active
+SP210,Rachana Naidu,STORE008,2023-12-28,Senior Sales Associate,Active
+SP211,Atharv Chand,STORE045,2024-01-14,Sales Associate,Active
+SP212,Amruta Baria,STORE039,2020-11-06,Senior Sales Associate,Active
+SP213,Upma Venkataraman,STORE008,2025-05-23,Sales Executive,Active
+SP214,Arunima Golla,STORE020,2024-06-11,Sales Associate,Active
+SP215,Vyanjana Chand,STORE020,2023-11-18,Senior Sales Associate,Inactive
+SP216,Nilima Nath,STORE025,2022-11-25,Sales Associate,Active
+SP217,Naveen Narayan,STORE005,2021-08-19,Senior Sales Associate,Active
+SP218,Bhavya Rattan,STORE016,2022-05-27,Sales Associate,Active
+SP219,Suhani Chakrabarti,STORE055,2025-10-27,Senior Sales Associate,Active
+SP220,Ekiya D’Alia,STORE051,2021-07-30,Senior Sales Executive,Active
+SP221,Yoshita Agarwal,STORE023,2025-06-22,Senior Sales Associate,Active
+SP222,Odika Bhagat,STORE005,2024-06-30,Senior Sales Associate,Active
+SP223,Wishi Sathe,STORE055,2020-06-30,Sales Associate,Active
+SP224,Samar Loke,STORE028,2025-05-14,Senior Sales Executive,Active
+SP225,Bhavna Sarma,STORE054,2023-07-29,Sales Associate,Active
+SP226,Jairaj Balakrishnan,STORE012,2026-05-24,Senior Sales Associate,Inactive
+SP227,Nathan Mukhopadhyay,STORE018,2024-04-05,Senior Sales Associate,Inactive
+SP228,Nikita Chander,STORE050,2023-08-03,Sales Associate,Active
+SP229,Triya Dalal,STORE047,2020-10-24,Senior Sales Associate,Active
+SP230,Wishi Manne,STORE016,2024-05-30,Sales Executive,Active
+SP231,Ojasvi Subramanian,STORE057,2023-03-26,Sales Associate,Active
+SP232,Tanmayi Dhillon,STORE037,2022-12-02,Senior Sales Associate,Active
+SP233,Yashoda Deshpande,STORE002,2022-03-01,Sales Associate,Active
+SP234,Anya Sachdeva,STORE032,2026-04-02,Sales Associate,Active
+SP235,Aarnav Mandal,STORE022,2021-10-16,Sales Associate,Active
+SP236,Vrishti Dixit,STORE057,2025-01-28,Sales Associate,Active
+SP237,Hemani Natarajan,STORE013,2022-09-13,Sales Associate,Active
+SP238,Tamanna Nagy,STORE032,2023-08-06,Senior Sales Associate,Active
+SP239,William Rajagopal,STORE031,2026-04-19,Senior Sales Associate,Active
+SP240,Caleb Nadkarni,STORE051,2020-11-20,Sales Associate,Active
+SP241,Lakshmi Raju,STORE026,2025-03-27,Senior Sales Associate,Active
+SP242,Warhi Bansal,STORE038,2024-07-19,Sales Associate,Active
+SP243,Harish Sarraf,STORE023,2019-12-23,Sales Associate,Active
+SP244,Alexander Dhawan,STORE022,2019-10-01,Sales Associate,Active
+SP245,Falan Singh,STORE020,2022-05-22,Sales Associate,Active
+SP246,Hamsini Rao,STORE013,2025-07-20,Sales Associate,Active
+SP247,Falguni Walla,STORE049,2024-06-05,Senior Sales Associate,Active
+SP248,Vinaya Banik,STORE048,2022-02-18,Sales Associate,Active
+SP249,Wahab Mani,STORE049,2024-02-26,Senior Sales Associate,Active
+SP250,Radha Chaudhari,STORE007,2020-11-01,Sales Executive,Active
+SP251,Sachi Ganesan,STORE024,2025-05-15,Sales Associate,Active
+SP252,Ayush Batra,STORE035,2024-10-21,Sales Associate,Active
+SP253,Chaaya Parmer,STORE004,2021-08-29,Senior Sales Associate,Active
+SP254,Madhav Konda,STORE009,2022-02-02,Senior Sales Associate,Active
+SP255,Pranit Garde,STORE007,2023-06-03,Sales Executive,Active
+SP256,Lavanya Khosla,STORE031,2020-05-22,Sales Associate,Active
+SP257,Vincent Shenoy,STORE004,2023-02-19,Sales Associate,Active
+SP258,Tripti Kumer,STORE008,2024-04-29,Sales Executive,Active
+SP259,Udyati Mani,STORE005,2024-07-28,Senior Sales Associate,Active
+SP260,Ethan Sathe,STORE010,2024-08-31,Sales Associate,Active
+SP261,Panini Krishna,STORE020,2021-11-03,Sales Associate,Active
+SP262,Rushil Rajagopalan,STORE036,2022-10-15,Sales Executive,Active
+SP263,Hredhaan Khalsa,STORE051,2026-02-28,Senior Sales Associate,Active
+SP264,Chakrika Merchant,STORE025,2022-02-22,Sales Associate,Active
+SP265,Anvi Anand,STORE056,2019-02-02,Senior Sales Associate,Active
+SP266,Watika Mangat,STORE037,2023-09-19,Senior Sales Associate,Active
+SP267,Indira Kanda,STORE048,2025-07-02,Sales Associate,Active
+SP268,Zashil Devan,STORE041,2024-04-25,Sales Associate,Active
+SP269,Balveer More,STORE011,2024-03-30,Sales Associate,Active
+SP270,Bahadurjit Patla,STORE011,2025-08-11,Sales Associate,Active
+SP271,Gautam Merchant,STORE039,2025-02-17,Sales Associate,Active
+SP272,Parth Iyer,STORE019,2021-09-06,Senior Sales Associate,Active
+SP273,Yachana Mahajan,STORE030,2020-01-10,Sales Associate,Active
+SP274,Aarini Subramaniam,STORE017,2025-12-19,Sales Executive,Active
+SP275,Hamsini Contractor,STORE043,2025-10-05,Sales Executive,Active
+SP276,Lohit Kara,STORE008,2022-11-20,Senior Sales Associate,Active
+SP277,Jasmit Chana,STORE059,2026-03-21,Sales Associate,Active
+SP278,Akshay Lalla,STORE004,2025-08-17,Sales Associate,Active
+SP279,Suhani Pillay,STORE048,2023-06-20,Sales Executive,Inactive
+SP280,Lakshmi Prabhu,STORE029,2024-08-16,Sales Associate,Active
+SP281,Urishilla Bakshi,STORE045,2019-10-28,Sales Associate,Active
+SP282,Timothy Bhatnagar,STORE035,2024-03-03,Sales Associate,Active
+SP283,Chasmum Rege,STORE003,2024-04-22,Sales Executive,Active
+SP284,Chakradev Barad,STORE039,2019-11-23,Sales Associate,Active
+SP285,Jack Chatterjee,STORE044,2021-06-28,Sales Executive,Active
+SP286,Lipika Setty,STORE002,2020-11-24,Senior Sales Executive,Active
+SP287,Mohammed Sachdeva,STORE018,2022-01-21,Senior Sales Associate,Active
+SP288,Vrishti Reddy,STORE012,2024-06-21,Sales Associate,Active
+SP289,Bachittar Prabhakar,STORE059,2026-11-21,Sales Associate,Inactive
+SP290,Sai Keer,STORE028,2020-10-01,Senior Sales Associate,Active
+SP291,Hardik Pillai,STORE006,2026-03-06,Sales Associate,Active
+SP292,Darsh Rao,STORE021,2023-07-14,Senior Sales Associate,Active
+SP293,Jason Sha,STORE022,2021-04-01,Sales Associate,Active
+SP294,Ansh Bedi,STORE043,2019-09-06,Sales Executive,Active
+SP295,Yagnesh Dass,STORE036,2025-08-05,Sales Associate,Active
+SP296,Ekapad Johal,STORE017,2025-08-06,Sales Associate,Inactive
+SP297,Viraj Narasimhan,STORE026,2023-11-21,Sales Executive,Active
+SP298,Aarnav Malhotra,STORE001,2025-06-27,Senior Sales Associate,Active
+SP299,Kalpit Zachariah,STORE027,2026-03-15,Sales Associate,Active
+SP300,Imaran Bal,STORE040,2021-01-12,Sales Executive,Active
+SP301,Ishita Khanna,STORE049,2020-01-09,Sales Associate,Active
+SP302,Amol Ghosh,STORE009,2023-11-29,Sales Executive,Active
+SP303,Jonathan Sama,STORE045,2021-02-27,Sales Associate,Active
+SP304,Devansh Soni,STORE041,2023-05-18,Senior Sales Associate,Active
+SP305,Yochana Chopra,STORE011,2022-09-18,Sales Associate,Active
+SP306,Caleb Verma,STORE027,2022-09-30,Sales Associate,Inactive
+SP307,Azaan Bhat,STORE059,2021-06-20,Sales Associate,Inactive
+SP308,Pooja Chokshi,STORE042,2022-12-23,Sales Executive,Active
+SP309,Ethan Buch,STORE046,2023-01-27,Sales Associate,Active
+SP310,Dominic Date,STORE027,2021-08-22,Sales Executive,Inactive
+SP311,Lakshmi Wali,STORE016,2021-03-29,Sales Associate,Active
+SP312,Yashasvi Sani,STORE013,2021-05-30,Sales Executive,Active
+SP313,Tanveer Sani,STORE057,2019-09-30,Sales Associate,Active
+SP314,Odika Nori,STORE050,2022-09-28,Sales Executive,Active
+SP315,Mohini Sagar,STORE060,2025-12-09,Sales Executive,Active
+SP316,Dhriti Sane,STORE001,2025-02-08,Sales Associate,Active
+SP317,Kavya Dua,STORE038,2021-07-23,Senior Sales Associate,Active
+SP318,Ekalinga Chand,STORE056,2024-09-28,Sales Associate,Active
+SP319,Girik Sankaran,STORE023,2025-12-23,Sales Associate,Active
+SP320,Kalpit Bhasin,STORE025,2019-09-22,Sales Associate,Active
+SP321,Jason Roy,STORE013,2023-11-22,Senior Sales Executive,Active
+SP322,Charan Mani,STORE025,2021-11-28,Sales Associate,Active
+SP323,Indira Chawla,STORE003,2024-01-04,Sales Associate,Active
+SP324,Mohammed Subramaniam,STORE059,2023-10-26,Sales Executive,Active
+SP325,Inaya Pillai,STORE043,2020-10-22,Sales Executive,Active
+SP326,Upkaar Sanghvi,STORE010,2019-11-17,Sales Associate,Active
+SP327,Amara Balakrishnan,STORE033,2026-02-02,Senior Sales Executive,Active
+SP328,Dayamai Nori,STORE007,2020-06-08,Sales Executive,Active
+SP329,Pratyush Dhar,STORE034,2021-11-20,Sales Executive,Active
+SP330,Ekaraj Dhar,STORE010,2023-09-20,Sales Associate,Active
+SP331,Gavin Wali,STORE010,2025-03-16,Sales Associate,Active
+SP332,Oni Setty,STORE017,2020-09-24,Sales Associate,Active
+SP333,Kala Muni,STORE042,2021-10-20,Sales Associate,Active
+SP334,Frado Ben,STORE044,2025-01-14,Sales Executive,Active
+SP335,Chandran Bumb,STORE021,2020-03-23,Senior Sales Associate,Active
+SP336,Panini Sunder,STORE032,2021-03-20,Sales Executive,Active
+SP337,Oeshi Mahajan,STORE005,2024-01-25,Sales Associate,Active
+SP338,Hemani Sani,STORE019,2020-09-25,Senior Sales Executive,Active
+SP339,Vidhi Vyas,STORE028,2019-11-05,Senior Sales Executive,Active
+SP340,Chakradev Kannan,STORE046,2024-07-29,Sales Executive,Active
+SP341,Abhimanyu Jayaraman,STORE045,2022-04-07,Sales Associate,Active
+SP342,Laksh Kumer,STORE021,2021-06-19,Sales Executive,Active
+SP343,Jagdish Amble,STORE024,2021-05-13,Sales Associate,Active
+SP344,Parth Dayal,STORE027,2023-02-18,Senior Sales Associate,Active
+SP345,Xiti Pandya,STORE011,2022-02-19,Sales Associate,Active
+SP346,Brijesh Sarin,STORE025,2019-07-07,Senior Sales Associate,Active
+SP347,Faras Munshi,STORE059,2019-01-23,Senior Sales Associate,Active
+SP348,Nidhi Sahni,STORE041,2023-10-19,Sales Associate,Active
+SP349,Nidhi Bail,STORE001,2021-05-13,Sales Executive,Active
+SP350,Triveni Pathak,STORE019,2021-08-31,Senior Sales Associate,Active
+SP351,Hitesh Kohli,STORE029,2019-08-26,Sales Executive,Inactive
+SP352,Farhan Randhawa,STORE020,2022-08-10,Senior Sales Associate,Active
+SP353,Harinakshi Kant,STORE017,2026-04-22,Sales Associate,Active
+SP354,Faraj Uppal,STORE025,2021-09-25,Sales Executive,Active
+SP355,Yashvi Hari,STORE025,2024-04-15,Senior Sales Associate,Active
+SP356,Indali Divan,STORE045,2026-08-10,Sales Associate,Inactive
+SP357,Madhav Kunda,STORE043,2020-11-29,Sales Associate,Active
+SP358,Michael Borra,STORE056,2020-07-30,Senior Sales Associate,Active
+SP359,Ucchal Sen,STORE004,2020-05-29,Sales Executive,Active
+SP360,Diya Dora,STORE054,2024-09-11,Sales Executive,Active
+SP361,Upasna Sathe,STORE052,2022-08-23,Sales Associate,Active
+SP362,Anvi Bhalla,STORE015,2024-04-09,Senior Sales Associate,Active
+SP363,Dayita Shenoy,STORE044,2021-11-23,Sales Executive,Active
+SP364,Dakshesh Pillay,STORE044,2022-09-30,Sales Executive,Active
+SP365,Faraj Chana,STORE058,2025-12-22,Senior Sales Associate,Active
+SP366,Turvi Barman,STORE051,2024-02-18,Sales Associate,Active
+SP367,Ekanta Soni,STORE047,2022-09-23,Sales Associate,Inactive
+SP368,David Seshadri,STORE021,2023-03-02,Senior Sales Associate,Active
+SP369,Frado Thaman,STORE009,2019-10-13,Sales Executive,Active
+SP370,Balveer Kota,STORE024,2024-05-25,Senior Sales Associate,Inactive
+SP371,Reva Viswanathan,STORE054,2024-12-02,Sales Associate,Inactive
+SP372,Januja Pradhan,STORE031,2023-05-08,Senior Sales Executive,Active
+SP373,Lila Rege,STORE056,2026-09-16,Sales Associate,Active
+SP374,Charles Natt,STORE005,2025-06-28,Sales Associate,Inactive
+SP375,Girindra Raju,STORE056,2019-06-18,Senior Sales Associate,Active
+SP376,Mason Nath,STORE026,2021-04-26,Senior Sales Executive,Active
+SP377,Inaya Mukherjee,STORE024,2019-08-06,Sales Associate,Active
+SP378,Kai Chad,STORE017,2024-06-25,Senior Sales Associate,Active
+SP379,Falguni Datta,STORE044,2021-07-14,Senior Sales Associate,Active
+SP380,Pallavi Trivedi,STORE025,2024-08-07,Sales Executive,Inactive
+SP381,Janani More,STORE007,2021-12-24,Senior Sales Associate,Active
+SP382,Harita Sunder,STORE040,2020-06-08,Sales Executive,Active
+SP383,Laksh Dubey,STORE059,2020-07-14,Senior Sales Associate,Active
+SP384,Harrison Tripathi,STORE041,2019-07-23,Sales Executive,Inactive
+SP385,Gayathri Deep,STORE020,2025-06-17,Senior Sales Associate,Active
+SP386,Mitesh Gaba,STORE003,2023-12-25,Sales Executive,Active
+SP387,Raksha Bassi,STORE032,2020-06-09,Sales Associate,Active
+SP388,Wazir Sawhney,STORE035,2022-05-25,Sales Associate,Active
+SP389,Saumya Kaur,STORE043,2024-02-05,Sales Executive,Active
+SP390,Dayamai Singh,STORE035,2023-06-12,Sales Associate,Active
+SP391,Jhalak Sastry,STORE010,2026-08-04,Sales Executive,Active
+SP392,Lavanya Thakkar,STORE054,2022-10-30,Sales Associate,Active
+SP393,Neel Iyengar,STORE018,2023-05-22,Sales Associate,Active
+SP394,Zashil Ben,STORE029,2025-09-19,Sales Associate,Active
+SP395,Kamya Chauhan,STORE024,2024-05-10,Sales Associate,Active
+SP396,Bhavani Chacko,STORE035,2024-12-14,Sales Executive,Active
+SP397,Anjali Sengupta,STORE004,2025-05-23,Sales Associate,Active
+SP398,Rajeshri Chand,STORE008,2026-08-08,Sales Executive,Active
+SP399,Shravya Palla,STORE006,2026-08-24,Senior Sales Associate,Active
+SP400,Oeshi Bera,STORE039,2026-10-25,Senior Sales Executive,Active
+SP401,Warinder Raju,STORE022,2022-04-10,Sales Associate,Active
+SP402,Udarsh Bala,STORE037,2019-08-06,Sales Associate,Active
+SP403,Gautami Dhingra,STORE036,2021-08-12,Sales Associate,Active
+SP404,Bhavini Sodhi,STORE056,2020-01-27,Sales Associate,Active
+SP405,Upasna Sen,STORE051,2024-10-27,Sales Executive,Active
+SP406,Fariq Bahl,STORE055,2024-02-19,Senior Sales Executive,Inactive
+SP407,Mason Wable,STORE035,2021-01-29,Sales Associate,Active
+SP408,Bhavya Khanna,STORE043,2022-07-03,Sales Executive,Active
+SP409,Champak Khare,STORE023,2021-06-18,Sales Executive,Active
+SP410,Dev Choudhry,STORE021,2022-06-22,Sales Associate,Active
+SP411,Amol Varma,STORE009,2026-01-07,Senior Sales Associate,Active
+SP412,Maanas Manne,STORE048,2023-10-17,Sales Associate,Active
+SP413,Ira Khosla,STORE024,2022-07-21,Senior Sales Associate,Active
+SP414,Rachit Chada,STORE033,2023-10-03,Sales Associate,Active
+SP415,Ekansh Vora,STORE047,2023-05-10,Sales Executive,Active
+SP416,Madhavi Singhal,STORE034,2023-07-13,Sales Associate,Active
+SP417,Kashvi Kulkarni,STORE002,2019-04-10,Sales Associate,Active
+SP418,Ishanvi Bir,STORE026,2025-04-04,Sales Associate,Active
+SP419,Hemang Natarajan,STORE046,2021-11-01,Sales Executive,Active
+SP420,Indira Nigam,STORE006,2020-01-14,Sales Associate,Active
+SP421,Ucchal Srinivas,STORE009,2025-10-27,Sales Associate,Active
+SP422,Krishna Bhatnagar,STORE036,2024-04-10,Senior Sales Associate,Active
+SP423,Balhaar Memon,STORE039,2024-12-28,Senior Sales Associate,Active
+SP424,Ryan Barman,STORE039,2020-08-13,Sales Associate,Active
+SP425,Yutika Rao,STORE008,2021-08-02,Sales Executive,Active
+SP426,Zehaan Bansal,STORE050,2025-11-02,Senior Sales Associate,Active
+SP427,Bhavika Parikh,STORE028,2025-04-23,Sales Associate,Active
+SP428,Garima Mahajan,STORE022,2026-03-27,Sales Executive,Active
+SP429,Rajeshri Ratta,STORE047,2019-12-17,Sales Associate,Active
+SP430,Libni Nori,STORE043,2025-03-23,Sales Associate,Inactive
+SP431,Widisha Pillai,STORE044,2020-06-28,Sales Executive,Active
+SP432,Fitan Samra,STORE054,2026-10-06,Sales Associate,Active
+SP433,Pranit Memon,STORE048,2019-07-29,Senior Sales Associate,Active
+SP434,Fariq Narang,STORE036,2021-08-19,Sales Associate,Inactive
+SP435,Damini Sehgal,STORE036,2024-07-10,Sales Associate,Active
+SP436,Ojas Sawhney,STORE023,2024-01-11,Sales Executive,Inactive
+SP437,Brijesh Pandit,STORE028,2021-11-22,Sales Executive,Active
+SP438,Anvi Bhandari,STORE019,2024-02-18,Senior Sales Associate,Active
+SP439,Januja Varghese,STORE037,2019-07-17,Senior Sales Associate,Active
+SP440,Azaan Dhar,STORE031,2025-09-18,Sales Associate,Active
+SP441,Bakhshi Date,STORE055,2026-02-13,Senior Sales Associate,Active
+SP442,Jeevika Pathak,STORE018,2019-06-22,Senior Sales Associate,Active
+SP443,Mitesh Sengupta,STORE055,2022-02-27,Senior Sales Associate,Active
+SP444,Sachi Bose,STORE040,2022-01-21,Senior Sales Associate,Active
+SP445,Jeevika Rao,STORE002,2023-10-14,Senior Sales Associate,Active
+SP446,Zaid Comar,STORE045,2021-07-29,Sales Associate,Active
+SP447,Xalak Vasa,STORE045,2019-02-14,Sales Executive,Inactive
+SP448,Adweta Lad,STORE023,2022-03-12,Sales Associate,Active
+SP449,Tanish Mangal,STORE037,2024-11-21,Senior Sales Associate,Active
+SP450,Ryan Das,STORE048,2024-10-21,Senior Sales Associate,Active
+SP451,Siya Gera,STORE048,2020-01-21,Senior Sales Associate,Active
+SP452,Gagan Nagarajan,STORE030,2026-07-19,Sales Associate,Active
+SP453,Dhruv Mannan,STORE047,2024-07-31,Sales Associate,Inactive
+SP454,Nakul Ghosh,STORE039,2026-06-26,Sales Associate,Active
+SP455,Yashoda Kapur,STORE011,2025-08-26,Sales Executive,Active
+SP456,Liam Khalsa,STORE006,2019-12-08,Sales Associate,Active
+SP457,Atharv Patel,STORE032,2025-08-16,Senior Sales Associate,Active
+SP458,Unni Dayal,STORE014,2023-08-13,Sales Executive,Active
+SP459,Dominic More,STORE028,2024-02-09,Sales Associate,Active
+SP460,Nirja Rout,STORE038,2022-04-16,Sales Associate,Active
+SP461,Jeremiah Nadig,STORE003,2025-11-27,Sales Associate,Inactive
+SP462,Shivani Shukla,STORE004,2024-05-13,Sales Associate,Active
+SP463,Kabir Gopal,STORE014,2024-09-08,Sales Executive,Active
+SP464,Rachita Thakkar,STORE019,2025-06-07,Sales Associate,Active
+SP465,Jeet Vasa,STORE048,2026-08-25,Sales Associate,Active
+SP466,Nitesh Edwin,STORE035,2020-03-15,Senior Sales Associate,Active
+SP467,Hiral Venkataraman,STORE054,2021-08-24,Senior Sales Associate,Active
+SP468,Farhan Krishna,STORE026,2026-07-07,Sales Executive,Active
+SP469,Jeremiah Mitter,STORE002,2020-07-27,Sales Associate,Active
+SP470,Yadavi Ganguly,STORE021,2024-02-16,Senior Sales Associate,Active
+SP471,Onveer Nazareth,STORE046,2023-12-08,Senior Sales Associate,Active
+SP472,Ayush Bumb,STORE026,2026-01-25,Sales Associate,Active
+SP473,Shivansh Saha,STORE052,2019-04-16,Sales Executive,Active
+SP474,Widisha Mann,STORE045,2024-02-28,Sales Executive,Active
+SP475,Vasudha Konda,STORE055,2024-05-12,Sales Associate,Active
+SP476,Chameli Setty,STORE026,2025-09-30,Senior Sales Associate,Active
+SP477,Nakul Sarraf,STORE020,2019-07-10,Senior Sales Associate,Active
+SP478,Ucchal Jani,STORE050,2022-06-09,Sales Associate,Active
+SP479,Dhriti Nagar,STORE008,2021-10-17,Senior Sales Associate,Active
+SP480,Mohini De,STORE050,2025-02-23,Sales Associate,Active
+SP481,Yutika Cherian,STORE053,2025-05-16,Senior Sales Associate,Active
+SP482,Unnati Das,STORE007,2021-08-13,Sales Associate,Active
+SP483,Yug Dhaliwal,STORE039,2021-03-06,Sales Associate,Active
+SP484,Bina Rajagopalan,STORE005,2019-09-22,Sales Associate,Active
+SP485,Yuvraj Dutta,STORE032,2026-04-02,Sales Associate,Active
+SP486,Dhriti Gupta,STORE038,2025-10-27,Sales Associate,Inactive
+SP487,Wishi Varma,STORE037,2025-05-23,Senior Sales Associate,Inactive
+SP488,Darika Tank,STORE021,2022-11-15,Sales Executive,Active
+SP489,Maya Tiwari,STORE010,2019-02-06,Sales Associate,Active
+SP490,Tanveer Pandit,STORE041,2022-10-16,Sales Associate,Active
+SP491,Baghyawati Talwar,STORE004,2019-04-26,Sales Associate,Active
+SP492,Bhavika Yadav,STORE030,2023-12-26,Sales Associate,Active
+SP493,Raagini Desai,STORE054,2018-12-21,Sales Associate,Active
+SP494,Jasmit Rau,STORE055,2026-05-29,Sales Associate,Active
+SP495,Nandini Behl,STORE025,2022-01-05,Sales Associate,Active
+SP496,Janani Mani,STORE051,2023-10-02,Senior Sales Associate,Active
+SP497,Yamini Seshadri,STORE059,2019-07-12,Sales Executive,Active
+SP498,Jagat Dave,STORE021,2025-05-27,Senior Sales Associate,Active
+SP499,Kashvi Nori,STORE004,2019-09-22,Sales Associate,Active
+SP500,Maanas Issac,STORE054,2023-08-25,Sales Associate,Active

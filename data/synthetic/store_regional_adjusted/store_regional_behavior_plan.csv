@@ -1,0 +1,61 @@
+store_id,region,store_type,floor_area_sqft,store_size,regional_demand_multiplier,store_size_weight,store_behavior_weight
+STORE001,North,Neighborhood,7425,Medium,1.0,1.0,1.0
+STORE002,West,Mall,5233,Medium,1.05,1.0,1.05
+STORE003,Central,Outlet,3154,Small,0.82,0.8,0.656
+STORE004,South,Mall,7477,Medium,1.1,1.0,1.1
+STORE005,South,High Street,5874,Medium,1.1,1.0,1.1
+STORE006,West,Outlet,11480,Large,1.05,1.25,1.3125
+STORE007,Central,High Street,9073,Large,0.82,1.25,1.025
+STORE008,Central,Mall,10625,Large,0.82,1.25,1.025
+STORE009,North,Neighborhood,2416,Small,1.0,0.8,0.8
+STORE010,West,Neighborhood,8072,Large,1.05,1.25,1.3125
+STORE011,South,Mall,10792,Large,1.1,1.25,1.375
+STORE012,North,High Street,7982,Medium,1.0,1.0,1.0
+STORE013,West,High Street,5540,Medium,1.05,1.0,1.05
+STORE014,East,High Street,11077,Large,0.88,1.25,1.1
+STORE015,West,Outlet,5093,Medium,1.05,1.0,1.05
+STORE016,East,High Street,2271,Small,0.88,0.8,0.7040000000000001
+STORE017,South,Mall,8416,Large,1.1,1.25,1.375
+STORE018,West,Mall,9168,Large,1.05,1.25,1.3125
+STORE019,East,Mall,1688,Small,0.88,0.8,0.7040000000000001
+STORE020,South,Neighborhood,10297,Large,1.1,1.25,1.375
+STORE021,West,Mall,3327,Small,1.05,0.8,0.8400000000000001
+STORE022,South,High Street,5815,Medium,1.1,1.0,1.1
+STORE023,Central,Neighborhood,3243,Small,0.82,0.8,0.656
+STORE024,West,Neighborhood,9817,Large,1.05,1.25,1.3125
+STORE025,North,Mall,4146,Small,1.0,0.8,0.8
+STORE026,West,Outlet,1509,Small,1.05,0.8,0.8400000000000001
+STORE027,South,High Street,7447,Medium,1.1,1.0,1.1
+STORE028,North,Neighborhood,5446,Medium,1.0,1.0,1.0
+STORE029,West,Outlet,9462,Large,1.05,1.25,1.3125
+STORE030,East,Outlet,3560,Small,0.88,0.8,0.7040000000000001
+STORE031,West,Neighborhood,4205,Small,1.05,0.8,0.8400000000000001
+STORE032,West,High Street,4970,Medium,1.05,1.0,1.05
+STORE033,North,Neighborhood,6607,Medium,1.0,1.0,1.0
+STORE034,West,Outlet,8677,Large,1.05,1.25,1.3125
+STORE035,East,High Street,2549,Small,0.88,0.8,0.7040000000000001
+STORE036,South,Mall,11141,Large,1.1,1.25,1.375
+STORE037,North,Mall,2464,Small,1.0,0.8,0.8
+STORE038,North,Mall,6913,Medium,1.0,1.0,1.0
+STORE039,North,High Street,9453,Large,1.0,1.25,1.25
+STORE040,East,High Street,10855,Large,0.88,1.25,1.1
+STORE041,South,High Street,8169,Large,1.1,1.25,1.375
+STORE042,East,Mall,7304,Medium,0.88,1.0,0.88
+STORE043,Central,High Street,2387,Small,0.82,0.8,0.656
+STORE044,South,Neighborhood,2493,Small,1.1,0.8,0.8800000000000001
+STORE045,West,Neighborhood,3290,Small,1.05,0.8,0.8400000000000001
+STORE046,North,Mall,3796,Small,1.0,0.8,0.8
+STORE047,South,Mall,2735,Small,1.1,0.8,0.8800000000000001
+STORE048,North,Neighborhood,3104,Small,1.0,0.8,0.8
+STORE049,East,Neighborhood,1741,Small,0.88,0.8,0.7040000000000001
+STORE050,North,Outlet,4224,Medium,1.0,1.0,1.0
+STORE051,South,High Street,8070,Large,1.1,1.25,1.375
+STORE052,Central,Mall,7896,Medium,0.82,1.0,0.82
+STORE053,South,Outlet,6173,Medium,1.1,1.0,1.1
+STORE054,South,Neighborhood,10605,Large,1.1,1.25,1.375
+STORE055,South,Neighborhood,6361,Medium,1.1,1.0,1.1
+STORE056,South,Outlet,10383,Large,1.1,1.25,1.375
+STORE057,East,Neighborhood,11071,Large,0.88,1.25,1.1
+STORE058,South,High Street,4079,Small,1.1,0.8,0.8800000000000001
+STORE059,South,Outlet,4544,Medium,1.1,1.0,1.1
+STORE060,North,Neighborhood,5353,Medium,1.0,1.0,1.0

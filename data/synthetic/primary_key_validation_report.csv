@@ -1,0 +1,9 @@
+dataset,primary_key,rows,missing_keys,blank_keys,duplicate_keys,status
+customers_master,customer_id,10000,0,0,0,VALID
+products_master,product_id,2500,0,0,0,VALID
+stores_master,store_id,60,0,0,0,VALID
+salespersons_master,salesperson_id,500,0,0,0,VALID
+promotions_master,promotion_id,72,0,0,0,VALID
+targets,target_id,8980,0,0,0,VALID
+sales,sales_line_id,2118200,0,0,0,VALID
+returns,return_id,118400,0,0,0,VALID

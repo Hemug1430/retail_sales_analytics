@@ -1,0 +1,2 @@
+sales_line_id,corrected_quantity,corrected_unit_price,correction_reason
+SL202401_001,3,450.00,Data entry correction for price markdown omission

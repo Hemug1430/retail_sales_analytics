@@ -1,0 +1,7 @@
+category,actual_rows,actual_pct,expected_pct,difference_pct
+Grocery,635460,30.0,30.0,0.0
+Fashion,423640,20.0,20.0,0.0
+Home & Kitchen,317730,15.0,15.0,0.0
+Beauty & Personal Care,317730,15.0,15.0,0.0
+Electronics,211820,10.0,10.0,0.0
+Sports & Fitness,211820,10.0,10.0,0.0

@@ -1,0 +1,9 @@
+batch_number,batch_month,batch_file_name
+1,2026-01,incremental_sales_2026-01.csv
+2,2026-02,incremental_sales_2026-02.csv
+3,2026-03,incremental_sales_2026-03.csv
+4,2026-04,incremental_sales_2026-04.csv
+5,2026-05,incremental_sales_2026-05.csv
+6,2026-06,incremental_sales_2026-06.csv
+7,2026-07,incremental_sales_2026-07.csv
+8,2026-08,incremental_sales_2026-08.csv

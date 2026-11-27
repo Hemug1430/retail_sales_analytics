@@ -1,0 +1,13 @@
+month,month_name,seasonal_multiplier,season_type
+1,January,0.95,Post-Holiday
+2,February,0.9,Soft Baseline
+3,March,1.0,Normal
+4,April,1.02,Modest Uplift
+5,May,1.05,Summer Uplift
+6,June,1.08,Mid-Year Activity
+7,July,1.03,Moderation
+8,August,1.08,Festival Build-Up
+9,September,1.15,Pre-Festival
+10,October,1.35,Festive Peak
+11,November,1.45,Festive Peak
+12,December,1.6,Year-End Peak
