@@ -2117,6 +2117,10 @@ def main():
     # Process datasets
     # --------------------------------------------------------
 
+    with engine.begin() as conn:
+        for tbl in DATASET_TABLE_MAP.values():
+            if table_exists(engine, tbl):
+                conn.execute(text("TRUNCATE TABLE " + tbl))
     results = []
 
     for file_path in files:
